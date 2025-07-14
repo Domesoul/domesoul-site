@@ -20,20 +20,19 @@
 
   <!-- Spotify Embed Section -->
   <section id="spotify" class="embed">
-    <h2>Listen Now</h2>
-    <iframe src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  </section>
-
-  <!-- Countdown Timer Section -->
-  <section class="countdown">
-    <h2>Next Release In:</h2>
-    <div id="timer">
-      <span id="days">00</span>d
-      <span id="hours">00</span>h
-      <span id="minutes">00</span>m
-      <span id="seconds">00</span>s
-    </div>
-  </section>
+  <h2>Listen Now</h2>
+  <!-- Updated Spotify Embed with full allow list and responsive styling -->
+  <div class="spotify-container">
+    <iframe 
+      src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB" 
+      width="100%" 
+      height="380" 
+      frameborder="0" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
 
   <!-- Soul Mission Form Section -->
   <section class="mission">
