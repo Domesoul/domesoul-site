@@ -1,13 +1,18 @@
 /* styles.css */
 /* Navigation Styles */
 .site-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
-  padding: 10px 0;
-  z-index: 2;
+  background: rgba(0,0,0,0.7);
+  padding: 15px 0;         /* more vertical space */
+  z-index: 999;
+}
+body {
+  padding-top: 60px;       /* push content below the fixed nav */
+}
+
 }
 .site-nav ul {
   list-style: none;
@@ -30,12 +35,31 @@ body { margin:0; font-family:'Helvetica', sans-serif; background:#f4f4f4; color:
 .hero { position:relative; height:80vh;  background: url('hero-bg-new.jpg') center/cover no-repeat; } .hero { 
 }
 .hero .overlay { position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5); }
-.hero-content { position:relative; z-index:1; text-align:center; color:white; top:50%; transform:translateY(-50%); }
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+.hero .overlay {
+  background: rgba(0,0,0,0.4);  /* darken a bit more for text legibility */
+}
+
+{ position:relative; z-index:1; text-align:center; color:white; top:50%; transform:translateY(-50%); }
 .btn { padding:10px 20px; background:#C59D5F; color:white; text-decoration:none; border-radius:4px; }
 .embed .spotify-container {
   max-width: 600px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .site-nav ul { display: none; }
+  .site-nav::before {
+    content: "☰";
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+}
+
 .embed { text-align:center; padding:40px 20px; background:#fff; }
 .countdown { text-align:center; padding:20px; background:#eee; }
 .mission { padding:40px; background:#fff; text-align:center; }
