@@ -1,19 +1,22 @@
-/* styles.css */
-/* Navigation Styles */
-.site-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.7);
-  padding: 15px 0;         
-  z-index: 999;
+/* ===== GLOBAL RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-  padding-top: 60px;       
+  font-family: 'Helvetica', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 60px;  /* space for the fixed nav */
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-}
+/* ===== NAVIGATION ===== */
 .site-nav {
   position: fixed;
   top: 0;
@@ -21,58 +24,143 @@ body {
   width: 100%;
   background: rgba(0,0,0,0.7);
   padding: 15px 0;
-  z-index: 999;               
+  z-index: 999;
 }
 .site-nav ul {
-  list-style: none;           
-  margin: 0;                  
-  padding: 0;                 
-  display: flex;              
-  justify-content: center;   
-  gap: 30px;                  
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
-.site-nav li {
-  margin: 0;                  
-}
+.site-nav li { }
 .site-nav a {
-  color: #f9f4ef;            
-  text-decoration: none;      
+  color: #f9f4ef;
   font-weight: bold;
   font-size: 1rem;
+  transition: opacity .2s;
 }
 .site-nav a:hover {
-  text-decoration: underline;
+  opacity: 0.7;
 }
 
-body {
-  padding-top: 60px;          
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('hero-bg-new.jpg') center/cover no-repeat;
 }
-
 .hero .overlay {
-  background: rgba(0,0,0,0.4);  
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #C59D5F;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-{ position:relative; z-index:1; text-align:center; color:white; top:50%; transform:translateY(-50%); }
-.btn { padding:10px 20px; background:#C59D5F; color:white; text-decoration:none; border-radius:4px; }
-.embed .spotify-container {
+/* ===== EMBED SECTIONS ===== */
+.embed, .countdown, .mission, .quotes {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+}
+.embed h2,
+.countdown h2,
+.mission h2,
+.quotes h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.spotify-container {
   max-width: 600px;
   margin: 0 auto;
 }
+.countdown #timer {
+  font-size: 1.2rem;
+  text-align: center;
+  gap: 10px;
+}
+.countdown span {
+  font-weight: bold;
+}
+
+/* ===== SOUL MISSION BUTTON ===== */
+.mission .btn {
+  margin: 20px auto;
+  display: inline-block;
+  padding: 12px 24px;
+  background: #5A432D;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ===== QUOTE SLIDER ===== */
+.quote-slider {
+  position: relative;
+  height: 100px;
+}
+.quote-slider .quote {
+  display: none;
+  font-style: italic;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.quote-slider .quote.active {
+  display: block;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+footer a {
+  color: #C59D5F;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .site-nav ul { display: none; }
-  .site-nav::before {
-    content: "☰";
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-    margin-left: 20px;
+  .site-nav ul {
+    display: none;   /* hide nav links on mobile for now */
+  }
+  /* Later you can add a hamburger menu here */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
   }
 }
 
-.embed { text-align:center; padding:40px 20px; background:#fff; }
-.countdown { text-align:center; padding:20px; background:#eee; }
-.mission { padding:40px; background:#fff; text-align:center; }
-.quotes { padding:40px; background:#f9f9f9; text-align:center; }
-.quote-slider .quote { display:none; font-style:italic; margin:20px auto; max-width:600px; }
-.quote-slider .quote.active { display:block; }
-footer { text-align:center; padding:20px; background:#333; color:white; }
