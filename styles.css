@@ -131,6 +131,10 @@ a {
   border-radius: 4px;
   font-weight: bold;
 }
+.mission p {
+  text-align: center;
+  margin: 0 auto 20px;  /* centers and gives a little bottom spacing */
+}
 
 /* ===== QUOTE SLIDER ===== */
 .quote-slider {
