@@ -4,12 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Helvetica', sans-serif;
   background: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  padding-top: 60px;  /* space for the fixed nav */
+  padding-top: 60px;
 }
 a {
   text-decoration: none;
@@ -24,8 +27,8 @@ a {
   width: 100%;
   background: rgba(0,0,0,0.7);
   padding: 15px 0;
-  border-bottom: 2px solid rgba(255,255,255,0.3);
   z-index: 999;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
 }
 .site-nav ul {
   list-style: none;
@@ -33,7 +36,6 @@ a {
   justify-content: center;
   gap: 30px;
 }
-.site-nav li { }
 .site-nav a {
   color: #f9f4ef;
   font-weight: bold;
@@ -54,27 +56,31 @@ a {
 }
 .hero .overlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.5);
 }
 .hero-content {
   position: relative;
   z-index: 2;
-  color: white;
   text-align: center;
-  padding-top: 60px;
   top: 50%;
   transform: translateY(-50%);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  padding-top: 60px;
+}
+.hero-content h1,
+.hero-content p,
+.hero-content .btn {
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 .hero-content p {
-  color: #fff !important;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -83,9 +89,8 @@ a {
   padding: 12px 24px;
   background: #C59D5F;
   color: #fff !important;
-  border-radius: 15px;
+  border-radius: 4px;
   font-weight: bold;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 }
 
 /* ===== EMBED SECTIONS ===== */
@@ -145,9 +150,7 @@ a {
 .quote-slider .quote.active {
   display: block;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
@@ -159,12 +162,16 @@ footer a {
   color: #C59D5F;
 }
 
+/* ===== SCROLL MARGIN ===== */
+section {
+  scroll-margin-top: 80px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .site-nav ul {
-    display: none;   /* hide nav links on mobile for now */
+    display: none;
   }
-  /* Later you can add a hamburger menu here */
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -172,4 +179,3 @@ footer a {
     font-size: 1.2rem;
   }
 }
-
