@@ -1,3 +1,4 @@
+/* script.js */
 (function() {
   const endDate = new Date('2025-08-25T00:00:00');
   const daysEl = document.getElementById('days');
