@@ -4,26 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Domé Soul – Light in the Dust</title>
+  <style>
+  .site-nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(33,33,33,0.85);
+    padding: 10px 40px;
+    display: flex; align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  .site-nav .brand {
+    display: flex; flex-direction: column;
+    color: #f9f4ef; font-size: 1.5rem; font-weight: bold;
+  }
+  .site-nav .brand .tagline {
+    font-size: 0.875rem; color: #f9f4ef; opacity: 0.8; margin-top: 2px;
+  }
+  .site-nav .nav-links {
+    list-style: none; display: flex; gap: 25px; margin-left: auto;
+  }
+  .site-nav .nav-links a {
+    color: #f9f4ef; font-weight: 500; transition: opacity .2s;
+  }
+  .site-nav .nav-links a:hover { opacity: .8; }
+</style>
+
   <!-- main stylesheet -->
 <link rel="stylesheet" href="styles.css">
 </head>
   <body>
-  <!-- NAVIGATION -->
-  <nav class="site-nav">
-    <div class="brand">
-  Domé Soul
-  <span class="tagline">Afro-soul troubadour & humanitarian</span>
-</div>
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    <ul class="nav-links">
-      <li><a href="#spotify">Listen</a></li>
-      <li><a href="#bio">Bio</a></li>
-      <li><a href="#countdown">Countdown</a></li>
-      <li><a href="#mission">Soul Mission</a></li>
-      <li><a href="#quotes">Quotes</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="site-nav">
+  <div class="brand">
+    Domé Soul
+    <span class="tagline">Afro-soul troubadour & humanitarian</span>
+  </div>
+  <button class="nav-toggle">☰</button>
+  <ul class="nav-links">
+    <li><a href="#spotify">Listen</a></li>
+    <li><a href="#countdown">Countdown</a></li>
+    <li><a href="#mission">Soul Mission</a></li>
+    <li><a href="#quotes">Quotes</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
   <!-- HERO -->
   <header class="hero">
