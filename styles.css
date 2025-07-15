@@ -1,36 +1,35 @@
-/* ===== GLOBAL RESET & BASE ===== */
+/* styles.css for Domé Soul site */
+
+/* Global Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background: #f9f4ef;
+  line-height: 1.6;
+}
+
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-family: 'Helvetica', sans-serif;
-  background: #f4f4f4;
-  color: #333;            /* dark text for readability */
-  line-height: 1.6;
-  padding-top: 60px;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 /* ===== NAVIGATION ===== */
-html { scroll-behavior: smooth; }
 .site-nav {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 15px 20px;
-  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
 }
 .nav-toggle {
   display: none;
@@ -44,15 +43,15 @@ html { scroll-behavior: smooth; }
   list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
 }
 .nav-links a {
   color: #f9f4ef;
+  text-decoration: none;
   font-weight: bold;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 .nav-links a:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 /* ===== MOBILE NAV ===== */
@@ -61,49 +60,48 @@ html { scroll-behavior: smooth; }
     display: block;
   }
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
     text-align: center;
     padding: 20px 0;
   }
   .nav-links.open {
     display: flex;
   }
+  .nav-links a {
+    padding: 10px 0;
+    display: block;
+  }
 }
+
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   background: url('hero-bg-new.jpg') center/cover no-repeat;
-  border-radius: 20px 20px 20px 20px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9f4ef;
 }
 .hero .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 .hero-content {
   position: relative;
-  z-index: 2;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-top: 60px;
-}
-.hero-content h1,
-.hero-content p,
-.hero-content .btn {
-  color: #fff !important;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  z-index: 1;
 }
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
 }
 .hero-content p {
@@ -111,100 +109,91 @@ html { scroll-behavior: smooth; }
   margin-bottom: 1rem;
 }
 .hero-content .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #C59D5F;
-  color: #fff !important;
-  border-radius: 4px;
+  padding: 10px 20px;
+  background: #b8860b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
   font-weight: bold;
 }
-
-/* ===== EMBED SECTIONS ===== */
-.embed, .countdown, .mission, .quotes {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background: white;
+.hero-content .btn:hover {
+  opacity: 0.9;
 }
-.embed h2,
-.countdown h2,
-.mission h2,
-.quotes h2 {
+
+/* ===== EMBED ===== */
+.embed {
+  padding: 80px 20px;
   text-align: center;
+}
+.embed h2 {
   margin-bottom: 20px;
   font-size: 2rem;
 }
-.spotify-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-.countdown #timer {
-  font-size: 1.2rem;
+
+/* ===== COUNTDOWN ===== */
+.countdown {
+  padding: 80px 20px;
   text-align: center;
-  gap: 10px;
+  background: #fff;
 }
-.countdown span {
-  font-weight: bold;
+.countdown h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+#timer {
+  font-size: 1.5rem;
+}
+#timer span {
+  margin: 0 5px;
 }
 
-/* ===== SOUL MISSION BUTTON ===== */
-.mission .btn {
-  margin: 20px auto;
-  display: inline-block;
-  padding: 12px 24px;
-  background: #5A432D;
-  color: white;
-  border-radius: 4px;
-  font-weight: bold;
+/* ===== MISSION ===== */
+.mission {
+  padding: 80px 20px;
+  text-align: center;
+}
+.mission h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 .mission p {
-  text-align: center;
-  margin: 0 auto 20px;  /* centers and gives a little bottom spacing */
+  max-width: 600px;
+  margin: 0 auto 20px;
+  font-size: 1.2rem;
 }
 
-/* ===== QUOTE SLIDER ===== */
+/* ===== QUOTES ===== */
+.quotes {
+  padding: 80px 20px;
+  background: #f0f0f0;
+  text-align: center;
+}
+.quotes h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
 .quote-slider {
   position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
   height: 100px;
 }
-.quote-slider .quote {
-  display: none;
-  font-style: italic;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+.quote {
   position: absolute;
   width: 100%;
-  top: 0;
+  opacity: 0;
+  transition: opacity 1s;
 }
-.quote-slider .quote.active {
-  display: block;
-}
-.quote-slider p {
-  text-align: center;
-  margin: 0 auto 20px;  /* centers and gives a little bottom spacing */
+.quote.active {
+  opacity: 1;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #333;
-  color: white;
-}
-footer a {
-  color: #C59D5F;
-}
-
-/* ===== SCROLL MARGIN ===== */
-section {
-  scroll-margin-top: 80px;
-}
-/* ===== SHARE BUTTONS ===== */
+/* ===== SHARE ===== */
 .share {
-  text-align: center;
-  padding: 40px 20px;
+  padding: 80px 20px;
   background: #fff;
+  text-align: center;
 }
 .share h2 {
   margin-bottom: 20px;
@@ -217,26 +206,29 @@ section {
   gap: 15px;
 }
 .share-buttons a {
-  display: inline-block;
   padding: 10px 20px;
   background: #333;
   color: #f9f4ef;
+  text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 .share-buttons a:hover {
   background: #555;
 }
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .site-nav ul {
-    display: none;
-  }
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  .hero-content p {
-    font-size: 1.2rem;
-  }
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 40px 20px;
+  background: #222;
+  color: #f9f4ef;
+  text-align: center;
+}
+footer a {
+  color: #b8860b;
+  text-decoration: none;
+}
+footer a:hover {
+  opacity: 0.8;
 }
