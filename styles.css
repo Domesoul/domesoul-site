@@ -31,20 +31,39 @@ a:hover { opacity: 0.8; }
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  /* Ensure nav items align vertically */
+  line-height: 1.2;
 }
-/* Brand with bio underneath */
-.site-nav .brand .tagline {
-  display: block;
-  font-size: 0.875rem;
+.site-nav .brand {
+  display: flex;
+  flex-direction: column;
   color: #f9f4ef;
-  opacity: 0.8;
-  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.nav-links { list-style: none; display: flex; gap: 25px; }
+.site-nav .brand .tagline {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin-top: 2px;
+  color: #f9f4ef;
+}
+.nav-links { list-style: none; display: flex; gap: 25px; margin-left: auto; }
 .nav-links a { color: #f9f4ef; font-weight: 500; transition: opacity 0.2s; }
+.nav-links a:hover { opacity: 0.8; }
 .nav-toggle { display: none; background: none; border: none; color: #f9f4ef; font-size: 2rem; cursor: pointer; }
 
 /* Mobile nav */
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: fixed; top: 60px; left: 0;
+    width: 100%; flex-direction: column;
+    background: rgba(33,33,33,0.95);
+    display: none; padding: 20px 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 0; font-size: 1.2rem; }
+}
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
   .nav-links {
