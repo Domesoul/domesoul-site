@@ -146,13 +146,17 @@ a {
   font-style: italic;
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   position: absolute;
   width: 100%;
   top: 0;
 }
 .quote-slider .quote.active {
   display: block;
+}
+.quote-slider p {
+  text-align: center;
+  margin: 0 auto 20px;  /* centers and gives a little bottom spacing */
 }
 
 /* ===== FOOTER ===== */
