@@ -32,7 +32,20 @@ a:hover { opacity: 0.8; }
   justify-content: space-between;
   z-index: 1000;
 }
-.site-nav .brand { color: #f9f4ef; font-size: 1.5rem; font-weight: bold; }
+.site-nav .brand {
+  color: #f9f4ef;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+.site-nav .brand::after {
+  content: "Afro‑soul troubadour & humanitarian";
+  display: block;
+  font-size: 0.875rem;
+  color: #f9f4ef;
+  opacity: 0.8;
+  margin-top: 4px;
+}
 .nav-links { list-style: none; display: flex; gap: 25px; }
 .nav-links a { color: #f9f4ef; font-weight: 500; transition: opacity 0.2s; }
 .nav-toggle { display: none; background: none; border: none; color: #f9f4ef; font-size: 2rem; cursor: pointer; }
