@@ -51,7 +51,7 @@ a {
   position: relative;
   height: 80vh;
   background: url('hero-bg-new.jpg') center/cover no-repeat;
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px 20px 20px 20px;
   overflow: hidden;
 }
 .hero .overlay {
@@ -146,7 +146,7 @@ a {
   font-style: italic;
   text-align: center;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   position: absolute;
   width: 100%;
   top: 0;
