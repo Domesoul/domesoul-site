@@ -49,3 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('open');
   });
 });
+document.addEventListener( 'DOMContentLoaded', () => {
+  new Splide( '#hero-carousel', {
+    type   : 'loop',
+    perPage: 1,
+    autoplay: true,
+    interval: 4000,
+    pagination: true,
+    arrows: false,
+  } ).mount();
+} );
+
