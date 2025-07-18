@@ -1,144 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Domé Soul – Light in the Dust</title>
-  <style>
-  .site-nav {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    background: rgba(33,33,33,0.85);
-    padding: 10px 40px;
-    display: flex; align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-  }
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-  .site-nav .brand {
-    display: flex; flex-direction: column;
-    color: #f9f4ef; font-size: 1.5rem; font-weight: bold;
-  }
-  .site-nav .brand .tagline {
-    font-size: 0.875rem; color: #f9f4ef; opacity: 0.8; margin-top: 2px;
-  }
-  .site-nav .nav-links {
-    list-style: none; display: flex; gap: 25px; margin-left: auto;
-  }
-  .site-nav .nav-links a {
-    color: #f9f4ef; font-weight: 500; transition: opacity .2s;
-  }
-  .site-nav .nav-links a:hover { opacity: .8; }
-</style>
-
-  <!-- main stylesheet -->
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-  <body>
-<nav class="site-nav">
-  <div class="brand">
-    Domé Soul
-    <span class="tagline">Afro-soul troubadour & humanitarian</span>
-  </div>
-  <button class="nav-toggle">☰</button>
-  <ul class="nav-links">
-    <li><a href="#spotify">Listen</a></li>
-    <li><a href="#bio">Bio</a></li>
-    <li><a href="#countdown">Countdown</a></li>
-    <li><a href="#mission">Soul Mission</a></li>
-    <li><a href="#quotes">Quotes</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <div class="brand">
+      Domé Soul
+      <span class="tagline">Afro-soul troubadour & humanitarian</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#spotify">Listen</a></li>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#countdown">Countdown</a></li>
+      <li><a href="#mission">Soul Mission</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
   <section class="hero">
-  <div id="hero-carousel" class="splide">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide"><img src="part1.png" alt="Dust Mote Macro"></li>
-        <li class="splide__slide"><img src="part2.png" alt="Silhouetted Hands"></li>
-        <li class="splide__slide"><img src="part3.png" alt="Flickering Flame"></li>
-        <li class="splide__slide"><img src="part4.png" alt="Acacia Dawn"></li>
-      </ul>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Domé Soul</h1>
+      <p>Where the Light Lives</p>
+      <a href="https://open.spotify.com/..." class="btn">Listen on Spotify</a>
     </div>
-  </div>
-  <div class="hero-content">
-    <h1>Domé Soul</h1>
-    <p>Where the Light Lives</p>
-    <a href="#spotify" class="btn">Listen on Spotify</a>
-  </div>
-</section>
+  </section>
 
-  <!-- SPOTIFY EMBED -->
+  <!-- FEATURED VISUAL THEMES -->
+  <section id="themes">
+    <h2>Light in the Dust – Visual Themes</h2>
+    <div class="theme-grid">
+      <div class="theme-card">Dust Mote Macro</div>
+      <div class="theme-card">Silhouetted Hands</div>
+      <div class="theme-card">Flickering Flame</div>
+      <div class="theme-card">Acacia Dawn</div>
+    </div>
+  </section>
+
+  <!-- EMBED SPOTIFY PLAYER -->
   <section id="spotify">
-    <h2>Listen Now</h2>
     <div class="spotify-container">
-      <iframe src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/..." width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   </section>
-<section id="bio">
-    <h2>Domé SOUL Bio</h2>
-    <p>Domé Soul is more than a name  it’s a voice, a mission, and a movement. Blending Afro-soul, folk, gospel, and conscious pop, his music is rooted in love, service, and storytelling. As a seasoned humanitarian, Domé Soul transforms global struggles into soul-stirring anthems of healing and hope. With powerful duets, worshipful ballads, and uplifting grooves, his debut album “Light in the Dust” carries the listener through loss, faith, brotherhood, and resilience. Whether singing for the voiceless or celebrating divine light, Domé Soul invites you to journey with him where brokenness becomes beauty.
 
-Fun Facts:
-
-Domé Soul has over 15 years of experience as a humanitarian aid worker.
-He blends Ibibio, folk, gospel, and acoustic African influences.
-His first single “Where the Light Lives” features the soulful vocals of Daniella Dee (ElleDee)..</p>
+  <!-- OTHER SECTIONS (Bio, Countdown, Mission, etc.) -->
+  <section id="bio">
+    <h2>Artist Bio</h2>
+    <p>Domé Soul is an Afro-soul artist, storyteller, and humanitarian whose voice carries the dust of forgotten places and the fire of human resilience.</p>
   </section>
-  <!-- COUNTDOWN -->
+
   <section id="countdown">
-    <h2>Next Release In:</h2>
+    <h2>Countdown to Release</h2>
     <div id="timer">
-      <span id="days">00</span>d
-      <span id="hours">00</span>h
-      <span id="minutes">00</span>m
-      <span id="seconds">00</span>s
+      <span id="days">--</span> :
+      <span id="hours">--</span> :
+      <span id="minutes">--</span> :
+      <span id="seconds">--</span>
     </div>
   </section>
 
-  <!-- SOUL MISSION -->
   <section id="mission">
     <h2>Soul Mission</h2>
-    <p>Nominate someone in need and bring light to their story.</p>
-    <a href="https://forms.gle/qVmY5bdHN1ck4jKeA" class="btn" target="_blank">Fill the Nomination Form</a>
-    <a href="mailto:udoekongud@gmail.com?subject=Soul%20Mission%20Nomination" class="btn">Nominate via Email</a>
+    <p>We give back to those in need through music, donations, and humanitarian outreach.</p>
+    <a href="#" class="btn">Nominate a Soul</a>
+    <a href="#" class="btn">Support a Mission</a>
   </section>
 
-  <!-- QUOTES -->
   <section id="quotes">
-    <h2>Words of Light</h2>
+    <h2>Fan Reflections</h2>
     <div class="quote-slider">
-      <div class="quote active">"This song was born from pain, but it carries peace." – Domé Soul</div>
-      <div class="quote">"We’re not just making music — we’re making room for hope." – Domé Soul</div>
-      <div class="quote">"I don't sing for gold or fame, But for the child with no known name." – Domé Soul</div>
-      <div class="quote">"Where the Light Lives is where love remembers us, even in the dark." – Domé Soul</div>
+      <div class="quote active">“Your voice tells stories I feel but can't speak.”</div>
+      <div class="quote">“Domé Soul brings light to forgotten places.”</div>
     </div>
   </section>
 
-  <!-- SHARE -->
-  <section class="share">
-    <h2>Share the Light</h2>
-    <div class="share-buttons">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://domesoul.github.io/domesoul-site/" target="_blank">Facebook</a>
-      <a href="https://twitter.com/intent/tweet?url=https://domesoul.github.io/domesoul-site/&text=Listen%20to%20Dom%C3%A9%20Soul" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://domesoul.github.io/domesoul-site/" target="_blank">LinkedIn</a>
-      <a href="https://api.whatsapp.com/send?text=Listen%20to%20Dom%C3%A9%20Soul%20%E2%80%93%20Light%20in%20the%20Dust%20https://domesoul.github.io/domesoul-site/" target="_blank">WhatsApp</a>
-    </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: dome.soul@example.com</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>© 2025 Domé Soul. All rights reserved.</p>
-    <p><a href="mailto:udoekongud@gmail.com">udoekongud@gmail.com</a></p>
+  <footer>
+    <p>&copy; 2025 Domé Soul</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-/* Actually include styles.css link */
