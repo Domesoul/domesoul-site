@@ -3,96 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domé Soul – Light in the Dust</title>
+  <title>Domé Soul</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="site-nav">
-    <div class="brand">
-      Domé Soul
-      <span class="tagline">Afro-soul troubadour & humanitarian</span>
+  <header class="hero-carousel">
+    <div class="slide active" style="background-image: url('images/dust-mote.jpg');">
+      <div class="overlay"><h1>Light in the Dust</h1></div>
     </div>
-    <button class="nav-toggle" onclick="toggleNav()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#spotify">Listen</a></li>
-      <li><a href="#bio">Bio</a></li>
-      <li><a href="#countdown">Countdown</a></li>
-      <li><a href="#mission">Soul Mission</a></li>
-      <li><a href="#quotes">Quotes</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Domé Soul</h1>
-      <p>Where the Light Lives</p>
-      <a href="https://open.spotify.com/..." class="btn">Listen on Spotify</a>
+    <div class="slide" style="background-image: url('images/silhouetted-hands.jpg');">
+      <div class="overlay"><h1>Reach for Hope</h1></div>
     </div>
-  </section>
-<a href="dust-mote.html" class="theme-card">Dust Mote Macro</a>
-<a href="silhouetted-hands.html" class="theme-card">Silhouetted Hands</a>
-<a href="flickering-flame.html" class="theme-card">Flickering Flame</a>
-<a href="acacia-dawn.html" class="theme-card">Acacia Dawn</a>
-
-  <!-- FEATURED VISUAL THEMES -->
-  <section id="themes">
-    <h2>Light in the Dust – Visual Themes</h2>
-    <div class="theme-grid">
-      <div class="theme-card">Dust Mote Macro</div>
-      <div class="theme-card">Silhouetted Hands</div>
-      <div class="theme-card">Flickering Flame</div>
-      <div class="theme-card">Acacia Dawn</div>
+    <div class="slide" style="background-image: url('images/flickering-flame.jpg');">
+      <div class="overlay"><h1>Flame of Soul</h1></div>
     </div>
-  </section>
-
-  <!-- EMBED SPOTIFY PLAYER -->
-  <section id="spotify">
-    <div class="spotify-container">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/..." width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="slide" style="background-image: url('images/acacia-dawn.jpg');">
+      <div class="overlay"><h1>New Dawn</h1></div>
     </div>
-  </section>
+  </header>
 
-  <!-- OTHER SECTIONS (Bio, Countdown, Mission, etc.) -->
-  <section id="bio">
-    <h2>Artist Bio</h2>
-    <p>Domé Soul is an Afro-soul artist, storyteller, and humanitarian whose voice carries the dust of forgotten places and the fire of human resilience.</p>
-  </section>
+  <main>
+    <section id="spotify">
+      <h2>Listen on Spotify</h2>
+      <div class="spotify-container">
+        <iframe src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </section>
 
-  <section id="countdown">
-    <h2>Countdown to Release</h2>
-    <div id="timer">
-      <span id="days">--</span> :
-      <span id="hours">--</span> :
-      <span id="minutes">--</span> :
-      <span id="seconds">--</span>
-    </div>
-  </section>
+    <section id="countdown">
+      <h2>Next Release In:</h2>
+      <div id="timer"><span>00</span>:<span>00</span>:<span>00</span>:<span>00</span></div>
+    </section>
 
-  <section id="mission">
-    <h2>Soul Mission</h2>
-    <p>We give back to those in need through music, donations, and humanitarian outreach.</p>
-    <a href="#" class="btn">Nominate a Soul</a>
-    <a href="#" class="btn">Support a Mission</a>
-  </section>
+    <section id="mission">
+      <h2>Soul Mission</h2>
+      <p>Nominate someone in need and bring light to their story.</p>
+      <a class="btn" href="https://forms.gle/qVmY5bdHN1ck4jKeA">Nominate via Google Form</a>
+    </section>
 
-  <section id="quotes">
-    <h2>Fan Reflections</h2>
-    <div class="quote-slider">
-      <div class="quote active">“Your voice tells stories I feel but can't speak.”</div>
-      <div class="quote">“Domé Soul brings light to forgotten places.”</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: dome.soul@example.com</p>
-  </section>
+    <section id="quotes">
+      <h2>Words That Inspire</h2>
+      <div class="quote-slider">
+        <p class="quote active">"Music can heal the wounds that medicine cannot touch."</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Domé Soul</p>
