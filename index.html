@@ -1,104 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Add this in the <head> -->
-<link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
-<!-- Inside <body>, replace your current hero with this: -->
-<section class="hero swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <img src="assets/images/dust-mote.jpg" alt="Dust Mote">
-      <div class="hero-content">
-        <h1>Domé Soul</h1>
-        <p>Where the Light Lives</p>
-        <a href="https://open.spotify.com/artist/xyz" class="btn">Listen on Spotify</a>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="assets/images/silhouetted-hands.jpg" alt="Silhouetted Hands">
-      <div class="hero-content">
-        <h1>Reach & Restore</h1>
-        <p>Humanity, One Soul at a Time</p>
-        <a href="#mission" class="btn">Explore Soul Mission</a>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="assets/images/flickering-flame.jpg" alt="Flickering Flame">
-      <div class="hero-content">
-        <h1>Kindle the Light</h1>
-        <p>Music with a Purpose</p>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <img src="assets/images/acacia-dawn.jpg" alt="Acacia Dawn">
-      <div class="hero-content">
-        <h1>Africa Awakens</h1>
-        <p>Stories from the Dust</p>
-      </div>
-    </div>
-  </div>
-</section>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Domé Soul</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="hero-carousel">
-    <div class="slide active" style="background-image: url('images/dust-mote.jpg');">
-      <div class="overlay"><h1>Light in the Dust</h1></div>
+  <div class="hero-carousel">
+    <div class="slide fade">
+      <img src="assets/images/dust-mote.jpg" alt="Dust Mote">
+      <div class="caption">Domé Soul — Light in the Dust</div>
     </div>
-    <div class="slide" style="background-image: url('images/silhouetted-hands.jpg');">
-      <div class="overlay"><h1>Reach for Hope</h1></div>
+    <div class="slide fade">
+      <img src="assets/images/silhouetted-hands.jpg" alt="Silhouetted Hands">
+      <div class="caption">Reaching for Humanity</div>
     </div>
-    <div class="slide" style="background-image: url('images/flickering-flame.jpg');">
-      <div class="overlay"><h1>Flame of Soul</h1></div>
+    <div class="slide fade">
+      <img src="assets/images/flickering-flame.jpg" alt="Flickering Flame">
+      <div class="caption">Soul on Fire</div>
     </div>
-    <div class="slide" style="background-image: url('images/acacia-dawn.jpg');">
-      <div class="overlay"><h1>New Dawn</h1></div>
+    <div class="slide fade">
+      <img src="assets/images/acacia-dawn.jpg" alt="Acacia Dawn">
+      <div class="caption">Hope at Sunrise</div>
     </div>
-  </header>
-  <main>
-    <section id="spotify">
-      <h2>Listen on Spotify</h2>
-      <div class="spotify-container">
-        <iframe src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-    </section>
-    <section id="countdown">
-      <h2>Next Release In:</h2>
-      <div id="timer"><span>00</span>:<span>00</span>:<span>00</span>:<span>00</span></div>
-    </section>
-    <section id="mission">
-      <h2>Soul Mission</h2>
-      <p>Nominate someone in need and bring light to their story.</p>
-      <a class="btn" href="https://forms.gle/qVmY5bdHN1ck4jKeA">Nominate via Google Form</a>
-    </section>
-    <section id="quotes">
-      <h2>Words That Inspire</h2>
-      <div class="quote-slider">
-        <p class="quote active">"Music can heal the wounds that medicine cannot touch."</p>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Domé Soul</p>
-  </footer>
-  <script src="script.js"></script>
-  <!-- Include Swiper JS at the bottom of <body> -->
-<script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.mySwiper', {
-    effect: 'fade',
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    fadeEffect: {
-      crossFade: true
-    },
-  });
-</script>
+  </div>
 </body>
 </html>
