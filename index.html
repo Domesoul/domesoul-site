@@ -3,65 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domé Soul – Light in the Dust</title>
+  <meta name="description" content="Domé Soul - Where the Light Lives.">
+  <meta property="og:title" content="Domé Soul" />
+  <meta property="og:description" content="Where the Light Lives - Listen Now" />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:url" content="https://domesoul.github.io/domesoul-site/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Domé Soul</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-nav">
+    <div class="brand">
+      Domé Soul
+      <span class="tagline">Where the Light Lives</span>
+    </div>
+    <button class="nav-toggle" id="navToggle">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#spotify">Listen</a>
+      <a href="#mission">Mission</a>
+      <a href="#quotes">Quotes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<nav class="site-nav">
-  <div class="brand">Domé Soul<span class="tagline">Where the Light Lives</span></div>
-  <button class="nav-toggle" onclick="toggleNav()">☰</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#spotify">Listen</a></li>
-    <li><a href="#mission">Mission</a></li>
-    <li><a href="#quotes">Quotes</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <section class="hero splide" id="hero">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><img src="dust-mote.jpg" alt="Dust Mote" /></li>
+        <li class="splide__slide"><img src="silhouetted-hands.jpg" alt="Silhouetted Hands" /></li>
+        <li class="splide__slide"><img src="flickering-flame.jpg" alt="Flickering Flame" /></li>
+        <li class="splide__slide"><img src="acacia-dawn.jpg" alt="Acacia Dawn" /></li>
+      </ul>
+    </div>
+    <div class="hero-content">
+      <h1>Where the Light Lives</h1>
+      <p>Music, Mission & Meaning</p>
+      <a href="#spotify" class="btn">Listen Now</a>
+    </div>
+  </section>
 
-<section id="hero" class="hero-carousel">
-  <div class="hero-slide" style="background-image: url('dust-mote.jpg')">
-    <div class="hero-text"><h1>Domé Soul</h1><p>Where the Light Lives</p><a href="#spotify" class="btn">Listen on Spotify</a></div>
-  </div>
-  <div class="hero-slide" style="background-image: url('silhouetted-hands.jpg')"></div>
-  <div class="hero-slide" style="background-image: url('flickering-flame.jpg')"></div>
-  <div class="hero-slide" style="background-image: url('acacia-dawn.jpg')"></div>
-</section>
+  <section id="spotify">
+    <div class="spotify-container">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB?utm_source=generator"
+        width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+    </div>
+  </section>
 
-<section id="spotify">
-  <h2>Now Streaming</h2>
-  <div class="spotify-container">
-    <iframe src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB" width="100%" height="352" frameborder="0" allow="encrypted-media"></iframe>
-  </div>
-</section>
+  <section id="mission">
+    <h2>Soul Mission</h2>
+    <p>Nominate someone in need and bring light to their story.</p>
+    <a href="mailto:udoekongud@gmail.com?subject=Soul%20Mission%20Nomination" class="btn">Nominate via Email</a>
+  </section>
 
-<section id="mission">
-  <h2>Soul Mission</h2>
-  <p>Nominate someone in need and bring light to their story.</p>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSft.../viewform?embedded=true" width="100%" height="600" frameborder="0">Loading…</iframe>
-  <a href="mailto:udoekongud@gmail.com?subject=Nominate" class="btn">Nominate via Email</a>
-</section>
-
-<section id="quotes">
-  <h2>Inspiration</h2>
-  <div class="quote-slider">
-    <div class="quote active">“Music is the light that reaches where words cannot.”</div>
-    <div class="quote">“Every soul has a song, let yours be heard.”</div>
-    <div class="quote">“Hope sounds like Domé Soul.”</div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:udoekongud@gmail.com">udoekongud@gmail.com</a></p>
-</section>
-
-<footer>
-  <p>&copy; 2025 Domé Soul • All rights reserved</p>
-  <p><a href="#hero">Back to top</a></p>
-</footer>
-
-<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Domé Soul</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
