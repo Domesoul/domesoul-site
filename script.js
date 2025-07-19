@@ -1,10 +1,26 @@
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let slides = document.getElementsByClassName("carousel");
-  for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+// Hero Slider
+let heroIndex = 0;
+function rotateHero() {
+  const slides = document.querySelectorAll('.hero-slide');
+  slides.forEach(s => s.classList.remove('active'));
+  heroIndex = (heroIndex + 1) % slides.length;
+  slides[heroIndex].classList.add('active');
+  setTimeout(rotateHero, 5000);
+}
+rotateHero();
+
+// Quote Carousel
+let quoteIndex = 0;
+function rotateQuote() {
+  const quotes = document.querySelectorAll('.quote');
+  quotes.forEach(q => q.classList.remove('active'));
+  quoteIndex = (quoteIndex + 1) % quotes.length;
+  quotes[quoteIndex].classList.add('active');
+  setTimeout(rotateQuote, 7000);
+}
+rotateQuote();
+
+// Navigation Toggle for Mobile
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
 }
