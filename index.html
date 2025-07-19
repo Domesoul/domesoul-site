@@ -2,65 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domé Soul - Light in the Dust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official site of Domé Soul – music, mission, and soul outreach." />
+  <meta property="og:title" content="Domé Soul" />
+  <meta property="og:description" content="Listen to the sound. Join the mission." />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:url" content="https://domesoul.github.io/domesoul-site/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="twitter-card.jpg" />
+  <title>Domé Soul</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Domé Soul</div>
-    <ul class="nav-links">
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="brand">
+      Domé Soul
+      <span class="tagline">Where the Light Lives</span>
+    </div>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#hero">Home</a></li>
-      <li><a href="#listen">Listen</a></li>
-      <li><a href="#watch">Watch</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#spotify">Listen</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <header id="hero" class="carousel-container">
-    <div class="carousel fade">
-      <img src="dust-mote.jpg" alt="Dust Mote" />
-      <div class="overlay-text">Children of the Dust, Rise in Light</div>
-    </div>
-    <div class="carousel fade">
-      <img src="silhouetted-hands.jpg" alt="Hands" />
-      <div class="overlay-text">Reach for Hope</div>
-    </div>
-    <div class="carousel fade">
-      <img src="flickering-flame.jpg" alt="Flame" />
-      <div class="overlay-text">Where the Light Lives</div>
-    </div>
-    <div class="carousel fade">
-      <img src="acacia-dawn.jpg" alt="Acacia Dawn" />
-      <div class="overlay-text">From the Soil, We Rise</div>
-    </div>
-  </header>
-
-  <section id="listen">
-    <h2>Listen on Spotify</h2>
-    <div class="embed-wrapper">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB?utm_source=generator" 
-        width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  <!-- Hero Carousel -->
+  <section class="hero">
+    <div class="carousel">
+      <div class="slide fade" style="background-image: url('dust-mote.jpg');">
+        <div class="hero-content">
+          <h1>Domé Soul</h1>
+          <p>Where the Light Lives</p>
+          <a href="#spotify" class="btn">Listen on Spotify</a>
+        </div>
+      </div>
+      <div class="slide fade" style="background-image: url('silhouetted-hands.jpg');"></div>
+      <div class="slide fade" style="background-image: url('flickering-flame.jpg');"></div>
+      <div class="slide fade" style="background-image: url('acacia-dawn.jpg');"></div>
     </div>
   </section>
 
-  <section id="watch">
-    <h2>Watch on YouTube</h2>
-    <div class="embed-wrapper">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-        title="YouTube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- Spotify Section -->
+  <section id="spotify">
+    <h2>Now Streaming</h2>
+    <div class="spotify-container">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Domé Soul</h2>
-    <p>Domé Soul is a voice for the forgotten — blending sound, story, and soul from the heart of Africa to the world.</p>
+  <!-- Soul Mission Section -->
+  <section id="mission">
+    <h2>Soul Mission</h2>
+    <p>Nominate someone in need and bring light to their story.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSft.../viewform?embedded=true" width="100%" height="800" frameborder="0">Loading…</iframe>
+    <a href="mailto:udoekongud@gmail.com?subject=Soul%20Mission%20Nomination" class="btn">Nominate via Email</a>
   </section>
 
+  <!-- Quote Carousel -->
+  <section id="quotes">
+    <h2>Inspiration</h2>
+    <div class="quote-slider">
+      <div class="quote active">“Music is the light that reaches where words cannot.”</div>
+      <div class="quote">“Every soul has a song, let yours be heard.”</div>
+      <div class="quote">“Hope sounds like Domé Soul.”</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:udoekongud@gmail.com">udoekongud@gmail.com</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+    <p><a href="#">Back to Top</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    let index = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      index++;
+      if (index > slides.length) index = 1;
+      slides[index - 1].style.display = "block";
+      setTimeout(showSlides, 5000);
+    }
+    showSlides();
+
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
