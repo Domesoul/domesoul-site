@@ -147,6 +147,22 @@ a:hover {
   transform: translateY(-2px);
 }
 
+arousel-container {
+  position: relative;
+  max-height: 90vh;
+  overflow: hidden;
+}
+.carousel {
+  display: none;
+  position: relative;
+}
+.carousel img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+
 /* Section Layout */
 section {
   padding: 80px 20px;
