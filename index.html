@@ -1,1 +1,87 @@
-<!-- Fixed index.html content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domé Soul - Light in the Dust</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="site-nav">
+    <ul>
+      <li><a href="#spotify">Listen</a></li>
+      <li><a href="#countdown">Countdown</a></li>
+      <li><a href="#mission">Soul Mission</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Domé Soul</h1>
+      <p>Where the Light Lives</p>
+      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB" class="btn" target="_blank" rel="noopener">Listen on Spotify</a>
+    </div>
+  </header>
+
+  <!-- Spotify Embed Section -->
+  <section id="spotify" class="embed">
+    <h2>Listen Now</h2>
+    <div class="spotify-container">
+      <iframe
+        src="https://open.spotify.com/embed/artist/3CQUZpVh6x10v1v49OqfkB"
+        width="100%"
+        height="380"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Countdown Timer Section -->
+  <section id="countdown" class="countdown">
+    <h2>Next Release In:</h2>
+    <div id="timer">
+      <span id="days">00</span>d
+      <span id="hours">00</span>h
+      <span id="minutes">00</span>m
+      <span id="seconds">00</span>s
+    </div>
+  </section>
+
+  <!-- Soul Mission Form Section -->
+  <section id="mission" class="mission">
+    <h2>Soul Mission</h2>
+    <p>Nominate someone in need and bring light to their story.</p>
+    <!-- Replace PLACEHOLDER_FORM_ID with your actual Google Form ID after embedding -->
+    <iframe src="https://docs.google.com/forms/d/1p0mPzzOLWgpKxctZhBDi8wMTGi7P7DusW_lUTta-2oI/edit?pli=1&pli=1/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <!-- Fallback Email Nomination Button -->
+    <div style="text-align:center; margin-top:20px;">
+      <a href="mailto:udoekongud@gmail.com?subject=Soul%20Mission%20Nomination" class="btn">Nominate via Email</a>
+    </div>
+  </section>
+
+  <!-- Quotes Slider Section -->
+  <section id="quotes" class="quotes">
+    <h2>Words of Light</h2>
+    <div class="quote-slider">
+      <div class="quote active">"This song was born from pain, but it carries peace." – Domé Soul</div>
+      <div class="quote">"We’re not just making music — we’re making room for hope." – Domé Soul</div>
+      <div class="quote">"Where the Light Lives is where love remembers us, even in the dark." – Domé Soul</div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <p>© 2025 Domé Soul. All rights reserved.</p>
+    <p><a href="mailto:udoekongud@gmail.com">udoekongud@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
