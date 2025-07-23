@@ -1,5 +1,4 @@
 
-/* Domé Soul Website Styles */
 * {
   margin: 0;
   padding: 0;
@@ -26,20 +25,15 @@ h1, h2 {
 }
 
 .hero {
-  background: #000 url('dust-mote.jpg') no-repeat center center/cover;
+  background: #000;
   color: white;
   text-align: center;
   padding: 100px 20px;
 }
 
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
 .tagline {
   font-size: 1.4em;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .btn {
@@ -50,7 +44,6 @@ h1, h2 {
   border-radius: 6px;
   text-decoration: none;
   margin-top: 10px;
-  transition: background 0.3s ease;
 }
 
 .btn:hover {
@@ -58,16 +51,8 @@ h1, h2 {
 }
 
 .carousel {
-  background: #fff;
-  padding: 40px 20px;
   text-align: center;
-}
-
-.quotes {
-  max-width: 600px;
-  margin: auto;
-  font-style: italic;
-  font-size: 1.2em;
+  padding: 40px 20px;
 }
 
 .soul-mission {
@@ -93,8 +78,6 @@ footer .socials a:hover {
   color: white;
 }
 
-
-/* Navigation Bar */
 .navbar {
   background-color: #111;
   padding: 10px 20px;
@@ -129,7 +112,6 @@ footer .socials a:hover {
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 4px;
-  transition: background 0.3s ease;
 }
 
 .nav-links li a:hover {

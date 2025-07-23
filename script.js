@@ -1,5 +1,4 @@
 
-// Countdown Timer for Domé Soul
 document.addEventListener("DOMContentLoaded", function () {
   const countdown = document.getElementById("countdown");
   const releaseDate = new Date("August 10, 2025 00:00:00").getTime();
