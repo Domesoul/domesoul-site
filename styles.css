@@ -1,0 +1,138 @@
+
+/* Domé Soul Website Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #faf7f2;
+  color: #222;
+  line-height: 1.6;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.hero {
+  background: #000 url('dust-mote.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e66b2b;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #cc5e26;
+}
+
+.carousel {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.quotes {
+  max-width: 600px;
+  margin: auto;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.soul-mission {
+  background: #ffeedd;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  color: white;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  background-color: #111;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 1.4em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #e66b2b;
+  color: #fff;
+}
