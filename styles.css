@@ -181,3 +181,76 @@ footer .socials a:hover {
   background-color: #e66b2b;
   color: #fff;
 }
+.music-section {
+  padding: 4rem 2rem;
+  background-color: #faf7f2;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.music-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+}
+
+.music-card img {
+  width: 100%;
+  height: auto;
+}
+
+.music-card h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.music-card p {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.btn-listen,
+.btn-story {
+  display: inline-block;
+  margin: 0.5rem 0.3rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #e65f2b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-story {
+  background-color: #444;
+}
+
+.btn-listen:hover {
+  background-color: #c74a19;
+}
+.btn-story:hover {
+  background-color: #222;
+}
+
