@@ -10,38 +10,6 @@ body { font-family: 'Segoe UI', sans-serif; background: #faf7f2; color: #222; li
 .nav-links li a { color: #fff; text-decoration: none; padding: 6px 12px; border-radius: 4px; }
 .nav-links li a:hover, .nav-links li a.active { background-color: #e66b2b; color: #fff; }
 
-/* Hero */
-.hero {
-  background-image: url('og-image.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 12px;
-}
-.hero-title { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; }
-.hero-subtitle { font-size: 1.5rem; margin-bottom: 2rem; }
-.countdown-timer { font-size: 1.8rem; font-weight: bold; color: #fdd835; margin-bottom: 1.5rem; }
-.cta-button {
-  padding: 0.8rem 2rem;
-  background-color: #e65f2b;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-.cta-button:hover { background-color: #d14e1c; }
-
 /* Music */
 .music-section { padding: 4rem 2rem; background-color: #faf7f2; text-align: center; }
 .section-title { font-size: 2.5rem; margin-bottom: 2rem; }
@@ -78,13 +46,7 @@ body { font-family: 'Segoe UI', sans-serif; background: #faf7f2; color: #222; li
 .btn-listen:hover { background-color: #c74a19; }
 .btn-story:hover { background-color: #222; }
 
-footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-}
-
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -113,3 +75,10 @@ footer {
   cursor: pointer;
 }
 .close:hover { color: black; }
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
