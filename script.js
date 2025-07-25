@@ -1,22 +1,18 @@
 
-// Open modal
-function openModal(id) {
-  document.getElementById(id).style.display = "block";
+function openModal(songId) {
+  document.getElementById('modal-' + songId).style.display = "block";
 }
-
-// Close modal
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
+function closeModal(songId) {
+  document.getElementById('modal-' + songId).style.display = "none";
 }
-
-// Close on outside click
 window.onclick = function(event) {
-  document.querySelectorAll('.modal').forEach(modal => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach(modal => {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   });
-};
+}
 
 // Countdown Timer
 document.addEventListener("DOMContentLoaded", function () {
