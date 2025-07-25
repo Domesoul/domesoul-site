@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Music - Domé Soul</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Domé Soul — Music</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 <nav class="navbar">
@@ -17,25 +20,47 @@
     </ul>
   </div>
 </nav>
+
 <section class="music-section">
   <h2 class="section-title">🎵 Latest Music</h2>
   <div class="music-grid">
+
     <div class="music-card">
-      <img src="og-image.jpg" alt="Where the Light Lives">
+      <img src="hero1.jpg" alt="Where the Light Lives">
       <h3>Where the Light Lives</h3>
       <p>Afro-soul | Single</p>
       <a href="#" class="btn-listen">Listen</a>
-      <a href="#" class="btn-story">Behind the Song</a>
+      <a href="#" class="btn-story" onclick="openModal('light')">Behind the Song</a>
     </div>
+
     <div class="music-card">
-  <img src="feels-like-heaven.jpg" alt="Feels Like Heaven With You">
-  <h3>Feels Like Heaven With You</h3>
-  <p>Duet | Domé Soul</p>
-  <a href="#" class="btn-listen">Listen</a>
-  <a href="#" class="btn-story">Behind the Song</a>
-</div>
+      <img src="hero1.jpg" alt="Feels Like Heaven">
+      <h3>Feels Like Heaven With You</h3>
+      <p>Duet | Domé Soul</p>
+      <a href="#" class="btn-listen">Listen</a>
+      <a href="#" class="btn-story" onclick="openModal('heaven')">Behind the Song</a>
+    </div>
+
   </div>
 </section>
+
+<!-- Modals -->
+<div id="modal-light" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('light')">&times;</span>
+    <h2>Where the Light Lives</h2>
+    <p>This track reflects the inner fire that keeps us going — a gospel-infused Afro-soul anthem of purpose and resilience.</p>
+  </div>
+</div>
+
+<div id="modal-heaven" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('heaven')">&times;</span>
+    <h2>Feels Like Heaven With You</h2>
+    <p>A romantic duet capturing the softness of true love — blending soulful harmonies and sunset warmth.</p>
+  </div>
+</div>
+
 <footer>
   <p>&copy; 2025 Domé Soul. All rights reserved.</p>
 </footer>
