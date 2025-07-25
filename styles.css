@@ -470,4 +470,21 @@ footer {
   font-size: 2.5rem;
   font-weight: bold;
 }
+.hero-behind {
+  height: 300px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.hero-behind h1 {
+  font-size: 2.5rem;
+}
+.content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
