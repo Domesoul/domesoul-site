@@ -1,1 +1,1 @@
-// JS functionality if needed
+console.log('Domé Soul site loaded');
