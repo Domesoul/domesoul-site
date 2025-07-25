@@ -523,3 +523,53 @@ footer {
   border-radius: 5px;
   margin-top: 1rem;
 }
+.music-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.music-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  max-width: 320px;
+  transition: transform 0.3s;
+}
+
+.music-card:hover {
+  transform: translateY(-5px);
+}
+
+.cover-art {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.btn-group {
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 10px 18px;
+  margin: 0 0.3rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #ec5b2c;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #eaeaea;
+  color: #333;
+}
