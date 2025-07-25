@@ -448,3 +448,11 @@ footer {
     padding: 0.5rem 1rem;
   }
 }
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+}
+
