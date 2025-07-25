@@ -353,4 +353,58 @@ footer {
 .cta-button:hover {
   background-color: #cf4d1c;
 }
+.track-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem auto;
+  max-width: 340px;
+}
+
+.track-card img {
+  width: 100%;
+  height: auto;
+}
+
+.track-info {
+  padding: 1.2rem;
+}
+
+.track-info h3 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.track-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #e65c25;
+  color: #fff;
+}
+
 
