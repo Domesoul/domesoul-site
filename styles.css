@@ -311,35 +311,32 @@ footer {
 .donate-section {
   margin-top: 3rem;
 }
-.soul-mission-hero {
-  background-image: url('images/soul-mission-hero.png');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 450px;
+.soul-mission-hero.clean {
+  background-color: #f6e4d4;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.soul-mission-hero.clean .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 100%;
   color: white;
 }
 
-.soul-mission-hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  text-align: center;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 700px;
-}
-
-.soul-mission-hero h1 {
+.soul-mission-hero.clean h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.soul-mission-hero p {
+.soul-mission-hero.clean p {
   font-size: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .cta-button {
