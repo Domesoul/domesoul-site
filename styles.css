@@ -1,99 +1,41 @@
 
-/* Hero Section with spacing fix */
-.hero {
-  position: relative;
-  background: url('hero1.jpg') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 2.5rem 1.5rem 3.5rem;
-  border-radius: 16px;
-  color: #fff;
-  max-width: 720px;
-  margin: 0 1rem;
-}
-
-.hero-title {
-  font-size: 3.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.countdown-timer {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #ffe;
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: #e65f2b;
-  color: white;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-.cta-button:hover {
-  background-color: #c74a19;
-}
-
-/* Soul Mission Styling */
-.soul-mission-section {
-  max-width: 720px;
+/* Contact Page */
+.contact-section {
+  max-width: 600px;
   margin: 3rem auto;
   padding: 2rem;
-  background: #fff;
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.soul-mission-section h2,
-.soul-mission-section h3 {
-  text-align: center;
+.contact-section h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.mission-text {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.mission-form {
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-.mission-form input,
-.mission-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  width: 100%;
 }
 
 .btn-submit {
-  padding: 0.8rem;
-  font-size: 1rem;
   background-color: #e65f2b;
   color: white;
+  font-size: 1rem;
+  padding: 0.8rem 1.4rem;
   border: none;
   border-radius: 6px;
   font-weight: bold;
@@ -101,25 +43,6 @@
 }
 .btn-submit:hover {
   background-color: #c74a19;
-}
-
-.donate-section {
-  margin-top: 2.5rem;
-  text-align: center;
-}
-
-.donate-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.6rem 1.4rem;
-  background-color: #444;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.donate-link:hover {
-  background-color: #222;
 }
 
 /* Footer */
