@@ -2,151 +2,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Music - Domé Soul</title>
-    <link href="styles.css" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fcf8f3;
-            color: #222;
-        }
-
-        .navbar {
-            background-color: #111;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-
-        .navbar .active {
-            background: #e65c2e;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
-        }
-
-        .music-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .music-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 400px;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .music-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .music-card h3 {
-            margin: 0.5rem 0 0.2rem 0;
-            font-size: 1.5rem;
-        }
-
-        .music-card p {
-            color: #666;
-        }
-
-        .btn-listen, .btn-behind {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn-listen {
-            background-color: #e65c2e;
-            color: white;
-        }
-
-        .btn-behind {
-            background-color: #eee;
-            color: #444;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Domé Soul</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="music.html">Music</a></li>
+                <li><a href="soul-mission.html">Soul Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="navbar">
-    <div class="logo"><strong>Domé Soul</strong></div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="music.html" class="active">Music</a>
-        <a href="soul-mission.html">Soul Mission</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</div>
+    <section class="music-section">
+        <div class="song-card">
+            <img src="where_the_light_lives_400x400.png" alt="Where the Light Lives cover" />
+            <h2>Where the Light Lives</h2>
+            <p>New Single by Domé Soul</p>
+            <button>Listen Now</button>
+            <button class="secondary">Behind the Song</button>
+        </div>
 
-<section class="music-section">
-  <div class="song-card">
-    <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives cover">
-    <h2>Where the Light Lives</h2>
-    <p>New Single by Domé Soul</p>
-    <button>Listen Now</button>
-    <button class="secondary">Behind the Song</button>
-  </div>
-
-  <div class="song-card">
-    <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven With You cover">
-    <h2>Feels Like Heaven With You</h2>
-    <p>Romantic Afro-Soul Duet</p>
-    <button>Listen Now</button>
-    <button class="secondary">Behind the Song</button>
-  </div>
-</section>
-<!-- Behind the Song Button -->
-<button class="btn-secondary" onclick="openModal('modal-light')">Behind the Song</button>
-
-<!-- Modal -->
-<div id="modal-light" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal-light')">&times;</span>
-    <h3>Where the Light Lives</h3>
-    <p>This song is a journey through pain and purpose. Written under a tree in Zamzam Camp, North Darfur, it speaks for every child searching for light in the dust.</p>
-  </div>
-</div>
-
-    <div class="music-card">
-        <img src="images/feels-like-heaven.jpg" alt="Feels Like Heaven With You cover">
-        <h3>Feels Like Heaven With You</h3>
-        <p>Romantic Afro-Soul Duet</p>
-        <a href="#" class="btn-listen">Listen Now</a>
-        <a href="#" class="btn-behind">Behind the Song</a>
-    </div>
-</section>
-<!-- Behind the Song Button -->
-<button class="btn-secondary" onclick="openModal('modal-heaven')">Behind the Song</button>
-
-<!-- Modal -->
-<div id="modal-heaven" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal-heaven')">&times;</span>
-    <h3>Feels Like Heaven With You</h3>
-    <p>This duet is a soft embrace — the feeling of peace in someone’s presence. It’s about soul-level love: quiet, honest, and healing.</p>
-  </div>
-</div>
-
+        <div class="song-card">
+            <img src="feels_like_heaven_400x400.png" alt="Feels Like Heaven With You cover" />
+            <h2>Feels Like Heaven With You</h2>
+            <p>Romantic Afro-Soul Duet</p>
+            <button>Listen Now</button>
+            <button class="secondary">Behind the Song</button>
+        </div>
+    </section>
 </body>
 </html>
