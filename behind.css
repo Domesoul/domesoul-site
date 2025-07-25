@@ -1,0 +1,47 @@
+.hero-behind {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+.hero-behind h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.behind-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: #fefaf4;
+}
+
+.behind-section h2 {
+  color: #dd5726;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.behind-section .lyrics {
+  white-space: pre-wrap;
+  background: #fff;
+  padding: 1rem;
+  border-left: 4px solid #f0643f;
+  font-family: 'Courier New', monospace;
+}
+
+.music-links .btn {
+  background-color: #f0643f;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
