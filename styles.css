@@ -286,3 +286,28 @@ footer {
   text-align: center;
   padding: 20px;
 }
+.soul-mission-section {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.soul-mission-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.soul-mission-section h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.mission-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.donate-section {
+  margin-top: 3rem;
+}
