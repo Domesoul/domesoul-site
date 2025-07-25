@@ -146,3 +146,14 @@ footer {
 .donate-link:hover {
   background-color: #222;
 }
+
+
+.countdown-timer {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #fff8e6;
+  background: rgba(0,0,0,0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
