@@ -56,6 +56,76 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Music section */
+.music-section {
+  padding: 40px;
+  background: #fdf9f4;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.music-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.music-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.music-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.music-card h2 {
+  font-size: 1.25rem;
+  margin: 15px 0;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #ff6b3d;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e35528;
+}
+
+.btn.secondary {
+  background: #333;
+}
+
+.btn.secondary:hover {
+  background: #111;
+}
+
+
 .music-page {
   padding: 2rem;
   text-align: center;
