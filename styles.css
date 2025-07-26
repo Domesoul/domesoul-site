@@ -219,4 +219,7 @@ body {
 .footer-socials a:hover {
   color: #f35b26;
 }
+html {
+  scroll-behavior: smooth;
+}
 
