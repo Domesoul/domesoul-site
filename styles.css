@@ -1,194 +1,91 @@
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdf9f4;
-    color: #111;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf9f4;
+  color: #1a1a1a;
 }
 
 header {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 2em;
-}
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #111;
-  padding: 15px 30px;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.navbar .logo {
-  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
   font-weight: bold;
 }
 
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+nav {
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-.navbar .nav-links li a {
+nav a {
   color: #fff;
+  margin: 0 1rem;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
 }
 
-.navbar .nav-links li a:hover,
-.navbar .nav-links li a.active {
+nav a:hover {
   color: #ff6b3d;
 }
 
-footer {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Music section */
-.music-section {
-  padding: 40px;
-  background: #fdf9f4;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #111;
-}
-
-.music-grid {
+.tracks-section {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
-}
-
-.music-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  width: 300px;
-  padding: 20px;
-  text-align: center;
-}
-
-.music-card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.music-card h2 {
-  font-size: 1.25rem;
-  margin: 15px 0;
-}
-
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background: #ff6b3d;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #e35528;
-}
-
-.btn.secondary {
-  background: #333;
-}
-
-.btn.secondary:hover {
-  background: #111;
-}
-
-
-.music-page {
-  padding: 2rem;
-  text-align: center;
-}
-
-.music-grid {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  padding: 2rem;
 }
 
-.music-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 1rem;
-  max-width: 280px;
+.track-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
+  padding-bottom: 1.5rem;
 }
 
-.cover-art {
+.track-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  display: block;
+  border-bottom: 1px solid #eee;
 }
 
-.btn-group {
+.track-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
-.btn {
-  padding: 0.5rem 1rem;
-  margin: 0 0.3rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn-primary {
-  background-color: #ec5b2c;
-  color: white;
-}
-
-.btn-secondary {
-  background-color: #eee;
-  color: #333;
-}
-.story-btn {
-  background-color: #f8f8f8;
-  color: #d35400;
-  border: 2px solid #d35400;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  margin-top: 10px;
-  display: inline-block;
-  text-decoration: none;
+.button-group a {
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
-  transition: background-color 0.3s, color 0.3s;
-}
-.story-btn:hover {
-  background-color: #d35400;
-  color: #fff;
+  background-color: #ff6b3d;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
+.button-group a:hover {
+  background-color: #e85a2f;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
