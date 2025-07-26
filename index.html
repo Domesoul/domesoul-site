@@ -1,170 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domé Soul – Music with a Mission</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    .hero {
-      background-image: url('img/home-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      padding: 6em 2em;
-      text-align: center;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5em;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2em;
-    }
-    .hero .buttons a {
-      background: #f97316;
-      color: #fff;
-      padding: 0.75em 1.5em;
-      margin: 0 0.5em;
-      border-radius: 1em;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: background 0.3s ease;
-    }
-    .hero .buttons a:hover {
-      background: #ea580c;
-    }
-    .quick-links {
-      text-align: center;
-      padding: 4em 2em;
-    }
-    .quick-links h2 {
-      margin-bottom: 1em;
-    }
-    .quick-links .link-grid {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      flex-wrap: wrap;
-    }
-    .quick-links .link-card {
-      background: #fff;
-      border-radius: 1em;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 2em;
-      width: 240px;
-    }
-    .link-card h3 {
-      margin-top: 0;
-    }
-    .link-card a {
-      display: inline-block;
-      margin-top: 1em;
-      text-decoration: none;
-      font-weight: bold;
-      color: #f97316;
-    }
-  </style>
+  <title>Domé Soul | Music With Purpose</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="navbar">
+    <div class="logo">Domé Soul</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header class="site-header">
-  <h1>Domé Soul</h1>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="music.html">Music</a>
-    <a href="soul-mission.html">Soul Mission</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Welcome to Domé Soul</h1>
-  <p>Afro-soul stories. Songs of light. Sounds that heal.</p>
-  <div class="buttons">
-    <a href="music.html">🎧 Listen Now</a>
-    <a href="soul-mission.html">💛 Soul Mission</a>
-  </div>
-</section>
-
-<!-- Quote Carousel Section -->
-<section class="quote-carousel">
-  <div class="quote-container">
-    <div class="quote active">“The light shines in the darkness, and the darkness has not overcome it.” — John 1:5</div>
-    <div class="quote">“Music is the soul’s voice when words fall short.” — Unknown</div>
-    <div class="quote">“Let your light shine before others…” — Matthew 5:16</div>
-    <div class="quote">“Even in dust, a melody can rise.” — Domé Soul</div>
-  </div>
-</section>
-
-<style>
-  .quote-carousel {
-    background: #f3f4f6;
-    padding: 3em 1em;
-    text-align: center;
-  }
-
-  .quote-container {
-    position: relative;
-    height: 100px;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
-  .quote {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    font-size: 1.3rem;
-    font-style: italic;
-    padding: 0 1em;
-  }
-
-  .quote.active {
-    opacity: 1;
-  }
-</style>
-
-<script>
-  let currentQuote = 0;
-  const quotes = document.querySelectorAll('.quote');
-  setInterval(() => {
-    quotes[currentQuote].classList.remove('active');
-    currentQuote = (currentQuote + 1) % quotes.length;
-    quotes[currentQuote].classList.add('active');
-  }, 5000); // Change quote every 5 seconds
-</script>
-
-<section class="quick-links">
-  <h2>Explore the Journey</h2>
-  <div class="link-grid">
-    <div class="link-card">
-      <h3>🎶 Latest Tracks</h3>
-      <p>Feel the soul in every lyric. Discover new releases.</p>
-      <a href="music.html">Explore →</a>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Domé Soul</h1>
+      <p>Where music meets heart, and every song tells a story of light.</p>
     </div>
-    <div class="link-card">
-      <h3>📖 Behind the Songs</h3>
-      <p>Read the stories and lyrics behind your favorites.</p>
-      <a href="behind-the-song-light.html">Read More →</a>
-    </div>
-    <div class="link-card">
-      <h3>✉️ Stay in Touch</h3>
-      <p>Subscribe for updates and soulful giveaways.</p>
-      <a href="contact.html">Join the List →</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <p>&copy; 2025 Domé Soul</p>
-</footer>
+  <section class="music-feature">
+    <h2>🎵 Featured Tracks</h2>
+    <div class="track-grid">
+      <div class="track-card">
+        <img src="where-the-light-lives-cover.png" alt="Where the Light Lives" />
+        <h3>Where the Light Lives</h3>
+        <div class="buttons">
+          <a href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N" class="btn">🎧 Listen on Spotify</a>
+          <a href="behind-the-song-light.html" class="btn alt">📖 Behind the Song</a>
+        </div>
+      </div>
+      <div class="track-card">
+        <img src="feels-like-heaven-cover.png" alt="Feels Like Heaven" />
+        <h3>Feels Like Heaven With You</h3>
+        <div class="buttons">
+          <a href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS" class="btn">🎧 Listen on Spotify</a>
+          <a href="behind-the-song-heaven.html" class="btn alt">📖 Behind the Song</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="cta-section">
+    <h2>❤️ Be Part of the Soul Mission</h2>
+    <p>Support someone in need or nominate a story for our outreach spotlight.</p>
+    <a href="soul-mission.html" class="btn">Nominate Now</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+  </footer>
 </body>
 </html>
