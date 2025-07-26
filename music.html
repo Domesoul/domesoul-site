@@ -2,39 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domé Soul - Music</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Music - Domé Soul</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header>Domé Soul</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="music.html">Music</a>
-  <a href="soul-mission.html">Soul Mission</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <header class="site-header">
+        <h1>Domé Soul</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="music.html" class="active">Music</a>
+            <a href="soul-mission.html">Soul Mission</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<section class="tracks-section">
-  <div class="track-card">
-    <img src="where_the_light_lives_400x400.png" alt="Where the Light Lives">
-    <h3>Where the Light Lives</h3>
-    <div class="button-group">
-      <a href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N" target="_blank">🎧 Listen on Spotify</a>
-      <a href="behind-the-song-light.html">📖 Behind the Song</a>
-    </div>
-  </div>
-  <div class="track-card">
-    <img src="feels_like_heaven_400x400.png" alt="Feels Like Heaven">
-    <h3>Feels Like Heaven With You</h3>
-    <div class="button-group">
-      <a href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS" target="_blank">🎧 Listen on Spotify</a>
-      <a href="behind-the-song-heaven.html">📖 Behind the Song</a>
-    </div>
-  </div>
-</section>
+    <main>
+        <h2 class="section-title">🎵 Latest Tracks</h2>
+        <div class="music-grid">
+            <div class="music-card">
+                <img src="img/light-cover.png" alt="Where the Light Lives">
+                <h3>Where the Light Lives</h3>
+                <div class="button-group">
+                    <a href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N" class="spotify-btn" target="_blank">🎧 Listen on Spotify</a>
+                    <a href="behind-the-song-light.html" class="story-btn">📖 Behind the Song</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <img src="img/heaven-cover.png" alt="Feels Like Heaven">
+                <h3>Feels Like Heaven With You</h3>
+                <div class="button-group">
+                    <a href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS" class="spotify-btn" target="_blank">🎧 Listen on Spotify</a>
+                    <a href="behind-the-song-heaven.html" class="story-btn">📖 Behind the Song</a>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<footer style="background:#111;color:#fff;text-align:center;padding:1rem;">© 2025 Domé Soul</footer>
+    <footer class="site-footer">
+        <p>&copy; 2025 Domé Soul</p>
+    </footer>
 </body>
 </html>
