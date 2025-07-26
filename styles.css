@@ -302,4 +302,13 @@ html {
 .join-now-btn:hover {
   background-color: #c24018;
 }
+#newsletter {
+  background: #fffdfb;
+  border-radius: 16px;
+  padding: 60px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
 
