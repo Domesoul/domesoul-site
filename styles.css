@@ -90,3 +90,41 @@ body {
     gap: 1rem;
   }
 }
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fffefc;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn {
+  background-color: #f35b26;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #d94916;
+}
+.btn.alt {
+  background-color: #222;
+}
+.btn.alt:hover {
+  background-color: #444;
+}
