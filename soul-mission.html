@@ -4,38 +4,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domé Soul | Soul Mission</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Soul Mission – Domé Soul</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .mission-hero {
+      background: url('img/soul-mission-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 6em 2em;
+    }
+    .mission-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    .mission-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .mission-body {
+      padding: 4em 2em;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+    .mission-body h2 {
+      margin-bottom: 1em;
+    }
+    .mission-body p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2em;
+    }
+    .mission-buttons a {
+      display: inline-block;
+      margin: 0.5em 1em;
+      padding: 0.75em 1.5em;
+      background: #f97316;
+      color: white;
+      font-weight: bold;
+      border-radius: 1em;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .mission-buttons a:hover {
+      background: #ea580c;
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Domé Soul</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="soul-mission.html" class="active">Soul Mission</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title">Our Soul Mission</h1>
-      <p class="hero-subtitle">Music meets mission — every song, a story of hope.</p>
-    </div>
-  </section>
+<header class="site-header">
+  <h1>Domé Soul</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="soul-mission.html" class="active">Soul Mission</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <main class="mission-main">
-    <section class="mission-section">
-      <h2>Music with a Purpose</h2>
-      <p>Every melody we release contributes to something bigger. From community stories to direct donations, your support powers healing.</p>
-    </section>
-  </main>
+<section class="mission-hero">
+  <h1>Our Soul Mission</h1>
+  <p>It’s more than a phrase — it’s a purpose. We give back through stories, songs, and service to those in need.</p>
+</section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
-  </footer>
+<section class="mission-body">
+  <h2>Music with a Purpose</h2>
+  <p>
+    “Soul Mission” is where the music meets the need.<br>
+    Every stream, every song, and every soul reached is part of a movement to uplift the poor, support families, and bring light where it's darkest.
+  </p>
+
+  <h2>Be the Light</h2>
+  <p>
+    Know someone who could use a little kindness?<br>
+    Nominate them below. Or support our efforts with a donation.
+  </p>
+
+  <div class="mission-buttons">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdltid1Fz_S71oyInNtvwuKCxtm54zivkE7g08dbrjZ6zfGqQ/viewform" target="_blank">Nominate Someone</a>
+    <a href="#" target="_blank">Donate Now</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Domé Soul</p>
+</footer>
+
 </body>
 </html>
