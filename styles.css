@@ -128,3 +128,35 @@ body {
 .btn.alt:hover {
   background-color: #444;
 }
+.site-footer {
+  background-color: #f8f8f8;
+  color: #444;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+.footer-links {
+  margin-top: 0.5rem;
+}
+.footer-links a {
+  margin: 0 10px;
+  color: #666;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: #f35b26;
+}
+.newsletter {
+  background: #fff8f3;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.newsletter h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.newsletter p {
+  margin-bottom: 1.5rem;
+  color: #444;
+}
