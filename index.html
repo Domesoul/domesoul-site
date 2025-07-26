@@ -1,32 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domé Soul - Home</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Domé Soul – Music with a Mission</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .hero {
+      background-image: url('img/home-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6em 2em;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2em;
+    }
+    .hero .buttons a {
+      background: #f97316;
+      color: #fff;
+      padding: 0.75em 1.5em;
+      margin: 0 0.5em;
+      border-radius: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+    .hero .buttons a:hover {
+      background: #ea580c;
+    }
+    .quick-links {
+      text-align: center;
+      padding: 4em 2em;
+    }
+    .quick-links h2 {
+      margin-bottom: 1em;
+    }
+    .quick-links .link-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+    .quick-links .link-card {
+      background: #fff;
+      border-radius: 1em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2em;
+      width: 240px;
+    }
+    .link-card h3 {
+      margin-top: 0;
+    }
+    .link-card a {
+      display: inline-block;
+      margin-top: 1em;
+      text-decoration: none;
+      font-weight: bold;
+      color: #f97316;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Domé Soul</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="soul-mission.html">Soul Mission</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to Domé Soul</h1>
-    </section>
-  </main>
+<header class="site-header">
+  <h1>Domé Soul</h1>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="music.html">Music</a>
+    <a href="soul-mission.html">Soul Mission</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer>
-    <p>© 2025 Domé Soul</p>
-  </footer>
+<section class="hero">
+  <h1>Welcome to Domé Soul</h1>
+  <p>Afro-soul stories. Songs of light. Sounds that heal.</p>
+  <div class="buttons">
+    <a href="music.html">🎧 Listen Now</a>
+    <a href="soul-mission.html">💛 Soul Mission</a>
+  </div>
+</section>
+
+<section class="quick-links">
+  <h2>Explore the Journey</h2>
+  <div class="link-grid">
+    <div class="link-card">
+      <h3>🎶 Latest Tracks</h3>
+      <p>Feel the soul in every lyric. Discover new releases.</p>
+      <a href="music.html">Explore →</a>
+    </div>
+    <div class="link-card">
+      <h3>📖 Behind the Songs</h3>
+      <p>Read the stories and lyrics behind your favorites.</p>
+      <a href="behind-the-song-light.html">Read More →</a>
+    </div>
+    <div class="link-card">
+      <h3>✉️ Stay in Touch</h3>
+      <p>Subscribe for updates and soulful giveaways.</p>
+      <a href="contact.html">Join the List →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2025 Domé Soul</p>
+</footer>
+
 </body>
 </html>
