@@ -223,3 +223,36 @@ html {
   scroll-behavior: smooth;
 }
 
+.testimonial-carousel {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+.testimonial-carousel h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.testimonials {
+  position: relative;
+  height: 120px;
+}
+.testimonial {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: opacity 1s ease-in-out;
+  color: #444;
+}
+.testimonial span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #777;
+}
+.testimonial.active {
+  opacity: 1;
+}
