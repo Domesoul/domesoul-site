@@ -287,4 +287,19 @@ html {
   background-color: #fdf9f6;
   text-align: center;
 }
+.join-now-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e25320;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.join-now-btn:hover {
+  background-color: #c24018;
+}
 
