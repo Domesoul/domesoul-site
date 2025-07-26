@@ -160,3 +160,37 @@ body {
   margin-bottom: 1.5rem;
   color: #444;
 }
+.quote-carousel {
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+.quote-carousel h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.quotes {
+  position: relative;
+  height: 120px;
+}
+.quote {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: opacity 1s ease-in-out;
+  color: #444;
+}
+.quote span {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #777;
+}
+.quote.active {
+  opacity: 1;
+}
+
