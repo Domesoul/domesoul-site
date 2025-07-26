@@ -175,3 +175,20 @@ footer {
   background-color: #eee;
   color: #333;
 }
+.story-btn {
+  background-color: #f8f8f8;
+  color: #d35400;
+  border: 2px solid #d35400;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.story-btn:hover {
+  background-color: #d35400;
+  color: #fff;
+}
+
