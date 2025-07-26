@@ -7,37 +7,27 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Domé Soul</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="soul-mission.html">Soul Mission</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+
+<header class="navbar">
+  <div class="logo">Domé Soul</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="soul-mission.html">Soul Mission</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </header>
+
 <div class="carousel-hero">
-  <div class="carousel-slide active" style="background-image: url('img/slide1.jpg');">
-    <div class="carousel-caption">
-      <h1>Healing in Harmony</h1>
-      <p>Music as a balm for the soul</p>
-    </div>
-  </div>
-  <div class="carousel-slide" style="background-image: url('img/slide2.jpg');">
-    <div class="carousel-caption">
-      <h1>Where the Light Lives</h1>
-      <p>Spreading hope and love through the power of music.</p>
-    </div>
-  </div>
-  <div class="carousel-slide" style="background-image: url('img/slide3.jpg');">
-    <div class="carousel-caption">
-      <h1>Soul Mission</h1>
-      <p>Be a light for those in need.</p>
-    </div>
-  </div>
+  <div class="carousel-slide active" style="background-image: url('slide1.jpg');"></div>
+  <div class="carousel-slide" style="background-image: url('slide2.jpg');"></div>
+  <div class="carousel-slide" style="background-image: url('slide3.jpg');"></div>
 </div>
+
+<section class="cta-section">
+  <a href="music.html" class="btn">🎵 Explore Music</a>
+  <a href="soul-mission.html" class="btn alt">❤️ Join the Mission</a>
+</section>
 
 <script>
   let current = 0;
