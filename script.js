@@ -14,3 +14,11 @@ toggleBtn.addEventListener('click', () => {
     quotes[current].classList.add('active');
   }, 5000); // switch every 5 seconds
 </script>
+// Testimonial Carousel Script
+const testimonials = document.querySelectorAll('.testimonial');
+let tIndex = 0;
+setInterval(() => {
+  testimonials[tIndex].classList.remove('active');
+  tIndex = (tIndex + 1) % testimonials.length;
+  testimonials[tIndex].classList.add('active');
+}, 6000);
