@@ -412,4 +412,44 @@ html {
   font-size: 1rem;
   color: #555;
 }
+.donation-cta {
+  background: #fff4f0;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 16px;
+}
+
+.donation-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d34213;
+}
+
+.donation-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.donate-btn {
+  background: #e25320;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #c44114;
+}
+
+.donation-cta .note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 1rem;
+}
 
