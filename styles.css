@@ -452,4 +452,9 @@ html {
   color: #777;
   margin-top: 1rem;
 }
+.donate-btn.disabled {
+  background: #bbb;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
 
