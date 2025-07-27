@@ -311,4 +311,65 @@ html {
   margin: 40px auto;
   text-align: center;
 }
+.soul-mission.polished {
+  background: #fffdfb;
+  padding: 60px 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+.soul-mission.polished h2,
+.soul-mission.polished h3 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.soul-mission.polished .intro {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.soul-mission.polished p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+.impact-list li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #e25320;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 1rem 0 2rem;
+}
+
+.cta-button:hover {
+  background: #c84010;
+}
+
+.closing-quote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
 
