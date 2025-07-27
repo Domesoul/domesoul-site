@@ -77,6 +77,11 @@ body {
 .nav-links a:hover {
   color: #f35b26;
 }
+.navbar a.active {
+  font-weight: bold;
+  color: #e25320;
+  border-bottom: 2px solid #e25320;
+}
 
 @media (max-width: 768px) {
   .carousel-caption h1 {
