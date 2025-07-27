@@ -372,4 +372,44 @@ html {
   margin-top: 30px;
   font-size: 1.1rem;
 }
+.impact-grid {
+  background: #fefefe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.impact-grid h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.impact-grid .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.impact-card {
+  background: #fffaf5;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.impact-card h3 {
+  font-size: 2.5rem;
+  color: #e25320;
+  margin-bottom: 0.5rem;
+}
+
+.impact-card p {
+  font-size: 1rem;
+  color: #555;
+}
 
