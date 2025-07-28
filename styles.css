@@ -573,4 +573,35 @@ body.contact-page {
   color: #e25320;
   text-decoration: none;
 }
+.contact-intro {
+  text-align: center;
+  padding: 100px 20px 40px;
+  background: #fffdfb;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-intro h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.contact-intro p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.contact-options {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.contact-options a {
+  color: #e25320;
+  text-decoration: none;
+  font-weight: bold;
+}
 
