@@ -537,4 +537,7 @@ iframe {
   display: block;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+.contact-intro {
+  padding: 40px 20px 10px;
+}
 
