@@ -543,4 +543,11 @@ iframe {
 body.contact-page {
   background: #fffdfb;
 }
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f4f4f4;
+  font-size: 0.95rem;
+  color: #555;
+}
 
