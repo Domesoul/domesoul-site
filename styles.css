@@ -608,5 +608,6 @@ body.contact-page {
   font-weight: bold;
   color: #e25320;
 }
+.mission-text p { max-width: 800px; margin: 0 auto; font-size: 1.2rem; }
 
 
