@@ -604,4 +604,9 @@ body.contact-page {
   text-decoration: none;
   font-weight: bold;
 }
+.navbar a.active {
+  font-weight: bold;
+  color: #e25320;
+}
+
 
