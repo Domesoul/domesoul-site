@@ -638,5 +638,10 @@ body.contact-page {
 .spotify-button:hover {
   background-color: #d84b12;
 }
+.track-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
 
 
