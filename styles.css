@@ -524,4 +524,17 @@ html {
   transform: scale(1.03);
   transition: transform 0.3s ease;
 }
+.contact-intro {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+iframe {
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
