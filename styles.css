@@ -622,5 +622,21 @@ body.contact-page {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+.spotify-button {
+  background-color: #f75c1f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 10px;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.spotify-button:hover {
+  background-color: #d84b12;
+}
 
 
