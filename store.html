@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domé Soul Store</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store | Domé Soul</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .store-hero {
+      background: linear-gradient(to right, #fff4f0, #fff);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .store-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .store-hero p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .store-card {
+      background: #fffefc;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 24px;
+    }
+    .store-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .store-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    .store-card p {
+      font-size: 1rem;
+      color: #444;
+    }
+    .coming-soon {
+      text-align: center;
+      margin-top: 40px;
+      font-style: italic;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
-  <div class="logo">Domé Soul</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="music.html">Music</a></li>
-     <li><a href="soul-mission.html">Soul Mission</a></li>
-    <li><a href="store.html" class="active">Store</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</header>
-  <header class="page-header">
-    <h1>🎵 Domé Soul Store</h1>
-    <p>Shop music-inspired items, gifts, and ways to support our mission.</p>
+    <h1 class="logo">Domé Soul</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="store.html" class="active">Store</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-  <section class="store-grid">
-    <div class="store-item">
-      <img src="img/tshirt.png" alt="Domé Soul T-Shirt" />
-      <h3>Classic Logo T-Shirt</h3>
-      <p>Soft cotton tee with Domé Soul design.</p>
-      <span>$20</span>
-      <button disabled>Coming Soon</button>
-    </div>
 
-    <div class="store-item">
-      <img src="img/songgift.png" alt="Custom Song" />
-      <h3>Custom Song for a Loved One</h3>
-      <p>Get a personalized soul-style song gift (demo format).</p>
-      <span>$50</span>
-      <button disabled>Coming Soon</button>
-    </div>
-
-    <div class="store-item">
-      <img src="img/foodpack.png" alt="Give Back Pack" />
-      <h3>Feed a Family – Soul Mission</h3>
-      <p>Donate to provide food packs to vulnerable communities.</p>
-      <span>$25</span>
-      <button disabled>Coming Soon</button>
-    </div>
-    <div class="merch-grid">
-  <div class="merch-item">
-    <!-- image, title, description, button -->
-  </div>
-  <!-- more items -->
-</div>
-
+  <section class="store-hero">
+    <h2>Shop Domé Soul</h2>
+    <p>Explore meaningful merch and services that give back with every purchase.</p>
   </section>
 
-  <footer class="site-footer">
+  <section class="store-grid">
+    <div class="store-card">
+      <img src="img/merch-shirt.jpg" alt="Domé Soul T-shirt">
+      <h3>Signature T-Shirt</h3>
+      <p>Stylish, soft, and supports outreach efforts. Coming soon!</p>
+    </div>
+    <div class="store-card">
+      <img src="img/merch-session.jpg" alt="Live Session">
+      <h3>Private Acoustic Session</h3>
+      <p>Book a virtual soul session — music, message, and meaning.</p>
+    </div>
+    <div class="store-card">
+      <img src="img/merch-art.jpg" alt="Lyric Artwork">
+      <h3>Lyric Prints</h3>
+      <p>Printed lyrics from your favorite Domé Soul songs in artistic format.</p>
+    </div>
+  </section>
+
+  <div class="coming-soon">More items launching soon — stay tuned.</div>
+
+  <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
   </footer>
 </body>
