@@ -1,88 +1,121 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Domé Soul | Soul Mission</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Mission | Domé Soul</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero-carousel {
+      position: relative;
+      height: 60vh;
+      overflow: hidden;
+    }
+    .hero-carousel img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .hero-carousel img.active {
+      opacity: 1;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 20px 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .mission-text {
+      max-width: 800px;
+      margin: 60px auto;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .form-wrapper {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fffdfb;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .donation-cta {
+      text-align: center;
+      background: #fff4f0;
+      padding: 60px 20px;
+      margin-top: 60px;
+      border-radius: 16px;
+    }
+    .donation-cta a {
+      background: #bbb;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-<header class="navbar">
-  <div class="logo">Domé Soul</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <a href="music.html" >Music</a>
-    <li><a href="soul-mission.html" class="active">Soul Mission</a></li>
-    <li><a href="store.html">Store</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</header>
- <section class="soul-mission polished">
-  <h2>🌍 Our Soul Mission</h2>
-  <p class="intro">
-    <em>Music can move crowds — but it can also move compassion.</em>
-  </p>
-  <p>
-    At Domé Soul, we believe that every song should serve more than just the ears — it should serve the heart. That’s why we created <strong>The Soul Mission</strong>: a humanitarian outreach rooted in music, hope, and giving.
-  </p>
-  <p>
-    From conflict zones to forgotten villages, we’ve seen what music can do. It inspires. It heals. It brings people together.
-  </p>
-  <p>
-    Through this mission, <strong>a portion of every project, stream, and performance goes back</strong> — to real people in need. We invite you, the listeners, to be part of that.
-  </p>
+  <header class="navbar">
+    <h1 class="logo">Domé Soul</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html" class="active">Soul Mission</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <h3>❤️ Nominate Someone in Need</h3>
-  <p>
-    Know someone going through a hard time?<br>
-    You can now <strong>nominate individuals or families</strong> for a little act of love — a food pack, a solar light, a song, or even just a story shared with the world.
-  </p>
-  <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdltid1Fz_S71oyInNtvwuKCxtm54zivkE7g08dbrjZ6zfGqQ/viewform?embedded=true" target="_blank">📝 Submit a Nomination</a>
-
-  <h3>🤝 What Your Support Does</h3>
-  <ul class="impact-list">
-    <li>✔️ Provides food, light, or shelter</li>
-    <li>✔️ Highlights stories from communities in need</li>
-    <li>✔️ Sponsors youth-led talents and education</li>
-    <li>✔️ Shares hope through music and real connection</li>
-  </ul>
-
-  <p class="closing-quote"><em>Because sometimes the light we need... is each other.</em></p>
-</section>
-
-
-  <main class="mission-main">
-    <section class="mission-section">
-      <h2>Music with a Purpose</h2>
-      <p>Every melody we release contributes to something bigger. From community stories to direct donations, your support powers healing.</p>
-    </section>
-  </main>
-<section class="impact-grid">
-  <h2>Impact Snapshot</h2>
-  <div class="grid">
-    <div class="impact-card">
-      <h3>25+</h3>
-      <p>Families Reached</p>
+  <section class="hero-carousel">
+    <img src="img/soul-slide1.jpg" class="active" alt="Soul Mission slide 1">
+    <img src="img/soul-slide2.jpg" alt="Soul Mission slide 2">
+    <img src="img/soul-slide3.jpg" alt="Soul Mission slide 3">
+    <div class="hero-text">
+      <h2>Music With a Mission</h2>
+      <p>Touching lives. Telling stories. Transforming communities.</p>
     </div>
-    <div class="impact-card">
-      <h3>8</h3>
-      <p>Homes Lit with Solar</p>
-    </div>
-    <div class="impact-card">
-      <h3>2,000+</h3>
-      <p>Hearts Touched through Music</p>
-    </div>
-  </div>
-</section>
-<section class="donation-cta">
-  <h2>Make a Difference</h2>
-  <p>Your support helps us bring light, hope, and healing through music and action.</p>
-  <a href="#" class="donate-btn disabled" onclick="alert('Donation portal coming soon. Stay tuned!'); return false;">💝 Donate to the Soul Mission</a>
-  <p class="note">Donation system coming soon. Every gift will go directly to those in need.</p>
-</section>
-  <footer class="footer">
+  </section>
+
+  <section class="mission-text">
+    <h2>Why We Exist</h2>
+    <p>Through music and action, Domé Soul connects art with heart. We believe every note can inspire hope, and every voice can be part of the solution. From local outreach to global resonance, we serve the forgotten with songs and support.</p>
+  </section>
+
+  <section class="form-wrapper">
+    <h3>Nominate Someone in Need</h3>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdltid1Fz_S71oyInNtvwuKCxtm54zivkE7g08dbrjZ6zfGqQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </section>
+
+  <section class="donation-cta">
+    <h2>Make a Difference</h2>
+    <p>Your support helps us bring light, hope, and healing.</p>
+    <a href="#" onclick="alert('Donation portal coming soon!'); return false;">💝 Donate to the Soul Mission</a>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.hero-carousel img');
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000);
+  </script>
 </body>
 </html>
