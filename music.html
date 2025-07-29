@@ -1,56 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Music - Domé Soul</title>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domé Soul | Music</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="navbar">
+    <h1 class="logo">Domé Soul</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header class="navbar">
-  <div class="logo">Domé Soul</div>
-  <ul class="nav-links">
-    <li><a href="index.html" >Home</a></li>
-    <li><a href="music.html" class="active">Music</a></li>
-    <li><a href="soul-mission.html">Soul Mission</a></li>
-    <li><a href="store.html">Store</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</header>
-    <main>
-        <h2 class="section-title">🎵 Latest Tracks</h2>
-        <div class="music-grid">
-            <section class="music-intro">
-  <h1>Domé Soul – Music That Heals</h1>
-  <p>Listen to the latest tracks and explore the stories behind the songs.</p>
-</section>
-            <div class="music-card">
-                <img src="where_the_light_lives_400x400.png" alt="Where the Light Lives">
-                <h3>Where the Light Lives</h3>
-                <div class="button-group">
-                    <a href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N" class="spotify-btn" target="_blank">🎧 Listen on Spotify</a>
-                    <a href="behind-the-song-light.html" class="story-btn">📖 Behind the Song</a>
-                </div>
-            </div>
-            <section class="music-intro">
-  <h1>Domé Soul – Music That Heals</h1>
-  <p>Listen to the latest tracks and explore the stories behind the songs.</p>
-</section>
-            <div class="music-card">
-                <img src="feels_like_heaven_400x400.png" alt="Feels Like Heaven">
-                <h3>Feels Like Heaven With You</h3>
-                <div class="button-group">
-                    <a href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS" class="spotify-btn" target="_blank">🎧 Listen on Spotify</a>
-                    <a href="behind-the-song-heaven.html" class="story-btn">📖 Behind the Song</a>
-                </div>
-            </div>
-        </div>
-    </main>
+  <section class="music-hero">
+    <h2><span class="emoji">🎵</span> Latest Tracks</h2>
+  </section>
 
-    <footer class="site-footer">
-        <p>&copy; 2025 Domé Soul</p>
-    </footer>
+  <section class="tracks">
+    <div class="track-card">
+      <img src="img/where-the-light-lives.png" alt="Where the Light Lives cover">
+      <h3>Where the Light Lives</h3>
+      <div class="buttons">
+        <a href="#" class="btn">🎧 Listen on Spotify</a>
+        <button class="btn secondary" onclick="openModal('lightModal')">📖 Behind the Song</button>
+      </div>
+    </div>
+
+    <div class="track-card">
+      <img src="img/feels-like-heaven.png" alt="Feels Like Heaven With You cover">
+      <h3>Feels Like Heaven With You</h3>
+      <div class="buttons">
+        <a href="#" class="btn">🎧 Listen on Spotify</a>
+        <button class="btn secondary" onclick="openModal('heavenModal')">📖 Behind the Song</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="lightModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('lightModal')">&times;</span>
+      <h3>Where the Light Lives</h3>
+      <p><strong>Behind the Song:</strong> Inspired by moments of silence and resilience during humanitarian missions, this song celebrates finding peace in unexpected places.</p>
+      <p><strong>Lyrics:</strong></p>
+      <pre>
+Where the light lives, I found my way
+In the shadows of hope, I chose to stay
+Guided by love, and grace from above
+I rise each dawn, holding on to love
+      </pre>
+    </div>
+  </div>
+
+  <div id="heavenModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('heavenModal')">&times;</span>
+      <h3>Feels Like Heaven With You</h3>
+      <p><strong>Behind the Song:</strong> This song was born during a calm sunrise in Malawi while reflecting on how love softens the hardest journeys.</p>
+      <p><strong>Lyrics:</strong></p>
+      <pre>
+Feels like heaven with you beside me
+Every prayer and dream, now reality
+Holding hands through the storm and blue
+Grace has a melody, and it sounds like you
+      </pre>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Domé Soul. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
