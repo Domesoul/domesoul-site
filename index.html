@@ -4,109 +4,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Domé Soul | Home</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffdfb;
+    }
+    header.navbar {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .logo {
+      font-size: 1.5rem;
+      color: #e25320;
+      font-weight: bold;
+    }
+    nav a {
+      margin: 0 12px;
+      color: #444;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active {
+      color: #e25320;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #fff4f0, #fff);
+      text-align: center;
+      padding: 100px 20px 80px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    .hero a {
+      background: #e25320;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+    }
+
+    .intro {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .quick-card {
+      background: #fffefc;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .quick-card h3 {
+      margin: 10px 0;
+      color: #222;
+    }
+    .quick-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #f6f6f6;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 60px;
+    }
+    .footer-links {
+      margin-top: 12px;
+    }
+    .footer-links a {
+      margin: 0 8px;
+      color: #666;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
-<header class="navbar">
-  <div class="logo">Domé Soul</div>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="music.html">Music</a></li>
-    <li><a href="soul-mission.html">Soul Mission</a></li>
-    <li><a href="store.html">Store</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</header>
-
-<div class="carousel-hero">
-  <div class="carousel-slide active" style="background-image: url('img/slide1.jpg');"></div>
-  <div class="carousel-slide" style="background-image: url('img/slide2.jpg');"></div>
-  <div class="carousel-slide" style="background-image: url('img/slide3.jpg');"></div>
-</div>
-<section class="cta-section">
-  <h2>Take your next step with Domé Soul</h2>
-  <p>Whether you're here for the music or the mission — there's a place for you.</p>
-  <div class="cta-buttons">
-
-    <a href="music.html" class="btn">🎧 Listen Now</a>
-<a href="soul-mission.html" class="btn">🤲 Soul Mission</a>
-  </div>
-</section>
-<section class="quote-carousel">
-  <h2>Words that Light the Soul</h2>
-  <div class="quotes">
-    <div class="quote active">“Music gives a soul to the universe, wings to the mind, flight to the imagination.”<br><span>— Plato</span></div>
-    <div class="quote">“Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.”<br><span>— Matthew 5:16</span></div>
-    <div class="quote">“Even in the dust, hope can sing.”<br><span>— Domé Soul</span></div>
-  </div>
-</section>
-<!-- Music Section -->
-<section id="music">
-  <!-- Your music preview or description -->
-</section>
-
-<!-- Soul Mission Section -->
-<section id="soul-mission">
-  <!-- Nomination or CTA area -->
-</section>
-<section class="testimonial-carousel">
-  <h2>What People Are Saying</h2>
-  <div class="testimonials">
-    <div class="testimonial active">
-      “Domé Soul's music healed something I didn’t know was broken.”<br><span>— Chidera, Lagos</span>
-    </div>
-    <div class="testimonial">
-      “You don’t just hear his songs — you feel seen by them.”<br><span>— Fatima, Maiduguri</span>
-    </div>
-    <div class="testimonial">
-      “Finally, music that carries both heart and mission.”<br><span>— Emmanuel, Kampala</span>
-    </div>
-  </div>
-</section>
-<script>
-  let current = 0;
-  const slides = document.querySelectorAll('.carousel-slide');
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 5000);
-</script>
-  <!-- Newsletter Section -->
-<section class="newsletter">
-  <h2>🎶 Stay Connected</h2>
-  <p>Be the first to hear new songs and see stories of impact. No spam — just soul.</p>
-  <a href="contact.html" class="btn">Join the Mailing List</a>
-</section>
-<a href="#newsletter" class="join-now-btn">Join Now</a>
-
-<section id="newsletter" class="newsletter-signup">
-  <h2>Join the Domé Soul Mailing List</h2>
-  <p>Be the first to hear about new releases, behind-the-song stories, and humanitarian missions.</p>
-  <!-- Embed your form below -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVTtj6u7y9h4DqhNzJRKCOjn26mvjsdpQEepZBKMoBicQzhg/viewform?embedded=true" width="640" height="794" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>>
-</section>
-
-  
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
+  <header class="navbar">
+    <h1 class="logo">Domé Soul</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
       <a href="music.html">Music</a>
       <a href="soul-mission.html">Soul Mission</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Where Music Meets Mission</h1>
+    <p>Domé Soul creates music rooted in love, soul, and service — a voice for the unheard, a light in the dust.</p>
+    <a href="music.html">🎧 Listen Now</a>
+  </section>
+
+  <section class="intro">
+    <h2>More Than Music</h2>
+    <p>From conflict zones to quiet hearts, Domé Soul brings melodies of healing and purpose. Through humanitarian action and musical storytelling, every lyric is a light. Join the Soul Mission to create change.</p>
+  </section>
+
+  <section class="quick-links">
+    <div class="quick-card">
+      <h3>🎶 Explore Music</h3>
+      <p>Dive into heartfelt tracks that blend soul, story, and spirit.</p>
+      <a href="music.html">Go to Music</a>
+    </div>
+    <div class="quick-card">
+      <h3>🌍 Soul Mission</h3>
+      <p>Discover how Domé Soul is reaching lives through humanitarian work.</p>
+      <a href="soul-mission.html">Join the Mission</a>
+    </div>
+    <div class="quick-card">
+      <h3>🛍 Shop Store</h3>
+      <p>Support the message with merch, music sessions, and more.</p>
+      <a href="store.html">Visit Store</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="music.html">Music</a> |
+      <a href="soul-mission.html">Soul Mission</a> |
+      <a href="store.html">Store</a> |
       <a href="contact.html">Contact</a>
     </div>
-    <div class="footer-socials">
-      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB" target="_blank" title="Spotify">🎧</a>
-      <a href="#" title="Instagram">📸</a>
-      <a href="#" title="YouTube">▶️</a>
-    </div>
-  </div>
-</footer>
-<script src="script.js"></script>
+    <p>Powered by art. Driven by compassion.</p>
+  </footer>
 </body>
 </html>
-
