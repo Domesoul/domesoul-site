@@ -22,3 +22,21 @@ setInterval(() => {
   tIndex = (tIndex + 1) % testimonials.length;
   testimonials[tIndex].classList.add('active');
 }, 6000);
+document.querySelectorAll('.openModal').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const modalId = this.getAttribute('data-modal');
+    document.getElementById(modalId).style.display = 'block';
+  });
+});
+
+document.querySelectorAll('.closeModal').forEach(btn => {
+  btn.addEventListener('click', function () {
+    this.closest('.modal').style.display = 'none';
+  });
+});
+
+window.addEventListener('click', function (event) {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+});
