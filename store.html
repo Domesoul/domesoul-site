@@ -53,6 +53,22 @@
       font-style: italic;
       color: #999;
     }
+    .tshirt-carousel {
+  position: relative;
+  height: 300px;
+}
+.tshirt-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.tshirt-slide.active {
+  opacity: 1;
+}
   </style>
 </head>
 <body>
@@ -75,10 +91,14 @@
 
   <section class="store-grid">
     <div class="store-card">
-      <img src="img/merch-shirt.jpg" alt="Domé Soul T-shirt">
-      <h3>Signature T-Shirt</h3>
-      <p>Stylish, soft, and supports outreach efforts. Coming soon!</p>
-    </div>
+  <div class="tshirt-carousel">
+    <img src="img/tshirt-black.jpg" alt="Domé Soul T-shirt - Black" class="tshirt-slide active">
+    <img src="img/tshirt-white.jpg" alt="Domé Soul T-shirt - White" class="tshirt-slide">
+    <img src="img/tshirt-beige.jpg" alt="Domé Soul T-shirt - Beige" class="tshirt-slide">
+  </div>
+  <h3>Signature T-Shirt</h3>
+  <p>Stylish, soft, and supports outreach efforts. Available in black, white, and beige. Coming soon!</p>
+</div>
     <div class="store-card">
       <img src="img/merch-session.jpg" alt="Live Session">
       <h3>Private Acoustic Session</h3>
@@ -92,6 +112,15 @@
   </section>
 
   <div class="coming-soon">More items launching soon — stay tuned.</div>
+<script>
+  const slides = document.querySelectorAll('.tshirt-slide');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 4000); // Change every 4 seconds
+</script>
 
   <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
