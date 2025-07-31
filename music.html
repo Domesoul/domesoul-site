@@ -4,9 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Music | Domé Soul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #fffaf7;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #121212;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .navbar a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    .navbar a.active {
+      font-weight: bold;
+      color: #e25320;
+    }
+    .music-hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .music-hero h2 {
+      font-size: 2.5rem;
+      color: #222;
+    }
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .track-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 24px;
+    }
+    .track-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .track-card h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #e25320;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin: 6px 4px;
+      font-weight: bold;
+    }
+    .btn.secondary {
+      background: #444;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .close {
+      color: #000;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Domé Soul Music Page</h1>
-  <p>This is the placeholder. The full version with styling and modals will be restored if needed.</p>
+  <header class="navbar">
+    <h1>Domé Soul</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="store.html">Store</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="music-hero">
+    <h2>🎵 Latest Tracks</h2>
+  </section>
+
+  <section class="track-grid">
+    <!-- Track 1 -->
+    <div class="track-card">
+      <img src="img/where-the-light-lives.jpg" alt="Where the Light Lives">
+      <h3>Where the Light Lives</h3>
+      <a class="btn" href="https://open.spotify.com" target="_blank">🎧 Listen on Spotify</a>
+      <button class="btn secondary" onclick="openModal('modal1')">📖 Behind the Song</button>
+    </div>
+
+    <!-- Track 2 -->
+    <div class="track-card">
+      <img src="img/feels-like-heaven.jpg" alt="Feels Like Heaven With You">
+      <h3>Feels Like Heaven With You</h3>
+      <a class="btn" href="https://open.spotify.com" target="_blank">🎧 Listen on Spotify</a>
+      <button class="btn secondary" onclick="openModal('modal2')">📖 Behind the Song</button>
+    </div>
+
+    <!-- Track 3 -->
+    <div class="track-card">
+      <img src="img/still-i-will-love-400x400.png" alt="Still, I Will Love">
+      <h3>Still, I Will Love</h3>
+      <a class="btn" href="https://open.spotify.com" target="_blank">🎧 Listen on Spotify</a>
+      <button class="btn secondary" onclick="openModal('modal3')">📖 Behind the Song</button>
+    </div>
+  </section>
+
+  <!-- Modal 1 -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h3>Where the Light Lives</h3>
+      <p><strong>Behind the Song:</strong> Inspired by moments of silence and resilience during humanitarian missions, this song celebrates finding peace in unexpected places.</p>
+      <p><strong>Lyrics:</strong><br>
+      Where the light lives, I found my way<br>
+      In the shadows of hope, I chose to stay<br>
+      Guided by love, and grace from above<br>
+      I rise each dawn, holding on to love</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h3>Feels Like Heaven With You</h3>
+      <p><strong>Behind the Song:</strong> This song was born during a calm sunrise in Malawi while reflecting on how love softens the hardest journeys.</p>
+      <p><strong>Lyrics:</strong><br>
+      Feels like heaven with you beside me<br>
+      Every prayer and dream, now reality<br>
+      Holding hands through the storm and blue<br>
+      Grace has a melody, and it sounds like you</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h3>Still, I Will Love</h3>
+      <p><strong>Behind the Song:</strong> A soulful vow born from pain and persistence, echoing the promise to love even when it hurts the most.</p>
+      <p><strong>Lyrics:</strong><br>
+      When the fire fades and the storm won't cease<br>
+      Still, I will love through the broken peace<br>
+      For love is stronger than what’s been lost<br>
+      And I’ll keep loving, whatever the cost</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 </body>
 </html>
