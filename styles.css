@@ -754,3 +754,22 @@ body.contact-page {
       margin-top: 40px;
     }
 
+footer {
+  background-color: #f6f6f6;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 60px;
+}
+.footer-links {
+  margin-top: 12px;
+}
+.footer-links a {
+  margin: 0 8px;
+  color: #666;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
