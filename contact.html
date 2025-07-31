@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Domé Soul</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    .contact-section {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 30px;
-      background: #fffefc;
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf8;
+      margin: 0;
+      padding: 0;
+    }
+    .contact-hero {
+      background: linear-gradient(to right, #fff4ee, #fff);
+      padding: 60px 20px;
       text-align: center;
     }
-    .contact-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .contact-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
     }
-    .contact-section p {
+    .contact-hero p {
       font-size: 1.1rem;
       color: #444;
-      margin-bottom: 30px;
+      margin: 0;
     }
-    .form-wrapper iframe {
-      border: none;
+    .contact-form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 700px;
+    }
+    .contact-form-wrapper iframe {
       width: 100%;
       height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    .contact-details {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .contact-details p {
+      margin: 6px 0;
+      color: #555;
+    }
+    .contact-details a {
+      color: #e25320;
+      text-decoration: none;
+    }
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -44,16 +80,23 @@
     </nav>
   </header>
 
-  <section class="contact-section">
+  <section class="contact-hero">
     <h2>Get in Touch</h2>
-    <p>We’d love to hear from you — whether it’s about collaborations, feedback, or community support ideas. Drop us a line!</p>
-    <div class="form-wrapper">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVTtj6u7y9h4DqhNzJRKCOjn26mvjsdpQEepZBKMoBicQzhg/viewform?embedded=true">Loading…</iframe>
-    </div>
+    <p>Reach out for collaborations, feedback, or humanitarian ideas.</p>
   </section>
+
+  <div class="contact-form-wrapper">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKmFo7YnKD4Fw/formResponse?embedded=true" allowfullscreen></iframe>
+  </div>
+
+  <div class="contact-details">
+    <p><strong>Email:</strong> <a href="mailto:contact@domesoul.com">contact@domesoul.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/domesoul">@domesoul</a></p>
+  </div>
 
   <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+    <p>Powered by art. Driven by compassion.</p>
   </footer>
 </body>
 </html>
