@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music | Domé Soul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fffaf7;
+      color: #222;
+    }
+
+    .music-hero {
+      background: linear-gradient(to bottom right, #fff5ef, #fffaf9);
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    .music-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .music-hero p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .track-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .track-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .track-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .track-card button {
+      margin: 5px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .spotify-btn {
+      background-color: #e25320;
+      color: white;
+    }
+
+    .modal-btn {
+      background-color: #333;
+      color: white;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .closeModal {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 24px;
+      color: #888;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      background: #f6f6f6;
+      padding: 30px 0;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">Domé Soul</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="store.html">Store</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="music-hero">
+    <h2>🎵 Latest Tracks</h2>
+    <p>Experience the sound of purpose — Domé Soul blends music and mission.</p>
+  </section>
+
+  <section class="music-grid">
+    <!-- Track 1 -->
+    <div class="track-card">
+      <img src="img/cover-light.jpg" alt="Where the Light Lives" />
+      <h3>Where the Light Lives</h3>
+      <a href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=9090498edf474e48" target="_blank">
+        <button class="spotify-btn">🎧 Listen on Spotify</button>
+      </a>
+      <button class="modal-btn openModal" data-modal="modal1">📖 Behind the Song</button>
+    </div>
+
+    <!-- Track 2 -->
+    <div class="track-card">
+      <img src="img/cover-heaven.jpg" alt="Feels Like Heaven With You" />
+      <h3>Feels Like Heaven With You</h3>
+      <a href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=b86a4eaaed9f45b4/track/heaven" target="_blank">
+        <button class="spotify-btn">🎧 Listen on Spotify</button>
+      </a>
+      <button class="modal-btn openModal" data-modal="modal2">📖 Behind the Song</button>
+    </div>
+  </section>
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="closeModal">&times;</span>
+      <h3>Behind the Song: Where the Light Lives</h3>
+      <p><strong>Story:</strong> Inspired by moments of silence and resilience during humanitarian missions, this song celebrates finding peace in unexpected places.</p>
+      <h4>Lyrics:</h4>
+      <pre>
+Where the light lives, I found my way  
+In the shadows of hope, I chose to stay  
+Guided by love, and grace from above  
+I rise each dawn, holding on to love  
+      </pre>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="closeModal">&times;</span>
+      <h3>Behind the Song: Feels Like Heaven With You</h3>
+      <p><strong>Story:</strong> This song was born during a calm sunrise in Malawi while reflecting on how love softens the hardest journeys.</p>
+      <h4>Lyrics:</h4>
+      <pre>
+Feels like heaven with you beside me  
+Every prayer and dream, now reality  
+Holding hands through the storm and blue  
+Grace has a melody, and it sounds like you  
+      </pre>
+    </div>
+  </div>
+<div class="song-card">
+  <img src="img/still_i_will_love_cover_400x400.png" alt="Still, I Will Love You cover art">
+  <h3>Still, I Will Love You</h3>
+  <a href="https://open.spotify.com/" class="spotify-btn" target="_blank">
+    <i class="fas fa-headphones"></i> Listen on Spotify
+  </a>
+  <button class="modal-btn" data-modal="modal3">
+    <i class="fas fa-book-open"></i> Behind the Song
+  </button>
+</div>
+<!-- Modal 3 -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" data-close="modal3">&times;</span>
+    <h3>Still, I Will Love You</h3>
+    <p><strong>Behind the Song:</strong> Written in moments of separation and longing, this song reflects the unwavering commitment to love even through the toughest times — a soul promise, even in silence.</p>
+    <p><strong>Lyrics:</strong></p>
+    <pre>
+Still, I will love you through the night
+When words are lost and hope is slight
+Even if skies no longer shine blue
+Still, I will love — I’ll stand with you
+    </pre>
+  </div>
+</div>
+  <footer>
+    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+    <p>Powered by art. Driven by compassion.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.openModal').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+      });
+    });
+
+    document.querySelectorAll('.closeModal').forEach(btn => {
+      btn.addEventListener('click', function () {
+        this.closest('.modal').style.display = 'none';
+      });
+    });
+
+    window.addEventListener('click', function (e) {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
