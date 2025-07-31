@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store | Domé Soul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #fffaf7;
+    }
+    .navbar {
+      background: #121212;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    .navbar a.active {
+      font-weight: bold;
+      color: #e25320;
+    }
+    .store-hero {
+      background: linear-gradient(to right, #fff0e8, #fffdfb);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .store-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .store-hero p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .store-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      padding: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .store-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .store-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .store-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    .store-card p {
+      font-size: 1rem;
+      color: #444;
+    }
+    .store-card .tag {
+      background: #e25320;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .coming-soon {
+      text-align: center;
+      margin-top: 40px;
+      font-style: italic;
+      color: #999;
+    }
+    footer {
+      background-color: #f6f6f6;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 60px;
+    }
+    .footer-links {
+      margin-top: 12px;
+    }
+    .footer-links a {
+      margin: 0 8px;
+      color: #666;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">Domé Soul</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="store.html" class="active">Store</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="store-hero">
+    <h2>🛍️ Shop Domé Soul</h2>
+    <p>Explore meaningful merch and services that give back with every purchase.</p>
+  </section>
+
+  <section class="store-grid">
+    <div class="store-card">
+      <img src="img/merch-shirt.jpg" alt="Domé Soul T-shirt">
+      <span class="tag">Coming Soon</span>
+      <h3>Signature T-Shirt</h3>
+      <p>Stylish, soft, and supports outreach efforts. Launching soon in multiple colors!</p>
+    </div>
+
+    <div class="store-card">
+      <img src="img/merch-session.jpg" alt="Live Session">
+      <span class="tag">Book Now</span>
+      <h3>Private Acoustic Session</h3>
+      <p>Book a virtual soul session — music, message, and meaning. Limited availability monthly.</p>
+    </div>
+
+    <div class="store-card">
+      <img src="img/merch-art.jpg" alt="Lyric Artwork">
+      <span class="tag">Available</span>
+      <h3>Lyric Prints</h3>
+      <p>Printed lyrics from your favorite Domé Soul songs — available in 3 styles. Frame-ready!</p>
+    </div>
+  </section>
+
+  <div class="coming-soon">More items launching soon — stay tuned.</div>
+
+  <footer>
+    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="music.html">Music</a> |
+      <a href="soul-mission.html">Soul Mission</a> |
+      <a href="store.html">Store</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>Powered by art. Driven by compassion.</p>
+  </footer>
+</body>
+</html>
