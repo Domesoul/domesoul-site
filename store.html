@@ -163,5 +163,18 @@
     </div>
     <p>Powered by art. Driven by compassion.</p>
   </footer>
+  <script>
+  const shirtImages = [
+    "img/merch-shirt.jpg",
+    "img/merch-shirt2.jpg",
+    "img/merch-shirt3.jpg"
+  ];
+  let currentShirt = 0;
+  setInterval(() => {
+    currentShirt = (currentShirt + 1) % shirtImages.length;
+    document.getElementById("shirtImage").src = shirtImages[currentShirt];
+  }, 3000); // Change image every 3 seconds
+</script>
+
 </body>
 </html>
