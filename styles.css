@@ -798,4 +798,11 @@ footer {
     width: 100%;
     border-bottom: 1px solid #eee;
   }
+.shirt-slider img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
 }
+
