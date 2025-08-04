@@ -2,104 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domé Soul | Links</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Domé Soul — Links</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fffaf5, #f0e9e2);
       margin: 0;
-      background: #fef9f7;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 20px;
+      padding: 2rem;
+    }
+
+    .links-container {
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
     }
 
     .logo {
-      margin-top: 20px;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
-      color: #e25320;
+      margin-bottom: 0.5rem;
+      color: #e4572e;
     }
 
-    .subtitle {
+    .tagline {
       font-size: 1rem;
-      color: #555;
-      margin-bottom: 30px;
-      text-align: center;
+      color: #444;
+      margin-bottom: 2rem;
     }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 400px;
-      gap: 16px;
-    }
-
-    .links a {
-      text-decoration: none;
-      padding: 14px;
+    .link-button {
+      display: block;
+      margin: 10px auto;
+      padding: 15px 25px;
+      background: #e4572e;
+      color: white;
+      font-size: 1.1rem;
       border-radius: 8px;
-      background-color: #e25320;
-      color: #fff;
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.05rem;
-      transition: background 0.2s ease;
-    }
-
-    .links a:hover {
-      background-color: #c64517;
-    }
-footer {
-      background-color: #f6f6f6;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 60px;
-    }
-    .footer-links {
-      margin-top: 12px;
-    }
-    .footer-links a {
-      margin: 0 8px;
-      color: #666;
       text-decoration: none;
-    }
-    .footer-links a:hover {
-      text-decoration: underline;
-    footer {
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #777;
+      transition: 0.3s ease;
+      width: 80%;
+      max-width: 400px;
     }
 
-    @media screen and (max-width: 480px) {
-      .logo {
-        font-size: 1.7rem;
-      }
-      .links a {
-        font-size: 1rem;
-      }
+    .link-button:hover {
+      background: #a33d20;
     }
   </style>
 </head>
 <body>
-  <div class="logo">Domé Soul</div>
-  <div class="subtitle">Light in the Dust – Where Music Meets Mission</div>
+  <div class="links-container">
+    <div class="logo">Domé Soul</div>
+    <div class="tagline">Artist. Storyteller. Light-bearer. Bringing soul and service to life through sound.</div>
 
-  <div class="links">
-    <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=KSj43CYLRJ2pqk8jghJ-_A" target="_blank">🎧 Listen on Spotify</a>
-    <a href="soul-mission.html">🌍 Soul Mission</a>
-    <a href="store.html">🛍️ Visit the Store</a>
-    <a href="press-kit.html">📰 Press Kit</a>
+    <a class="link-button" href="https://open.spotify.com/artist/4dpwUzTXLpRH3r0XNz2GZT" target="_blank">🎧 Listen on Spotify</a>
+    <a class="link-button" href="https://www.youtube.com/channel/UC5VfF9PUr-1oE9aP1G4qC7Q" target="_blank">🎥 Watch on YouTube</a>
+    <a class="link-button" href="/music.html">🎵 Explore Music</a>
+    <a class="link-button" href="/store.html">🛍️ Visit the Store</a>
+    <a class="link-button" href="/soul-mission.html">🌍 Soul Mission</a>
+    <a class="link-button" href="/contact.html">📩 Contact</a>
   </div>
-<footer>
+  <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
     <div class="footer-links">
       <a href="index.html">Home</a> |
@@ -112,5 +75,8 @@ footer {
     </div>
     <p>Powered by art. Driven by compassion.</p>
   </footer>
+</body>
+</html>
+
 </body>
 </html>
