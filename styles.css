@@ -805,4 +805,29 @@ footer {
   max-height: 300px;
   object-fit: cover;
 }
+  .button-section {
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.button-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.button-grid.center-align {
+  justify-content: center;
+}
+
+.button-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  max-width: 300px;
+  text-align: center;
+}
+
 
