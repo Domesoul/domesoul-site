@@ -829,5 +829,15 @@ footer {
   max-width: 300px;
   text-align: center;
 }
+.carousel {
+  text-align: center;
+  padding: 2rem;
+  background: #f7f7f7;
+}
+.carousel .quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
 
 
