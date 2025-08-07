@@ -96,5 +96,27 @@
       <a href="https://instagram.com" target="_blank">Instagram</a>
     </div>
   </footer>
+<script>
+  // Reveal on scroll using Intersection Observer
+  (function(){
+    const els = document.querySelectorAll('.reveal, .reveal-stagger');
+    if (!('IntersectionObserver' in window)) {
+      // Fallback: show all if no IO support
+      els.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  })();
+</script>
+
+  
 </body>
 </html>
