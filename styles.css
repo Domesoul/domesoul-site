@@ -319,4 +319,10 @@ nav img.logo {
   height: 40px;
   margin-right: 10px;
 }
+@media (max-width: 768px) {
+  .album-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 
