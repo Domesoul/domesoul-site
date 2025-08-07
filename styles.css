@@ -731,4 +731,72 @@ nav {
 .close:hover {
   color: #fff;
 }
+/* --- PRESS KIT PAGE STYLES --- */
+
+.press-kit-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(130, 71, 255, 0.1);
+}
+
+.press-kit-section h2 {
+  font-size: 2rem;
+  color: #c299ff;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.press-kit-section h2 img.icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+}
+
+.press-kit-section p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.press-kit-section ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+
+.press-kit-section ul li {
+  color: #9f92ff;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.press-kit-section a {
+  color: #c299ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.press-kit-section a:hover {
+  text-decoration: underline;
+}
+
+.download-link {
+  margin-top: 0.3rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  color: #c299ff;
+  background: #222;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.download-link:hover {
+  background-color: #292929;
+  color: #fff;
+}
 
