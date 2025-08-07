@@ -1,6 +1,16 @@
 
-function openModal(id) {
-  alert('Open modal for: ' + id);
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'block';
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'none';
+  }
 }
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
