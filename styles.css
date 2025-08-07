@@ -799,4 +799,44 @@ nav {
   background-color: #292929;
   color: #fff;
 }
+.donation-section {
+    background-color: #0c0c0c;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+}
+
+.donation-section h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.donation-section p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.donation-btn {
+    display: inline-block;
+    background-color: #8e44ff;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.donation-btn:hover {
+    background-color: #a471ff;
+    text-decoration: none;
+}
 
