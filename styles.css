@@ -277,4 +277,8 @@ footer a {
   height: 20px;
   margin-right: 10px;
 }
+body {
+  background-color: #121212;
+  color: #eee;
+}
 
