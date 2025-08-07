@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music – Domé Soul</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="page-header">
+  <h1>Domé Soul Music</h1>
+  <p>Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
+</header>
+
+<section class="music-gallery">
+  <div class="track-card">
+    <img src="assets/images/cover-where-the-light-lives.jpg" alt="Where the Light Lives" />
+    <h2>Where the Light Lives</h2>
+    <button onclick="openModal('modal1')">🎧 Listen</button>
+    <button onclick="openModal('lyrics1')">📝 Lyrics</button>
+    <button onclick="openModal('story1')">🎙 Behind the Song</button>
+  </div>
+</section>
+
+<!-- Modal: Spotify/Youtube Embed -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/your-track-id" width="100%" height="152" frameborder="0" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- Modal: Lyrics -->
+<div id="lyrics1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('lyrics1')">&times;</span>
+    <h3>Lyrics – Where the Light Lives</h3>
+    <p>When the night is long<br/>And your strength is gone<br/>Remember where the light lives...</p>
+  </div>
+</div>
+
+<!-- Modal: Behind the Song -->
+<div id="story1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('story1')">&times;</span>
+    <h3>Behind the Song</h3>
+    <p>“Where the Light Lives” was written as a tribute to hope during darkness...</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
