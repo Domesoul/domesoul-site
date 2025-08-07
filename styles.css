@@ -1108,4 +1108,170 @@ blockquote {
 .main-header nav ul li a:hover {
   color: #fff;
 }
+/* ===== Page frame (sticky footer) ===== */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #0e0e0e;  /* dark theme */
+  color: #EDEDED;
+}
+.page {
+  flex: 1 0 auto;  /* push footer down */
+}
+
+/* ===== Container ===== */
+.container {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+/* ===== Header / Nav ===== */
+.main-header {
+  position: sticky;   /* stays visible on scroll; remove if you don't want sticky */
+  top: 0;
+  z-index: 50;
+  background: #111;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+}
+.logo img {
+  height: 42px;       /* adjust to your logo */
+  display: block;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(16px, 3vw, 36px);
+  margin: 0;
+  padding: 0;
+}
+.site-nav a {
+  color: #B694FF;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.site-nav a:hover { color: #fff; }
+
+/* ===== Hero grid ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr .9fr;
+  gap: clamp(28px, 6vw, 56px);
+  padding: clamp(32px, 6vw, 80px) 0;
+}
+
+.intro h1 {
+  font-size: clamp(30px, 4.2vw, 52px);
+  line-height: 1.1;
+  margin: 0 0 10px;
+}
+.tagline {
+  color: #c9c9c9;
+  font-size: clamp(16px, 1.9vw, 22px);
+  margin-bottom: 26px;
+}
+
+.intro blockquote {
+  margin: 10px 0;
+  color: #d8d8d8;
+  font-style: italic;
+  border-left: 3px solid #2A1E45;
+  padding-left: 12px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid #2A1E45;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn-pill { border-radius: 999px; }
+.btn-primary {
+  background: #1A122C;
+  color: #E9DBFF;
+}
+.btn-primary:hover {
+  background: #24153f;
+  border-color: #3b2a6a;
+}
+.btn-accent {
+  background: #7C4DFF;
+  color: #fff;
+  border-color: transparent;
+}
+.btn-accent:hover { background: #8d63ff; }
+.btn-block { width: 100%; text-align: center; }
+
+.icon { opacity: .9; }
+
+/* ===== Support card ===== */
+.support-card {
+  background: #121212;
+  border: 1px solid #1F1A2D;
+  border-radius: 16px;
+  padding: 22px;
+  align-self: start;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.support-card__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: #E9DBFF;
+  margin-bottom: 10px;
+  letter-spacing: .2px;
+}
+.support-card p {
+  color: #cfcfcf;
+  margin: 8px 0 18px;
+}
+
+/* ===== Footer ===== */
+footer {
+  flex-shrink: 0;
+  background: #111;
+  border-top: 1px solid #1f1f1f;
+  padding: 18px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+footer a { color: #B694FF; text-decoration: none; }
+footer a:hover { color: #fff; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .support-card {
+    order: 2;           /* Intro first, card second on mobile */
+  }
+  .intro { order: 1; }
+  .intro h1 { text-align: left; }
+}
 
