@@ -2,63 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Domé Soul Music</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
+    <h1>Domé Soul Music</h1>
     <nav>
-      <div class="logo">Domé Soul</div>
-      <ul>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="soul-mission.html">Soul Mission</a></li>
-        <li><a href="press-kit.html">Press Kit</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-
   <main>
-    <h1>Domé Soul Music</h1>
-    <p class="subtitle">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
-
-    <div class="album-grid">
-      <div class="album-card">
-        <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives" />
-        <h2>Where the Light Lives</h2>
-        <div class="button-group">
-          <button onclick="openModal('listen1')">🎧 Listen</button>
-          <button onclick="openModal('lyrics1')">📄 Lyrics</button>
-          <button onclick="openModal('story1')">💡 Behind the Song</button>
+    <section class="music-gallery">
+      <div class="album">
+        <img src="img/where-the-light-lives.jpg" alt="Where the Light Lives">
+        <h3>Where the Light Lives</h3>
+        <div class="actions">
+          <button onclick="openModal('light')">🎧 Listen</button>
+          <button onclick="openModal('lightLyrics')">📜 Lyrics</button>
+          <button onclick="openModal('lightStory')">💡 Behind the Song</button>
         </div>
       </div>
-
-      <div class="album-card">
-        <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven With You" />
-        <h2>Feels Like Heaven With You</h2>
-        <div class="button-group">
-          <button onclick="openModal('listen2')">🎧 Listen</button>
-          <button onclick="openModal('lyrics2')">📄 Lyrics</button>
-          <button onclick="openModal('story2')">💡 Behind the Song</button>
+      <div class="album">
+        <img src="img/feels-like-heaven.jpg" alt="Feels Like Heaven With You">
+        <h3>Feels Like Heaven With You</h3>
+        <div class="actions">
+          <button onclick="openModal('heaven')">🎧 Listen</button>
+          <button onclick="openModal('heavenLyrics')">📜 Lyrics</button>
+          <button onclick="openModal('heavenStory')">💡 Behind the Song</button>
         </div>
       </div>
-    </div>
-
-    <!-- Modals -->
-    <div id="listen1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('listen1')">&times;</span><p>Embed Spotify or audio preview here for Where the Light Lives</p></div></div>
-    <div id="lyrics1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('lyrics1')">&times;</span><p>Lyrics go here</p></div></div>
-    <div id="story1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('story1')">&times;</span><p>Behind the song story goes here</p></div></div>
-
-    <div id="listen2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('listen2')">&times;</span><p>https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=c7d801be43ca46b2</p></div></div>
-    <div id="lyrics2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('lyrics2')">&times;</span><p>Lyrics go here</p></div></div>
-    <div id="story2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('story2')">&times;</span><p>Behind the song story goes here</p></div></div>
+    </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
