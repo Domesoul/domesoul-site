@@ -2,52 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Domé Soul Music</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
   <header>
     <h1>Domé Soul Music</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="music.html" class="active">Music</a>
+      <a href="music.html">Music</a>
       <a href="soul-mission.html">Soul Mission</a>
       <a href="press-kit.html">Press Kit</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <section class="music-gallery">
-      <div class="album">
-        <img src="img/where-the-light-lives.jpg" alt="Where the Light Lives">
-        <h3>Where the Light Lives</h3>
-        <div class="actions">
-          <button onclick="openModal('light')">🎧 Listen</button>
-          <button onclick="openModal('lightLyrics')">📜 Lyrics</button>
-          <button onclick="openModal('lightStory')">💡 Behind the Song</button>
-        </div>
+    <section class="song-card">
+      <img src="cover-light-lives.jpg" alt="Where the Light Lives cover art" />
+      <h2>Where the Light Lives</h2>
+      <div class="button-row">
+        <button onclick="openModal('lightListen')">🎧 Listen</button>
+        <button onclick="openModal('lightLyrics')">📜 Lyrics</button>
+        <button onclick="openModal('lightStory')">💡 Behind the Song</button>
       </div>
-      <div class="album">
-        <img src="img/feels-like-heaven.jpg" alt="Feels Like Heaven With You">
-        <h3>Feels Like Heaven With You</h3>
-        <div class="actions">
-          <button onclick="openModal('heaven')">🎧 Listen</button>
-          <button onclick="openModal('heavenLyrics')">📜 Lyrics</button>
-          <button onclick="openModal('heavenStory')">💡 Behind the Song</button>
-        </div>
+    </section>
+
+    <section class="song-card">
+      <img src="cover-feels-heaven.jpg" alt="Feels Like Heaven With You cover art" />
+      <h2>Feels Like Heaven With You</h2>
+      <div class="button-row">
+        <button onclick="openModal('heavenListen')">🎧 Listen</button>
+        <button onclick="openModal('heavenLyrics')">📜 Lyrics</button>
+        <button onclick="openModal('heavenStory')">💡 Behind the Song</button>
       </div>
-<!-- Modal for Behind the Song -->
-<div id="lightStory" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('lightStory')">&times;</span>
-    <h2>Behind the Song</h2>
-    <p>"Where the Light Lives" was inspired by those moments of spiritual searching and emotional clarity — when a simple walk in nature can feel like stepping into purpose. The light is both literal and symbolic — it represents hope, healing, and the power of soulful music to guide us home.</p>
+    </section>
+  </main>
+
+  <!-- Where the Light Lives Modals -->
+  <div id="lightListen" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('lightListen')">&times;</span>
+      <h3>Listen: Where the Light Lives</h3>
+      <audio controls>
+        <source src="where-the-light-lives.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
   </div>
-</div>
-      
+
+  <div id="lightLyrics" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('lightLyrics')">&times;</span>
+      <h3>Lyrics: Where the Light Lives</h3>
+      <p>
+        Sometimes life comes at you,<br />
+        Bad man got confused,<br />
+        Wonder why good times no dey last...<br />
+        (Full lyrics continue)
+      </p>
+    </div>
+  </div>
+
+  <div id="lightStory" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('lightStory')">&times;</span>
+      <h3>Behind the Song: Where the Light Lives</h3>
+      <p>
+        This song was inspired by real moments of quiet courage — when someone chooses to shine their light even in difficult places. It's an anthem of purpose, hope, and the healing power of music.
+      </p>
+    </div>
+  </div>
+
+  <!-- Feels Like Heaven With You Modals -->
+  <div id="heavenListen" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('heavenListen')">&times;</span>
+      <h3>Listen: Feels Like Heaven With You</h3>
+      <audio controls>
+        <source src="feels-like-heaven.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div id="heavenLyrics" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('heavenLyrics')">&times;</span>
+      <h3>Lyrics: Feels Like Heaven With You</h3>
+      <p>
+        I found a light inside your eyes,<br />
+        A peace no storm could undo...<br />
+        It feels like heaven with you.<br />
+        (Full lyrics continue)
+      </p>
+    </div>
+  </div>
+
+  <div id="heavenStory" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('heavenStory')">&times;</span>
+      <h3>Behind the Song: Feels Like Heaven With You</h3>
+      <p>
+        This track captures the warmth and intimacy of deep connection — a love that brings peace, safety, and a sense of the divine. It's for anyone who's ever felt completely seen and loved.
+      </p>
+    </div>
+  </div>
     </section>
   </main>
   <footer class="footer">
