@@ -315,4 +315,8 @@ main {
   font-weight: 600;
   text-align: left;
 }
+nav img.logo {
+  height: 40px;
+  margin-right: 10px;
+}
 
