@@ -149,4 +149,11 @@ button:hover, .btn:hover {
   vertical-align: middle;
   margin-right: 10px;
 }
+.navbar a:hover,
+button:hover {
+  color: #fff;
+  background-color: #a97fff;
+  transition: all 0.3s ease-in-out;
+}
+
 
