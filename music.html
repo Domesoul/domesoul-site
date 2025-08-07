@@ -23,16 +23,32 @@
   <p>Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
 </header>
 
-<section class="music-gallery">
-  <div class="track-card">
-    <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives" />
-    <h2>Where the Light Lives</h2>
-    <button onclick="openModal('modal1')">🎧 Listen</button>
-    <button onclick="openModal('lyrics1')">📝 Lyrics</button>
-    <button onclick="openModal('story1')">🎙 Behind the Song</button>
+<section class="music-albums">
+  <h2>Domé Soul Music</h2>
+  <p class="subtitle">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
+
+  <div class="album-grid">
+
+    <!-- Track 1: Where the Light Lives -->
+    <div class="album-card">
+      <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives Cover">
+      <h3>Where the Light Lives</h3>
+      <button onclick="openModal('listenModal1')">🎧 Listen</button>
+      <button onclick="openModal('lyricsModal1')">📝 Lyrics</button>
+      <button onclick="openModal('storyModal1')">💡 Behind the Song</button>
+    </div>
+
+    <!-- Track 2: Feels Like Heaven With You -->
+    <div class="album-card">
+      <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven Cover">
+      <h3>Feels Like Heaven With You</h3>
+      <button onclick="openModal('listenModal2')">🎧 Listen</button>
+      <button onclick="openModal('lyricsModal2')">📝 Lyrics</button>
+      <button onclick="openModal('storyModal2')">💡 Behind the Song</button>
+    </div>
+
   </div>
 </section>
-
 <!-- Modal: Spotify/Youtube Embed -->
 <div id="modal1" class="modal">
   <div class="modal-content">
