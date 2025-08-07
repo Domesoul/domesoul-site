@@ -308,4 +308,11 @@ main {
     font-size: 0.8em;
   }
 }
+.song-title {
+  font-size: 1.2em;
+  color: #A68BFF;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: left;
+}
 
