@@ -10,14 +10,17 @@
 </head>
 <body>
   <!-- LOGO NAVBAR INSERT -->
-<header>
+
+  
   <header class="main-header">
   <div class="logo">
-    <img src="assets/logo-dome-soul.png" alt="Domé Soul Logo" height="40">
+    <a href="index.html">
+      <img src="images/logo-dome-soul.png" alt="Domé Soul" />
+    </a>
   </div>
-  <nav>
+  <nav class="site-nav">
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="music.html">Music</a></li>
       <li><a href="soul-mission.html">Soul Mission</a></li>
       <li><a href="press-kit.html">Press Kit</a></li>
@@ -25,25 +28,38 @@
     </ul>
   </nav>
 </header>
-<section class="hero-wrapper">
-  <div class="hero-content">
-    <div class="intro-text">
+<main class="page">
+  <div class="container hero">
+    <section class="intro">
       <h1>Welcome to Domé Soul</h1>
       <p class="tagline">Music. Outreach. Purpose.</p>
+
       <blockquote>
-        “Let your light shine before others.”<br>
-        “Where the light lives, healing begins.”<br>
-        <em>"Soul is not just music, it's mission."</em>
+        “Let your light shine before others.”
       </blockquote>
-      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=ZCXl--ZpSxagaEmPgHLRRQ" class="cta-btn">🎧 Listen Now</a>
-    </div>
-    <div class="donation-card">
-      <h3>❤️ Support the Mission</h3>
-      <p>Your donation helps us reach more lives.<br>Every act of generosity counts.</p>
-      <a href="soul-mission.html" class="donate-btn">Donate Now</a>
-    </div>
+      <blockquote>
+        “Where the light lives, healing begins.”
+      </blockquote>
+      <blockquote>
+        “Soul is not just music, it’s mission.”
+      </blockquote>
+
+      <a class="btn btn-primary btn-pill" href="music.html">
+        <span class="icon">🎧</span> Listen Now
+      </a>
+    </section>
+    <aside class="support-card">
+      <div class="support-card__title">
+        <span class="icon">❤️</span>
+        <span>Support the Mission</span>
+      </div>
+      <p>Your donation helps us reach more lives. Every act of generosity counts.</p>
+      <a class="btn btn-accent btn-block" href="https://your-donate-link.example" target="_blank" rel="noopener">
+        Donate Now
+      </a>
+    </aside>
   </div>
-</section>
+</main>
   <footer class="footer">
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
     <div class="social-links">
