@@ -1,108 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music – Domé Soul</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domé Soul Music</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">Domé Soul</a>
-    <ul class="nav-links">
-      <li><a href="music.html">Music</a></li>
-      <li><a href="soul-mission.html">Soul Mission</a></li>
-      <li><a href="press-kit.html">Press Kit</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-<header class="page-header">
-  <h1>Domé Soul Music</h1>
-  <p>Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
-</header>
+  <header>
+    <nav>
+      <div class="logo">Domé Soul</div>
+      <ul>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a href="press-kit.html">Press Kit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="music-albums">
-  <h2>Domé Soul Music</h2>
-  <p class="subtitle">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
+  <main>
+    <h1>Domé Soul Music</h1>
+    <p class="subtitle">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
 
-  <div class="album-grid">
+    <div class="album-grid">
+      <div class="album-card">
+        <img src="img/where-the-light-lives.png" alt="Where the Light Lives" />
+        <h2>Where the Light Lives</h2>
+        <div class="button-group">
+          <button onclick="openModal('listen1')">🎧 Listen</button>
+          <button onclick="openModal('lyrics1')">📄 Lyrics</button>
+          <button onclick="openModal('story1')">💡 Behind the Song</button>
+        </div>
+      </div>
 
-    <!-- Track 1: Where the Light Lives -->
-    <div class="album-card">
-      <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives Cover">
-      <h3>Where the Light Lives</h3>
-      <button onclick="openModal('listenModal1')">🎧 Listen</button>
-      <button onclick="openModal('lyricsModal1')">📝 Lyrics</button>
-      <button onclick="openModal('storyModal1')">💡 Behind the Song</button>
+      <div class="album-card">
+        <img src="img/feels-like-heaven.png" alt="Feels Like Heaven With You" />
+        <h2>Feels Like Heaven With You</h2>
+        <div class="button-group">
+          <button onclick="openModal('listen2')">🎧 Listen</button>
+          <button onclick="openModal('lyrics2')">📄 Lyrics</button>
+          <button onclick="openModal('story2')">💡 Behind the Song</button>
+        </div>
+      </div>
     </div>
 
-    <!-- Track 2: Feels Like Heaven With You -->
-    <div class="album-card">
-      <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven Cover">
-      <h3>Feels Like Heaven With You</h3>
-      <button onclick="openModal('listenModal2')">🎧 Listen</button>
-      <button onclick="openModal('lyricsModal2')">📝 Lyrics</button>
-      <button onclick="openModal('storyModal2')">💡 Behind the Song</button>
-    </div>
+    <!-- Modals -->
+    <div id="listen1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('listen1')">&times;</span><p>Embed Spotify or audio preview here for Where the Light Lives</p></div></div>
+    <div id="lyrics1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('lyrics1')">&times;</span><p>Lyrics go here</p></div></div>
+    <div id="story1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('story1')">&times;</span><p>Behind the song story goes here</p></div></div>
 
-  </div>
-</section>
-<!-- Where the Light Lives Modals -->
-<div id="listenModal1" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal('listenModal1')" class="close">&times;</span>
-    <h3>Listen on Spotify or YouTube</h3>
-    <iframe src="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a01425aca7c249b2" ...></iframe>
-    <iframe src="https://www.youtube.com/channel/UC5VfF9PUr-1oE9aP1G4qC7Q" ...></iframe>
-  </div>
-</div>
+    <div id="listen2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('listen2')">&times;</span><p>Embed Spotify or audio preview here for Feels Like Heaven With You</p></div></div>
+    <div id="lyrics2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('lyrics2')">&times;</span><p>Lyrics go here</p></div></div>
+    <div id="story2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('story2')">&times;</span><p>Behind the song story goes here</p></div></div>
+  </main>
 
-<div id="lyricsModal1" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal('lyricsModal1')" class="close">&times;</span>
-    <h3>Lyrics - Where the Light Lives</h3>
-    <p>“Children of the soil, hold your line...”</p>
-    <!-- full lyrics here -->
-  </div>
-</div>
+  <footer>
+    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
+  </footer>
 
-<div id="storyModal1" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal('storyModal1')" class="close">&times;</span>
-    <h3>Behind the Song</h3>
-    <p>This song was born out of a moment of quiet reflection...</p>
-  </div>
-</div>
-
-<!-- Feels Like Heaven With You Modals -->
-<div id="listenModal2" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal('listenModal2')" class="close">&times;</span>
-    <h3>Listen on Spotify or YouTube</h3>
-    <iframe src="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=d5dea08bb5164bbe" ...></iframe>
-    <iframe src="https://www.youtube.com/channel/UC5VfF9PUr-1oE9aP1G4qC7Q" ...></iframe>
-  </div>
-</div>
-
-<div id="lyricsModal2" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal('lyricsModal2')" class="close">&times;</span>
-    <h3>Lyrics - Feels Like Heaven With You</h3>
-    <p>Sometimes life comes at you,<br>
-    Bad man got confused...<br>
-    If we no go, how we for tek know...</p>
-  </div>
-</div>
-
-<div id="storyModal2" class="modal">
-  <div class="modal-content">
-    <span onclick="closeModal('storyModal2')" class="close">&times;</span>
-    <h3>Behind the Song</h3>
-    <p>This song was inspired by the joy of love and divine alignment — a testimony of grace in relationship and faith.</p>
-  </div>
-</div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
