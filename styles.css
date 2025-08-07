@@ -295,4 +295,17 @@ footer a {
   color: #A68BFF;
   text-decoration: none;
 }
+main {
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
 
