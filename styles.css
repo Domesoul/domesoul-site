@@ -1415,4 +1415,10 @@ footer a:hover { color:#fff; }
 @media (max-width: 900px){
   .hero .container, .featured { grid-template-columns: 1fr; }
 }
+.reveal { opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible, .reveal-stagger.is-visible > * { opacity:1; transform: translateY(0); }
+.reveal-stagger > * { opacity:0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+.reveal-stagger.is-visible > *:nth-child(2){ transition-delay:.06s; }
+.reveal-stagger.is-visible > *:nth-child(3){ transition-delay:.12s; }
+.reveal-stagger.is-visible > *:nth-child(4){ transition-delay:.18s; }
 
