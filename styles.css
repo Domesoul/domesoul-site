@@ -1077,4 +1077,35 @@ blockquote {
   background-color: #d7aaff;
   color: #111;
 }
+.main-header {
+  display: flex;
+  justify-content: space-between; /* space between logo and nav */
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #111; /* same background as site */
+  position: relative;
+}
+
+.main-header .logo img {
+  height: 40px; /* adjust as needed */
+}
+
+.main-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.main-header nav ul li a {
+  color: #b494ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-header nav ul li a:hover {
+  color: #fff;
+}
 
