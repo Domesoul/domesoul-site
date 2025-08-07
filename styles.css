@@ -228,4 +228,53 @@ footer a {
   }
 }
 </style>
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero-content .tagline {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.hero-content blockquote {
+  font-style: italic;
+  font-size: 1.1em;
+  margin: 10px auto;
+  color: #ddd;
+}
+
+.listen-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: 1px solid #b28bff;
+  color: #b28bff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.listen-btn:hover {
+  background: #b28bff;
+  color: #000;
+}
+
+.listen-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
 
