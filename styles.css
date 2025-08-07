@@ -435,4 +435,162 @@ nav img.logo {
 .contact-form button:hover {
   background-color: #d1b3ff;
 }
+/* GENERAL STYLING */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #b388ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #d4b3ff;
+    margin-bottom: 0.5em;
+}
+
+section {
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: #0b0b0b;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #dcdcdc;
+}
+
+.hero blockquote {
+    font-style: italic;
+    margin: 1.5rem 0;
+    color: #bbb;
+}
+
+.listen-button {
+    margin-top: 1.8rem;
+    background-color: #b388ff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.listen-button:hover {
+    background-color: #d1aaff;
+}
+
+/* PRESS KIT */
+.press-section h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b388ff;
+}
+
+.press-section ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.press-section ul li::before {
+    content: "🎵";
+    margin-right: 0.6rem;
+}
+
+.press-section a {
+    display: inline-block;
+    margin: 0.3rem 0;
+}
+
+/* CONTACT FORM */
+.contact-section {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-section label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-section textarea {
+    min-height: 150px;
+}
+
+.contact-section button {
+    background-color: #b388ff;
+    color: #000;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #d1aaff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid #222;
+}
+
+footer a {
+    margin: 0 10px;
+    color: #b388ff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
