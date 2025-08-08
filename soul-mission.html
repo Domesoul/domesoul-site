@@ -19,21 +19,32 @@
     </nav>
   </header>
   <main>
-    <h2>Soul Mission</h2>
-    <div class="we-give-section">
-    <h3>💜 Why We Give</h3>
-    <p>
-        Through Domé Soul's humanitarian outreach, we aim to connect music with purpose—<br>
-        bringing light, love, and support to those in need.
-    </p>
-    <a href="#nomination-form" class="nominate-btn">🎁 Nominate Someone in Need</a>
-</div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdltid1Fz_S71oyInNtvwuKCxtm54zivkE7g08dbrjZ6zfGqQ/viewform?embedded=true" width="100%" height="600" frameborder="0">Loading…</iframe>
-    <div class="donation-section">
-  <h4><span style="color:red;">❤️</span> Support the Mission</h4>
-  <p>Your donation helps us reach more lives. Every act of generosity counts.</p>
-  <a href="https://your-donation-link.com" class="donation-btn">Donate Now</a>
-</div>
+
+<section class="container we-give-section">
+  <h2>💜 Why We Give</h2>
+  <p>Through Domé Soul's humanitarian outreach, we connect music with purpose—bringing light, love, and support to those in need.</p>
+  <a class="btn btn-accent btn-pill" href="#nomination-form">🎁 Nominate Someone in Need</a>
+</section>
+<section class="container" id="nomination-form">
+  <div class="card">
+    <h3>Nomination Form</h3>
+    <p>Know someone who needs support? Share their story below.</p>
+    <!-- Replace src with your real Google Form embed URL -->
+    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+            width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+</section>
+
+<section class="container donation-section">
+  <div class="card center">
+    <h3>❤️ Support the Mission</h3>
+    <p>Your donation helps us reach more lives. Every act of generosity counts.</p>
+    <a class="btn btn-accent btn-pill" href="https://your-donate-link.example" target="_blank" rel="noopener">
+      Donate Now
+    </a>
+  </div>
+</section>
+    
   </main>
   <footer class="footer">
     <p>&copy; 2025 Domé Soul. All rights reserved.</p>
