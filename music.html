@@ -21,26 +21,35 @@
 
   <main>
   
-    <section class="song-card">
-      <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives cover art" />
-      <h2>Where the Light Lives</h2>
+    <section class="container" id="albums">
+  <h2 class="section-title">Albums & Singles</h2>
+
+  <div class="music-section">
+    <!-- Card 1 -->
+    <article class="music-card" id="light-card">
+      <img src="cover-light-lives.jpg" alt="Where the Light Lives cover art" />
+      <h3 class="song-title">Where the Light Lives</h3>
+      <p class="song-blurb">A soul-lifting anthem of hope and healing.</p>
       <div class="button-row">
         <button onclick="openModal('lightListen')">🎧 Listen</button>
         <button onclick="openModal('lightLyrics')">📜 Lyrics</button>
         <button onclick="openModal('lightStory')">💡 Behind the Song</button>
       </div>
-    </section>
+    </article>
 
-    <section class="song-card">
-      <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven With You cover art" />
-      <h2>Feels Like Heaven With You</h2>
+    <!-- Card 2 -->
+    <article class="music-card" id="heaven-card">
+      <img src="cover-feels-heaven.jpg" alt="Feels Like Heaven With You cover art" />
+      <h3 class="song-title">Feels Like Heaven With You</h3>
+      <p class="song-blurb">Warm, intimate, and full of light.</p>
       <div class="button-row">
         <button onclick="openModal('heavenListen')">🎧 Listen</button>
         <button onclick="openModal('heavenLyrics')">📜 Lyrics</button>
         <button onclick="openModal('heavenStory')">💡 Behind the Song</button>
       </div>
-    </section>
-  </main>
+    </article>
+  </div>
+</section>
 
   <!-- Where the Light Lives Modals -->
   <div id="lightListen" class="modal">
