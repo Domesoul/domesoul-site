@@ -3,133 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domé Soul Music</title>
+  <title>Music – Domé Soul</title>
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Domé Soul Music</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="soul-mission.html">Soul Mission</a>
-      <a href="press-kit.html">Press Kit</a>
-      <a href="contact.html">Contact</a>
+  <!-- Header / Nav -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo-dome-soul.png" alt="Domé Soul" /></a>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a href="press-kit.html">Press Kit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-  
-    <section class="container" id="albums">
-  <h2 class="section-title">Albums & Singles</h2>
+  <main class="page">
+    <section class="container">
+      <h1>Music</h1>
+      <p>Stream, explore lyrics, and discover the stories behind each song.</p>
 
-  <div class="music-section">
-    <!-- Card 1 -->
-    <article class="music-card" id="light-card">
-      <img src="cover-light-lives.jpg" alt="Where the Light Lives cover art" />
-      <h3 class="song-title">Where the Light Lives</h3>
-      <p class="song-blurb">A soul-lifting anthem of hope and healing.</p>
-      <div class="button-row">
-        <button onclick="openModal('lightListen')">🎧 Listen</button>
-        <button onclick="openModal('lightLyrics')">📜 Lyrics</button>
-        <button onclick="openModal('lightStory')">💡 Behind the Song</button>
+      <div class="music-grid">
+
+        <!-- Where the Light Lives -->
+        <div class="music-card">
+          <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives" />
+          <h3>Where the Light Lives</h3>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/exampleid" width="100%" height="80" frameBorder="0" allowfullscreen=""></iframe>
+          <div class="music-actions">
+            <button class="btn btn-accent" onclick="openModal('wtllLyrics')">Lyrics</button>
+            <button class="btn btn-primary" onclick="openModal('wtllStory')">Behind the Song</button>
+          </div>
+        </div>
+
+        <!-- Feels Like Heaven With You -->
+        <div class="music-card">
+          <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven With You" />
+          <h3>Feels Like Heaven With You</h3>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/exampleid2" width="100%" height="80" frameBorder="0" allowfullscreen=""></iframe>
+          <div class="music-actions">
+            <button class="btn btn-accent" onclick="openModal('flhLyrics')">Lyrics</button>
+            <button class="btn btn-primary" onclick="openModal('flhStory')">Behind the Song</button>
+          </div>
+        </div>
+
       </div>
-    </article>
-
-    <!-- Card 2 -->
-    <article class="music-card" id="heaven-card">
-      <img src="cover-feels-heaven.jpg" alt="Feels Like Heaven With You cover art" />
-      <h3 class="song-title">Feels Like Heaven With You</h3>
-      <p class="song-blurb">Warm, intimate, and full of light.</p>
-      <div class="button-row">
-        <button onclick="openModal('heavenListen')">🎧 Listen</button>
-        <button onclick="openModal('heavenLyrics')">📜 Lyrics</button>
-        <button onclick="openModal('heavenStory')">💡 Behind the Song</button>
-      </div>
-    </article>
-  </div>
-</section>
-
-  <!-- Where the Light Lives Modals -->
-  <div id="lightListen" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('lightListen')">&times;</span>
-      <h3>Listen: Where the Light Lives</h3>
-      <audio controls>
-        <source src="where-the-light-lives.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  </div>
-
-  <div id="lightLyrics" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('lightLyrics')">&times;</span>
-      <h3>Lyrics: Where the Light Lives</h3>
-      <p>
-        I’ve wandered deserts, crossed oceans wide,<br />
-        But peace only came when I saw your eyes,<br />
-        You speak in silence, yet I hear it all,<br />
-        The gentle thunder that made me fall...<br />
-        (Full lyrics continue)
-      </p>
-    </div>
-  </div>
-
-  <div id="lightStory" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('lightStory')">&times;</span>
-      <h3>Behind the Song: Where the Light Lives</h3>
-      <p>
-        This song was inspired by real moments of quiet courage — when someone chooses to shine their light even in difficult places. It's an anthem of purpose, hope, and the healing power of music.
-      </p>
-    </div>
-  </div>
-
-  <!-- Feels Like Heaven With You Modals -->
-  <div id="heavenListen" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('heavenListen')">&times;</span>
-      <h3>Listen: Feels Like Heaven With You</h3>
-      <audio controls>
-        <source src="feels-like-heaven.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-  </div>
-
-  <div id="heavenLyrics" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('heavenLyrics')">&times;</span>
-      <h3>Lyrics: Feels Like Heaven With You</h3>
-      <p>     
-        I was drifting like a song without a key,<br />
-        Empty streets and skies that wouldn’t speak ...<br />
-        Then you walked in with a quiet light.<br />
-        (Full lyrics continue)
-      </p>
-    </div>
-  </div>
-
-  <div id="heavenStory" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('heavenStory')">&times;</span>
-      <h3>Behind the Song: Feels Like Heaven With You</h3>
-      <p>
-        This track captures the warmth and intimacy of deep connection — a love that brings peace, safety, and a sense of the divine. It's for anyone who's ever felt completely seen and loved.
-      </p>
-    </div>
-  </div>
     </section>
   </main>
-  <footer class="footer">
-    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=ZCXl--ZpSxagaEmPgHLRRQ" target="_blank">Spotify</a>
+
+  <!-- Modals -->
+  <div id="wtllLyrics" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('wtllLyrics')">&times;</span>
+      <h2>Where the Light Lives – Lyrics</h2>
+      <p>[Your lyrics go here]</p>
+    </div>
+  </div>
+
+  <div id="wtllStory" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('wtllStory')">&times;</span>
+      <h2>Where the Light Lives – Behind the Song</h2>
+      <p>This song was inspired by moments of hope in the darkest places...</p>
+    </div>
+  </div>
+
+  <div id="flhLyrics" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('flhLyrics')">&times;</span>
+      <h2>Feels Like Heaven With You – Lyrics</h2>
+      <p>[Your lyrics go here]</p>
+    </div>
+  </div>
+
+  <div id="flhStory" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('flhStory')">&times;</span>
+      <h2>Feels Like Heaven With You – Behind the Song</h2>
+      <p>A heartfelt track about connection, love, and spiritual warmth...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=UGhVREaJQ62O8FkV7DpoLw" target="_blank" rel="noopener">Spotify</a>
       <a href="mailto:contact@domesoul.com">Email</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
