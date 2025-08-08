@@ -2,62 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Press Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Kit – Domé Soul</title>
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-  <header>
-    <h1>Domé Soul</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="soul-mission.html">Soul Mission</a>
-      <a href="press-kit.html" class="active">Press Kit</a>
-      <a href="contact.html">Contact</a>
+  <!-- Header / Nav -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo-dome-soul.png" alt="Domé Soul" /></a>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a class="active" href="press-kit.html">Press Kit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
-  <section class="container press-kit-section">
-  <div class="press-card">
-    <h3>🎤 Artist Bio</h3>
-    <p>Domé Soul is an Afro-soul and humanitarian-inspired artist whose music blends soul, gospel, and folk traditions with powerful storytelling.</p>
-  </div>
 
-  <div class="press-card">
-    <h3>📸 Logos & Photos</h3>
-    <a class="download-link" href="downloads/logo-dome-soul.png" download>Download Logo</a>
-    <a class="download-link" href="downloads/press-photos.zip" download>Download Photos</a>
-  </div>
+  <main class="page container press-kit-section">
+    <!-- Artist Bio -->
+    <div class="press-card">
+      <h3>🎤 Artist Bio</h3>
+      <p>
+        Domé Soul is an Afro-soul artist whose work blends soul, gospel, and folk influences,
+        bridging music and humanitarian outreach. His songs explore healing, faith, community,
+        and the light we carry for one another.
+      </p>
+    </div>
 
-  <div class="press-card">
-    <h3>🎧 Streaming & Social</h3>
-    <ul class="press-links">
-      <li><a href="https://open.spotify.com/artist/..." target="_blank">Spotify</a></li>
-      <li><a href="https://instagram.com/..." target="_blank">Instagram</a></li>
-      <li><a href="mailto:contact@domesoul.com">Email</a></li>
-    </ul>
-  </div>
+    <!-- Logos & Photos -->
+    <div class="press-card">
+      <h3>📸 Logos & Photos</h3>
+      <p>High-res logo and press photos for editorial use:</p>
+      <a class="download-link" href="downloads/logo-dome-soul.png" download>Download Logo (PNG)</a>
+      <a class="download-link" href="downloads/press-photos.zip" download>Download Photos (ZIP)</a>
+    </div>
 
-  <div class="press-card">
-    <h3>📄 One-Pager</h3>
-    <a class="download-link" href="downloads/Dome_Soul_Press_Kit_One_Pager.pdf" download>Download One-Pager PDF</a>
-  </div>
-</section>
+    <!-- Streaming & Social -->
+    <div class="press-card">
+      <h3>🎧 Streaming & Social</h3>
+      <ul class="press-links">
+        <!-- Replace # with your real links -->
+        <li><a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=ZCXl--ZpSxagaEmPgHLRRQ" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="@domesoulmusic" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:contact@domesoul.com">Email</a></li>
+      </ul>
+    </div>
+
+    <!-- One-Pager -->
+    <div class="press-card">
+      <h3>📄 One-Pager</h3>
+      <p>Artist overview, highlights, and contact in a single PDF.</p>
+      <a class="download-link" href="downloads/Dome_Soul_Press_Kit_One_Pager.pdf" download>
+        Download One-Pager PDF
+      </a>
+    </div>
   </main>
-  <footer class="footer">
-    <div class="social-links">
 
-      <footer>
-    © 2025 Domé Soul. All rights reserved.
-    <br>
-    <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=N2W7TwDTSB2b5wagdOeRfg">Spotify</a> |
-        <a href="mailto:contact@domesoul.com">Email</a> |
-        <a href="https://instagram.com">Instagram</a>
-  </footer>
-</body>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=ZCXl--ZpSxagaEmPgHLRRQ" target="_blank" rel="noopener">Spotify</a>
+      <a href="mailto:contact@domesoul.com">Email</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
