@@ -4,42 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Domé Soul</title>
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header / Nav -->
   <header class="main-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo"><img src="assets/logo-dome-soul.png" alt="Domé Soul Logo"></a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">☰</button>
-      <nav id="mobileMenu" class="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="soul-mission.html">Soul Mission</a></li>
-          <li><a href="press-kit.html">Press Kit</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-dome-soul.png" alt="Domé Soul" />
+      </a>
     </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a href="press-kit.html">Press Kit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
+
+  <main class="page">
+    <!-- Hero -->
     <section class="hero">
-      <h1>Welcome to Domé Soul</h1>
+      <div class="container hero reveal-stagger">
+        <section class="intro">
+          <h1 class="reveal">Welcome to Domé Soul</h1>
+          <p class="tagline reveal">Music. Outreach. Purpose.</p>
+
+          <blockquote class="reveal">“Let your light shine before others.”</blockquote>
+          <blockquote class="reveal">“Where the light lives, healing begins.”</blockquote>
+          <blockquote class="reveal">“Soul is not just music, it’s mission.”</blockquote>
+
+          <a class="btn btn-primary btn-pill reveal" href="music.html">
+            <span class="icon">🎧</span> Listen Now
+          </a>
+        </section>
+
+        <aside class="support-card reveal">
+          <div class="support-card__title">
+            <span class="icon">❤️</span>
+            <span>Support the Mission</span>
+          </div>
+          <p>Your donation helps us reach more lives. Every act of generosity counts.</p>
+          <a class="btn btn-accent btn-block" href="soul-mission.html">Donate Now</a>
+        </aside>
+      </div>
     </section>
+
+    <!-- Featured + Quick Links strip -->
     <section class="container featured-mini">
-  <div class="mini-left">
-    <h3>Featured Track</h3>
-    <p>Where the Light Lives</p>
-    <a class="btn btn-accent btn-pill" href="music.html">🎧 Listen</a>
-  </div>
-  <div class="mini-right">
-    <a class="chip" href="music.html#albums">New: Feels Like Heaven With You</a>
-    <a class="chip" href="soul-mission.html#nomination-form">Nominate Someone</a>
-    <a class="chip" href="press-kit.html">Press Kit</a>
-  </div>
-</section>
+      <div class="mini-left">
+        <h3>Featured Track</h3>
+        <p>Where the Light Lives</p>
+        <a class="btn btn-accent btn-pill" href="music.html">🎧 Listen</a>
+      </div>
+      <div class="mini-right">
+        <a class="chip" href="music.html#albums">New: Feels Like Heaven With You</a>
+        <a class="chip" href="soul-mission.html#nomination-form">Nominate Someone</a>
+        <a class="chip" href="press-kit.html">Press Kit</a>
+      </div>
+    </section>
   </main>
-  <footer>© 2025 Domé Soul. All rights reserved.</footer>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a>
+      <a href="mailto:contact@domesoul.com">Email</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
