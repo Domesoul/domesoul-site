@@ -190,3 +190,14 @@ footer a:hover { color:#fff; }
   .press-kit-section { padding: 20px 16px; margin: 16px auto; border-radius: 12px; }
   .contact-form { max-width: 620px; padding: 0 4px; }
 }
+.logo {
+    max-width: 120px; /* keeps it small enough */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 90px;
+    }
+}
+
