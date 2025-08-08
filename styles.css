@@ -59,3 +59,15 @@ body {
     padding: 10px 0;
   }
 }
+.featured-mini {
+  display:flex; gap:18px; align-items:center;
+  padding:16px 0; border-top:1px solid #1f1f1f; border-bottom:1px solid #1f1f1f;
+}
+.mini-left h3 { margin:0 0 4px; color:#E9DBFF; }
+.mini-left p { margin:0 0 8px; color:#cfcfcf; }
+.mini-right { display:flex; gap:10px; flex-wrap:wrap; }
+.chip { display:inline-block; padding:8px 12px; border-radius:999px; border:1px solid #2A1E45; color:#B694FF; text-decoration:none; }
+.chip:hover { background:#1A122C; }
+@media (max-width: 768px) {
+  .featured-mini { flex-direction:column; align-items:flex-start; }
+}
