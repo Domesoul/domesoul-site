@@ -71,3 +71,19 @@ body {
 @media (max-width: 768px) {
   .featured-mini { flex-direction:column; align-items:flex-start; }
 }
+.section-title { margin: 20px 0 12px; color:#E9DBFF; }
+.music-section {
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:30px; margin: 20px 0 60px;
+}
+.music-card {
+  background:#111; color:#fff; border-radius:12px; padding:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.3); transition: transform .2s ease;
+}
+.music-card:hover { transform: translateY(-4px); }
+.music-card img { width:100%; height:auto; border-radius:10px; display:block; }
+.song-title { margin:10px 0 6px; color:#B694FF; }
+.song-blurb { margin:0 0 12px; color:#cfcfcf; }
+.button-row { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px; }
+@media (max-width: 768px){ .button-row{ grid-template-columns: 1fr; } }
+
