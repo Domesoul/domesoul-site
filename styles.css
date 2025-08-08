@@ -1537,3 +1537,137 @@ footer a:hover { color:#fff; }
 }
 @media (max-width: 768px){ .music-section{ margin-top: 60px; } }
 
+/* ===== Global mobile baseline ===== */
+img, video, iframe { max-width: 100%; height: auto; display: block; }
+.container { width: min(1100px, 92vw); margin-inline: auto; }
+
+/* Fix sticky header overlap on short pages */
+main, .page { flex: 1 0 auto; }
+
+/* ===== Navbar ===== */
+@media (max-width: 768px) {
+  header.main-header {
+    padding: 12px 16px;
+  }
+  header.main-header .logo img { height: 36px; }
+
+  /* Turn nav into a wrap row or stacked list */
+  header.main-header nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;  /* right align */
+  }
+  header.main-header nav a {
+    padding: 6px 0;
+    display: inline-block;
+  }
+}
+
+/* ===== Hero / Intro + Support card ===== */
+@media (max-width: 900px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr;     /* stack */
+    gap: 22px;
+  }
+  .intro { order: 1; }
+  .support-card { order: 2; max-width: 520px; margin-inline: auto; }
+  .intro h1 { font-size: clamp(26px, 7vw, 34px); }
+  .tagline { font-size: 1rem; }
+  .cta-btn { width: 100%; text-align: center; }
+}
+
+/* ===== Featured section (Spotify/YT embed) ===== */
+.featured__right iframe {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #251a40;
+}
+@media (max-width: 768px) {
+  .featured { grid-template-columns: 1fr; gap: 18px; }
+  .featured__cta { gap: 10px; }
+  .featured__cta .btn { width: 100%; justify-content: center; }
+}
+
+/* ===== Music page: cards, buttons, modals ===== */
+@media (max-width: 768px) {
+  .music-section {
+    display: grid;
+    grid-template-columns: 1fr;       /* one per row */
+    gap: 18px;
+    margin: 18px auto 40px;
+    width: min(620px, 92vw);
+  }
+  .music-card, .song-card {
+    width: 100%;
+    margin: 0; padding: 16px;
+    border-radius: 12px;
+    background: #111;
+    box-shadow: 0 4px 15px rgba(0,0,0,.3);
+  }
+  .music-card img, .song-card img { border-radius: 10px; object-fit: cover; }
+  .music-card h2, .song-card h2 { font-size: 1.15rem; margin: 10px 0 8px; text-align: left; }
+
+  .button-row, .actions {
+    display: grid; grid-template-columns: 1fr;
+    gap: 10px; margin-top: 10px;
+  }
+  .button-row button, .actions button { width: 100%; justify-content: center; }
+
+  /* Modals fit phones */
+  .modal-content {
+    width: 92%;
+    max-width: 520px;
+    margin: 18% auto;
+    padding: 16px;
+  }
+}
+
+/* ===== Soul Mission: Why We Give + Donate ===== */
+@media (max-width: 768px) {
+  .we-give-section { padding: 24px 16px; max-width: 620px; margin-inline: auto; }
+  .we-give-section h3 { font-size: 1.4rem; }
+  .we-give-section p { font-size: 1rem; }
+  .nominate-btn, .donation-btn, .donation-btn, .donation-btn a, .donation-btn button {
+    width: 100%; display: inline-block; text-align: center;
+  }
+  .donation-section { padding: 28px 16px; }
+}
+
+/* ===== Press Kit: cards/links spacing ===== */
+@media (max-width: 768px) {
+  .press-kit-section {
+    padding: 20px 16px;
+    margin: 16px auto;
+    border-radius: 12px;
+  }
+  .press-kit-section h2 { font-size: 1.6rem; }
+  .press-kit-section p { font-size: 1rem; }
+  .press-kit-links, .press-items {
+    display: grid; grid-template-columns: 1fr; gap: 12px;
+  }
+  .press-card { padding: 14px; border-radius: 10px; background:#111; }
+  .download-link { width: 100%; text-align: center; }
+}
+
+/* ===== Contact: form controls full width ===== */
+@media (max-width: 768px) {
+  .contact-form, .contact-section form {
+    max-width: 620px; margin-inline: auto;
+    padding: 0 4px;
+  }
+  .contact-form input, .contact-form textarea,
+  .contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  .contact-form button, .contact-section button {
+    width: 100%; padding: 12px; font-weight: 700;
+  }
+}
+
+/* ===== Footer: centered links, safe tap targets ===== */
+footer .container { gap: 18px; }
+footer a { padding: 6px 2px; display: inline-block; }
+
