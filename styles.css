@@ -95,4 +95,11 @@ body {
   box-shadow:0 8px 24px rgba(0,0,0,.35); margin: 18px 0 40px;
 }
 .card.center { text-align:center; }
+.press-kit-section { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin: 20px 0 60px; }
+.press-card { background:#111; border:1px solid #1F1A2D; border-radius:12px; padding:16px; }
+.press-card h3 { margin:0 0 8px; color:#E9DBFF; }
+.press-links { list-style:none; padding:0; margin:8px 0 0; }
+.press-links li { margin:6px 0; }
+.download-link { display:inline-block; margin-right:10px; margin-top:6px; padding:8px 12px; border-radius:999px; border:1px solid #2A1E45; color:#B694FF; text-decoration:none; }
+.download-link:hover { background:#1A122C; }
 
