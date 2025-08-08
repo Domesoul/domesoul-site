@@ -2,42 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Domé Soul</title>
+  <link rel="icon" type="image/png" href="images/favicon-32.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Domé Soul</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="soul-mission.html">Soul Mission</a>
-      <a href="press-kit.html">Press Kit</a>
-      <a href="contact.html" class="active">Contact</a>
+  <!-- Header / Nav -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo-dome-soul.png" alt="Domé Soul" /></a>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a href="press-kit.html">Press Kit</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
-   <section class="container contact-section">
-  <h2>Contact Domé Soul</h2>
-  <form class="contact-form" action="mailto:contact@domesoul.com" method="post" enctype="text/plain">
-    <label>Name</label>
-    <input type="text" name="name" required>
-    <label>Email</label>
-    <input type="email" name="email" required>
-    <label>Message</label>
-    <textarea name="message" rows="5" required></textarea>
-    <button type="submit" class="btn btn-accent btn-pill">Send Message</button>
-  </form>
-</section>
+
+  <main class="page container contact-section">
+    <h1>Contact Domé Soul</h1>
+    <!-- Option A: Simple mailto form -->
+    <form class="contact-form" action="mailto:contact@domesoul.com" method="post" enctype="text/plain">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" required />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="btn btn-accent btn-pill">Send Message</button>
+    </form>
+
+    <!-- Option B: Google Form (uncomment and add your form ID)
+    <div class="card" style="margin-top:24px;">
+      <h2>Contact Form</h2>
+      <iframe
+        src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+        width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0"
+        title="Contact Domé Soul">Loading…</iframe>
+    </div>
+    -->
   </main>
-  <footer class="footer">
-    <p>&copy; 2025 Domé Soul. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=ZCXl--ZpSxagaEmPgHLRRQ" target="_blank">Spotify</a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a>
       <a href="mailto:contact@domesoul.com">Email</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
