@@ -670,4 +670,29 @@ footer {
   flex-wrap: wrap;
   margin-top: .5rem;
 }
+/* Press kit helpers */
+.presskit-section { margin: 2.5rem auto; max-width: 900px; }
+.presskit-section .kicker { color: #b28bff; font-weight: 600; margin-bottom: .25rem; }
+.presskit-section .lead { font-size: 1.05rem; line-height: 1.75; color: var(--text, #eaeaea); }
+
+.bio-details { margin-top: 1rem; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; }
+.bio-details summary { cursor: pointer; padding: .9rem 1rem; font-weight: 600; color: #d9c6ff; }
+.bio-details summary::-webkit-details-marker { display: none; }
+.bio-details summary span { position: relative; padding-left: 1.25rem; }
+.bio-details summary span::before {
+  content: "▸"; position: absolute; left: 0; top: 0; color: #b28bff; transition: transform .2s ease;
+}
+.bio-details[open] summary span::before { transform: rotate(90deg); }
+
+.bio-content { padding: .75rem 1rem 1rem; }
+.bio-content p { margin: .75rem 0; }
+.press-highlights { margin: .75rem 0 0; padding-left: 1.1rem; }
+.press-highlights li { margin: .35rem 0; }
+
+.press-actions { margin-top: 1rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+.press-actions .btn {
+  background: #2b2337; border: 1px solid rgba(178,139,255,.35);
+  color: #e9ddff; padding: .65rem .9rem; border-radius: 10px; text-decoration: none;
+}
+.press-actions .btn:hover { background: #342a44; border-color: rgba(178,139,255,.7); }
 
