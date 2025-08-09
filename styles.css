@@ -410,4 +410,21 @@ body.modal-open { overflow: hidden; }
 .skip-link:focus {
   top: 8px;
 }
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin: 18px 0 48px;
+}
+.article-card {
+  background:#111; border:1px solid #1F1A2D; border-radius:16px;
+  transition: transform .15s ease, border-color .2s ease;
+}
+.article-card:hover { transform: translateY(-2px); border-color:#2A1E45; }
+.article-link { display:block; padding:16px; text-decoration:none; color:#ededed; }
+.article-cover { width:100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius:12px; }
+.article-title { margin:10px 0 6px; color:#B694FF; }
+.article-excerpt { margin:0 0 10px; color:#cfcfcf; }
+.article-meta { font-size:14px; color:#9e9e9e; }
+@media (min-width: 768px) { .articles-grid { grid-template-columns: repeat(3, 1fr); } }
 
