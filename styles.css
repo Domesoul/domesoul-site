@@ -541,4 +541,22 @@ body.modal-open { overflow: hidden; }
   /* if you previously had display:flex; flex-direction:column; this is safe */
   display: block;
 }
+/* Layout scaffold for sticky footer */
+html, body {
+  height: 100%;
+}
+
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto; /* grow to fill */
+}
+
+footer {
+  flex: 0 0 auto;
+}
 
