@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- use the HEAD block style we set earlier -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articles — Domé Soul</title>
+  <meta name="description" content="Updates, behind-the-song notes, announcements, and stories from Domé Soul." />
+  <link rel="canonical" href="https://www.domesoul.com/articles.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <meta property="og:title" content="Articles — Domé Soul" />
+  <meta property="og:description" content="Updates, behind-the-song notes, announcements, and stories from Domé Soul." />
+  <meta property="og:image" content="https://www.domesoul.com/images/og-cover.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Domé Soul Articles",
+    "url":"https://www.domesoul.com/articles.html",
+    "publisher":{"@type":"Organization","name":"Domé Soul"},
+    "sameAs":[
+      "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
+      "https://www.youtube.com/@DomeSoulMusic"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="main-header">
+    <div class="logo"><a href="index.html"><img src="images/logo-dome-soul.png" alt="Domé Soul" /></a></div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a href="press-kit.html">Press Kit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="articles.html">Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="page container">
+    <h1>Articles</h1>
+    <p class="tagline">News, notes, and stories from Domé Soul.</p>
+
+    <!-- Optional quick filter -->
+    <input id="articleSearch" type="search" placeholder="Search articles…" aria-label="Search articles" style="width:100%;max-width:520px;margin:12px 0 22px;padding:12px;border-radius:10px;border:1px solid #2A1E45;background:#121212;color:#fff;">
+
+    <section class="articles-grid">
+      <!-- Card 1 -->
+      <article class="article-card" data-tags="behind-the-song,where-the-light-lives">
+        <a class="article-link" href="article-where-the-light-lives.html">
+          <img class="article-cover" src="images/where-the-light-lives-cover.jpg" alt="Where the Light Lives cover">
+          <h2 class="article-title">Behind the Song: Where the Light Lives</h2>
+          <p class="article-excerpt">How a quiet act of courage sparked a soul-lifting anthem…</p>
+          <span class="article-meta">Mar 2025 · 4 min read</span>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="article-card" data-tags="release,feels-like-heaven">
+        <a class="article-link" href="article-feels-like-heaven.html">
+          <img class="article-cover" src="images/feels-like-heaven-cover.jpg" alt="Feels Like Heaven With You cover">
+          <h2 class="article-title">Release Notes: Feels Like Heaven With You</h2>
+          <p class="article-excerpt">Textures, warmth, and the feeling of being truly seen…</p>
+          <span class="article-meta">Mar 2025 · 3 min read</span>
+        </a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="article-card" data-tags="outreach,soul-mission">
+        <a class="article-link" href="article-soul-mission-update.html">
+          <img class="article-cover" src="images/og-cover.jpg" alt="Soul Mission">
+          <h2 class="article-title">Soul Mission Update</h2>
+          <p class="article-excerpt">Stories of impact and how your support travels further…</p>
+          <span class="article-meta">Mar 2025 · 2 min read</span>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:contact@domesoul.com">Email</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Simple search filter
+    const search = document.getElementById('articleSearch');
+    if (search) {
+      search.addEventListener('input', e => {
+        const q = e.target.value.toLowerCase();
+        document.querySelectorAll('.article-card').forEach(card=>{
+          const text = card.innerText.toLowerCase();
+          card.style.display = text.includes(q) ? '' : 'none';
+        });
+      });
+    }
+  </script>
+</body>
+</html>
