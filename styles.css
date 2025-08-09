@@ -333,4 +333,45 @@ p, li { max-width: 75ch; }
 .mt-2 { margin-top: 16px !important; }
 .mt-3 { margin-top: 24px !important; }
 .mt-4 { margin-top: 32px !important; }
+/* --- Modern modal polish --- */
+.modal { 
+  position: fixed; inset: 0; z-index: 1000; display: none;
+}
+.modal.is-open { display: block; }
+body.modal-open { overflow: hidden; }
+
+/* Backdrop click area */
+.modal__backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.75);
+  opacity: 0; transition: opacity .18s ease;
+}
+.modal.is-open .modal__backdrop { opacity: 1; }
+
+/* Panel */
+.modal__panel {
+  position: relative;
+  width: min(640px, 92vw);
+  margin: min(12vh, 96px) auto;
+  background: #111; color: #fff;
+  border: 1px solid #333; border-radius: 14px;
+  padding: clamp(16px, 3vw, 22px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  outline: none;
+  transform: translateY(6px) scale(.98);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+}
+.modal.is-open .modal__panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Close button */
+.modal__close {
+  position: absolute; top: 10px; right: 12px;
+  background: transparent; color: #bbb;
+  font-size: 28px; line-height: 1; border: none; cursor: pointer;
+}
+.modal__close:hover { color: #fff; }
 
