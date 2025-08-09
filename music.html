@@ -81,51 +81,61 @@
     </nav>
   </header>
 
-  <main class="page">
-    <section class="container">
-      <h1>Music</h1>
-      <p>Stream, explore lyrics, and discover the stories behind each song.</p>
+<section class="music-page">
+  <div class="container">
+    <h1>Domé Soul Music</h1>
+    <p class="tagline">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
 
-      <div class="music-grid">
+    <!-- NEW: grid wrapper -->
+    <div class="music-grid">
+      <!-- CARD 1 -->
+      <article class="music-card" id="card-light">
+        <picture>
+          <source srcset="images/where-the-light-lives-cover.webp" type="image/webp">
+          <img src="images/where-the-light-lives-cover.jpg" alt="Where the Light Lives cover" class="music-cover" loading="lazy" decoding="async">
+        </picture>
 
-        <!-- Where the Light Lives -->
-        <div class="music-card">
-
-<div class="music-card"> 
-          <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives" />
-          <h3>Where the Light Lives</h3>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" width="100%" height="80" frameBorder="0" allowfullscreen=""></iframe>
-          <div class="music-actions">
-              <button class="btn btn-accent" data-modal-open="wtllLyrics">Lyrics</button>
-                <button class="btn btn-primary" data-modal-open="wtllStory">Behind the Song</button>
-          </div>
+        <h2>Where the Light Lives</h2>
+        <div class="music-actions">
+          <a class="btn btn-neutral" href="https://open.spotify.com/track/..." target="_blank" rel="noopener">🎧 Listen</a>
+          <button class="btn btn-neutral" data-modal="lyricsLight">📜 Lyrics</button>
+          <button class="btn btn-primary" data-modal="storyLight">💡 Behind the Song</button>
         </div>
+      </article>
 
-        <!-- Feels Like Heaven With You -->
-        <div class="music-card">
-          <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven With You" />
-          <h3>Feels Like Heaven With You</h3>
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5SuokkPewIRoK8gb9xxhPS?si=ba5f30e071204e42" width="100%" height="80" frameBorder="0" allowfullscreen=""></iframe>
-          <div class="music-actions">
-            <button class="btn btn-accent" onclick="openModal('flhLyrics')">Lyrics</button>
-            <button class="btn btn-primary" onclick="openModal('flhStory')">Behind the Song</button>
-          </div>
+      <!-- CARD 2 -->
+      <article class="music-card" id="card-heaven">
+        <picture>
+          <source srcset="images/feels-like-heaven-cover.webp" type="image/webp">
+          <img src="images/feels-like-heaven-cover.jpg" alt="Feels Like Heaven With You cover" class="music-cover" loading="lazy" decoding="async">
+        </picture>
+
+        <h2>Feels Like Heaven With You</h2>
+        <div class="music-actions">
+          <a class="btn btn-neutral" href="https://open.spotify.com/track/..." target="_blank" rel="noopener">🎧 Listen</a>
+          <button class="btn btn-neutral" data-modal="lyricsHeaven">📜 Lyrics</button>
+          <button class="btn btn-primary" data-modal="storyHeaven">💡 Behind the Song</button>
         </div>
-<!-- Still I Will Love You -->
-<div class="music-card" id="iwslu">
-  <img src="images/still-i-will-love-400x400.png" alt="Still I Will Love You cover" class="music-cover" />
-  <h3>Still I Will Love You</h3>
-  <!-- Replace the embed with your real Spotify/YT iframes -->
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7Ihh8elHekwN8Xk2sA63sU?si=af0a58ccb52a4b55"
-          width="100%" height="80" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
+      </article>
 
-  <div class="music-actions">
-    <button class="btn btn-accent" data-modal-open="iwsluLyrics">Lyrics</button>
-    <button class="btn btn-primary" data-modal-open="iwsluStory">Behind the Song</button>
+      <!-- CARD 3 (I Will Still Love You) -->
+      <article class="music-card" id="card-love">
+        <picture>
+          <source srcset="images/i-will-still-love-you-cover.webp" type="image/webp">
+          <img src="images/i-will-still-love-you-cover.jpg" alt="I Will Still Love You cover" class="music-cover" loading="lazy" decoding="async">
+        </picture>
+
+        <h2>I Will Still Love You</h2>
+        <div class="music-actions">
+          <a class="btn btn-neutral" href="https://open.spotify.com/track/..." target="_blank" rel="noopener">🎧 Listen</a>
+          <button class="btn btn-neutral" data-modal="lyricsLove">📜 Lyrics</button>
+          <button class="btn btn-primary" data-modal="storyLove">💡 Behind the Song</button>
+        </div>
+      </article>
+    </div>
   </div>
-</div>
-    </section>
-  </main>
+</section>
+ 
 
   <!-- Modals -->
 
