@@ -161,16 +161,25 @@
   </div>
 </div>
 
-  <div id="flhLyrics" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('flhLyrics')">&times;</span>
-      <h2>Feels Like Heaven With You – Lyrics</h2>   
-      <p>I was drifting like a song without a key,</p>
-      <p>Empty streets and skies that wouldn’t spea,k</p>
-      <p>Then you walked in with a quiet light,</p>
-      <p>And suddenly the dark felt right...</p>
+
+<div id="flhLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="flhLyricsTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="flhLyricsTitle">Feels Like Heaven With You — Lyrics</h2>
+    <div class="modal__body">
+      <p>
+        <!-- Your real lyrics here -->
+       I was drifting like a song without a key,<br>
+        Empty streets and skies that wouldn’t spea,<br>
+        Then you walked in with a quiet light, <br>
+        And suddenly the dark felt right...
+      </p>
     </div>
   </div>
+</div>
+
 
   <div id="flhStory" class="modal">
     <div class="modal-content">
