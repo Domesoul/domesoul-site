@@ -591,4 +591,83 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+/* 404 Page */
+.not-found-page {
+  /* ensures the 404 centers vertically even on tall screens */
+  min-height: 100svh; 
+  display: grid;
+  place-items: center;
+}
+
+.not-found {
+  text-align: center;
+  padding: clamp(24px, 5vw, 48px);
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.not-found__art img {
+  width: min(420px, 75vw);
+  height: auto;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.5));
+  margin-bottom: clamp(12px, 2.4vw, 20px);
+}
+
+.not-found h1 {
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  line-height: 1.2;
+  margin: 0.25rem 0 0.5rem;
+  letter-spacing: .3px;
+}
+
+.not-found__lead {
+  opacity: .9;
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.125rem);
+}
+
+/* Button system (uses site accent) */
+.btn {
+  --btn-bg: rgba(255,255,255,.06);
+  --btn-text: var(--text, #e9e7ef);
+  --btn-border: rgba(255,255,255,.14);
+
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .85rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid var(--btn-border);
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.btn:hover { transform: translateY(-1px); border-color: rgba(255,255,255,.24); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  --btn-bg: var(--accent, #8e6bff);
+  --btn-border: transparent;
+  box-shadow: 0 10px 24px rgba(142,107,255,.28);
+}
+.btn-primary:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 12px 28px rgba(142,107,255,.33);
+}
+
+.btn-neutral {
+  --btn-bg: rgba(255,255,255,.06);
+}
+
+.cta-group {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
 
