@@ -89,19 +89,28 @@
     <!-- NEW: grid wrapper -->
     <div class="music-grid">
       <!-- CARD 1 -->
-      <article class="music-card" id="card-light">
-        <picture>
-          <source srcset="images/where-the-light-lives-cover.webp" type="image/webp">
-          <img src="images/where_the_light_lives_400x400.png" alt="Where the Light Lives cover" class="music-cover" loading="lazy" decoding="async">
-        </picture>
+      <!-- CARD 1 -->
+<article class="music-card" id="card-light">
+  <picture>
+    <source srcset="/images/where-the-light-lives-cover.webp" type="image/webp">
+    <img
+      src="/images/where-the-light-lives-cover.jpg"
+      alt="Where the Light Lives cover"
+      class="music-cover"
+      loading="lazy" decoding="async">
+  </picture>
 
-        <h2>Where the Light Lives</h2>
-        <div class="music-actions">
-          <a class="btn btn-neutral" href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
-          <button class="btn btn-neutral" data-modal="lyricsLight">📜 Lyrics</button>
-          <button class="btn btn-primary" data-modal="storyLight">💡 Behind the Song</button>
-        </div>
-      </article>
+  <h2>Where the Light Lives</h2>
+
+  <div class="music-actions">
+    <a class="btn btn-neutral" href="https://open.spotify.com/track/..." target="_blank" rel="noopener">🎧 Listen</a>
+
+    <!-- NOTE: these now point at modal IDs via data-modal-target -->
+    <button class="btn btn-neutral" data-modal-target="#wtllLyrics">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal-target="#wtllStory">💡 Behind the Song</button>
+  </div>
+</article>
+
 
       <!-- CARD 2 -->
       <article class="music-card" id="card-heaven">
@@ -127,7 +136,7 @@
 
         <h2>I Will Still Love You</h2>
         <div class="music-actions">
-          <a class="btn btn-neutral" href="https://open.spotify.com/track/..." target="_blank" rel="noopener">🎧 Listen</a>
+          <a class="btn btn-neutral" href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
           <button class="btn btn-neutral" data-modal="card-lovelyrics">📜 Lyrics</button>
           <button class="btn btn-primary" data-modal="storyLove">💡 Behind the Song</button>
         </div>
@@ -136,7 +145,6 @@
   </div>
 </section>
  
-
   <!-- Modals -->
 
 
@@ -146,20 +154,19 @@
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-    <h2 id="wtllLyricsTitle">Where the Light Lives — Lyrics</h2>
+    <h2 id="wtllLyricsTitle">Lyrics — Where the Light Lives</h2>
     <div class="modal__body">
-      <p>
-        <!-- Your real lyrics here -->
-       I’ve danced with sorrow, slept next to fear,<br>
+      <!-- Your lyrics go here -->
+      <p>First verse…</p>
+      I’ve danced with sorrow, slept next to fear,<br>
         But you were the song I needed to hear,<br>
         Your hands don’t just hold, they understand, <br>
         You carry my heart like sacred land...
-      </p>
     </div>
   </div>
 </div>
 
-  <!-- MODAL: Where the Light Lives — Behind the Song -->
+<!-- MODAL: Where the Light Lives — Behind the Song -->
 <div id="wtllStory" class="modal" role="dialog" aria-modal="true"
      aria-labelledby="wtllStoryTitle" aria-hidden="true">
   <div class="modal__backdrop" data-modal-close></div>
