@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found - Domé Soul</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
-      background: #0f0f0f;
-      color: #fff;
-      font-family: sans-serif;
-    }
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      color: #a78bfa;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #ddd;
-    }
-    a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #a78bfa;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      background: #c4b5fd;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Domé Soul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-32.png">
 </head>
 <body>
-  <h1>404</h1>
-  <p>Oops! The page you're looking for doesn't exist.</p>
-  <a href="index.html">Return to Home</a>
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Domé Soul logo" height="40">
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="soul-mission.html">Soul Mission</a>
+        <a href="press-kit.html">Press Kit</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="error-page">
+    <div class="container">
+      <h1>404</h1>
+      <p>Looks like you’re off beat — this page doesn’t exist.</p>
+      <p>Let’s get you back to the music 🎵</p>
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-center">
+      <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:contact@domesoul.com">Email</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
 </body>
 </html>
