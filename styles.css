@@ -374,4 +374,19 @@ body.modal-open { overflow: hidden; }
   font-size: 28px; line-height: 1; border: none; cursor: pointer;
 }
 .modal__close:hover { color: #fff; }
+/* Equal-height music cards */
+.music-grid, .music-section { align-items: stretch; }
+.music-card { display:flex; flex-direction:column; }
+.music-card iframe { margin-top:auto; }
+
+/* Stable cover aspect ratio */
+.music-cover, .music-card img {
+  width:100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px;
+}
+
+/* Tighten spacing on small screens */
+@media (max-width: 480px){
+  .music-grid { gap: 16px; }
+  .music-card { padding: 14px; }
+}
 
