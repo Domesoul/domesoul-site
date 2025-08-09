@@ -100,3 +100,47 @@
   }, { threshold: 0.12 });
   els.forEach(el => io.observe(el));
 })();
+// Simple modal controller for <div class="modal"> pattern
+document.addEventListener('DOMContentLoaded', () => {
+  const openers = document.querySelectorAll('[data-modal-target]');
+  const body = document.body;
+
+  const openModal = (modal) => {
+    if (!modal) return;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('is-open');
+    body.style.overflow = 'hidden';
+    const panel = modal.querySelector('.modal__panel');
+    if (panel) panel.focus();
+  };
+
+  const closeModal = (modal) => {
+    if (!modal) return;
+    modal.setAttribute('aria-hidden', 'true');
+    modal.classList.remove('is-open');
+    body.style.overflow = '';
+  };
+
+  openers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sel = btn.getAttribute('data-modal-target');
+      openModal(document.querySelector(sel));
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('[data-modal-close]')) {
+      closeModal(e.target.closest('.modal'));
+    }
+    if (e.target.classList.contains('modal__backdrop')) {
+      closeModal(e.target.closest('.modal'));
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.is-open').forEach(closeModal);
+    }
+  });
+});
+
