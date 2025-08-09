@@ -107,30 +107,59 @@
             <button class="btn btn-primary" onclick="openModal('flhStory')">Behind the Song</button>
           </div>
         </div>
+<!-- I Will Still Love You -->
+<div class="music-card" id="iwslu">
+  <img src="images/i-will-still-love-you-cover.jpg" alt="I Will Still Love You cover" class="music-cover" />
+  <h3>I Will Still Love You</h3>
+  <!-- Replace the embed with your real Spotify/YT iframes -->
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/REPLACE_WITH_REAL_ID"
+          width="100%" height="80" frameborder="0" loading="lazy" allowfullscreen=""></iframe>
 
-      </div>
+  <div class="music-actions">
+    <button class="btn btn-accent" data-modal-open="iwsluLyrics">Lyrics</button>
+    <button class="btn btn-primary" data-modal-open="iwsluStory">Behind the Song</button>
+  </div>
+</div>
     </section>
   </main>
 
   <!-- Modals -->
-  <div id="wtllLyrics" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('wtllLyrics')">&times;</span>
-      <h2>Where the Light Lives – Lyrics</h2>
-      <p>I’ve danced with sorrow, slept next to fear,</p>
-      <p>But you were the song I needed to hear,</p>
-      <p>Your hands don’t just hold, they understand,</p>
-      <p>You carry my heart like sacred land...</p>
-    </div>
-  </div>
 
-  <div id="wtllStory" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('wtllStory')">&times;</span>
-      <h2>Where the Light Lives – Behind the Song</h2>
-      <p>This song was inspired by moments of hope in the darkest places...</p>
+
+<!-- MODAL: Where the Light Lives — Lyrics -->
+<div id="wtllLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="wtllLyricsTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="wtllLyricsTitle">Where the Light Lives — Lyrics</h2>
+    <div class="modal__body">
+      <p>
+        <!-- Your real lyrics here -->
+       I’ve danced with sorrow, slept next to fear,<br>
+        But you were the song I needed to hear,<br>
+        Your hands don’t just hold, they understand, <br>
+        You carry my heart like sacred land...
+      </p>
     </div>
   </div>
+</div>
+
+  <!-- MODAL: Where the Light Lives — Behind the Song -->
+<div id="wtllStory" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="wtllStoryTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="wtllStoryTitle">Where the Light Lives — Behind the Song</h2>
+    <div class="modal__body">
+      <p>
+        Inspired by moments of quiet courage — choosing to shine even when it’s hard,
+        and becoming a shelter for others.
+      </p>
+    </div>
+  </div>
+</div>
 
   <div id="flhLyrics" class="modal">
     <div class="modal-content">
@@ -150,7 +179,40 @@
       <p>A heartfelt track about connection, love, and spiritual warmth...</p>
     </div>
   </div>
+<!-- MODAL: I Will Still Love You — Lyrics -->
+<div id="iwsluLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="iwsluLyricsTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="iwsluLyricsTitle">I Will Still Love You — Lyrics</h2>
+    <div class="modal__body">
+      <p>
+        <!-- Your real lyrics here -->
+        When the night forgets our names,<br>
+        And the storms come breaking through,<br>
+        I will hold the light for you — I will still love you.
+      </p>
+    </div>
+  </div>
+</div>
 
+<!-- MODAL: I Will Still Love You — Behind the Song -->
+<div id="iwsluStory" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="iwsluStoryTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="iwsluStoryTitle">I Will Still Love You — Behind the Song</h2>
+    <div class="modal__body">
+      <p>
+        A vow to choose love beyond circumstance — steady, patient, and anchored in grace.
+        Written to sound like a whispered promise you can carry through the dark.
+      </p>
+    </div>
+  </div>
+</div>
+  
   <!-- Footer -->
   <footer>
     <div class="container">
