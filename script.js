@@ -143,4 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// Simple modal toggler (works for all cards)
+document.addEventListener('click', (e) => {
+  const openBtn = e.target.closest('[data-modal]');
+  if (openBtn) {
+    const id = openBtn.getAttribute('data-modal');
+    const modal = document.getElementById(id);
+    if (modal) modal.removeAttribute('aria-hidden');
+  }
+
+  const closeBtn = e.target.closest('[data-modal-close]');
+  if (closeBtn) {
+    closeBtn.closest('.modal')?.setAttribute('aria-hidden', 'true');
+  }
+});
 
