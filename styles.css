@@ -200,4 +200,137 @@ footer a:hover { color:#fff; }
         max-width: 90px;
     }
 }
+/* ====== Global layout polish ====== */
+:root {
+  --maxw: 1100px;
+  --gap: 24px;
+  --gap-lg: 40px;
+  --surface: #0e0e0f;
+  --surface-2: #141415;
+  --text: #eae7ef;
+  --muted: #b9b2c7;
+  --brand: #8b5cf6; /* purple */
+}
+
+/* page container */
+.container, .wrap, main > .inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 28px);
+}
+
+/* top spacing under header across pages */
+header + main,
+.navbar + main,
+.hero + .container {
+  margin-top: clamp(18px, 3.8vw, 34px);
+}
+
+/* footer */
+footer {
+  margin-top: clamp(40px, 6vw, 80px);
+}
+
+/* headings */
+h1.hero-title, .page-title, h1 {
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+/* ====== Music grid & first-card spacing ====== */
+.music-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  margin-top: var(--gap-lg);
+}
+
+.music-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: clamp(16px, 3vw, 24px);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+}
+
+/* give the first card a little breathing room from page title */
+.music-grid > .music-card:first-child {
+  margin-top: 8px;
+}
+
+/* 2 columns on tablets, 3 on large */
+@media (min-width: 640px) {
+  .music-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .music-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* nice buttons */
+.btn, .cta, .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(139,92,246,0.08);
+  color: var(--text);
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+.btn:hover { transform: translateY(-1px); background: rgba(139,92,246,0.13); }
+
+/* donate / support card */
+.support-card {
+  background: linear-gradient(180deg, rgba(139,92,246,.12), rgba(139,92,246,.06));
+  border: 1px solid rgba(139,92,246,.35);
+  border-radius: 18px;
+  padding: clamp(18px, 3.2vw, 24px);
+}
+
+/* forms (contact & nomination embed wrap) */
+.form-wrap, .embed-wrap {
+  background: var(--surface-2);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 24px);
+}
+
+/* iframe embeds scale nicely on mobile */
+.embed-wrap iframe {
+  width: 100% !important;
+  max-width: 100%;
+  border: none;
+}
+
+/* press kit lists */
+.resource-list { margin-top: 12px; }
+.resource-list a { color: #cbb8ff; }
+.resource-list a:hover { color: #e7dbff; }
+
+/* nav alignment consistency */
+.navbar, header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-inline: clamp(16px, 3vw, 28px);
+}
+
+/* prevent layout jump on long lines */
+p, li { max-width: 75ch; }
+
+/* card image treatment */
+.card-img, .music-cover {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+/* small utilities */
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 8px !important; }
+.mt-2 { margin-top: 16px !important; }
+.mt-3 { margin-top: 24px !important; }
+.mt-4 { margin-top: 32px !important; }
 
