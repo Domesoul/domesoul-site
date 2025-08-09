@@ -110,40 +110,49 @@
   </div>
 </article>
 
+<!-- CARD: Feels Like Heaven With You -->
+<article class="music-card" id="card-flhwy">
+  <picture>
+    <source srcset="images/feels-like-heaven-cover.webp" type="image/webp">
+    <img src="images/feels-like-heaven-cover.jpg"
+         alt="Feels Like Heaven With You cover"
+         class="music-cover" loading="lazy" decoding="async">
+  </picture>
 
-      <!-- CARD 2 -->
-      <article class="music-card" id="card-heaven">
-        <picture>
-          <source srcset="images/feels-like-heaven-cover.webp" type="image/webp">
-          <img src="images/feels_like_heaven_400x400.png" alt="Feels Like Heaven With You cover" class="music-cover" loading="lazy" decoding="async">
-        </picture>
-
-        <h2>Feels Like Heaven With You</h2>
-        <div class="music-actions">
-          <a class="btn btn-neutral" href="https://open.spotify.com/track/..." target="_blank" rel="noopener">🎧 Listen</a>
-          <button class="btn btn-neutral" data-modal="lyricsHeaven">📜 Lyrics</button>
-          <button class="btn btn-primary" data-modal="storyHeaven">💡 Behind the Song</button>
-        </div>
-      </article>
-
-      <!-- CARD 3 (I Will Still Love You) -->
-      <article class="music-card" id="card-love">
-        <picture>
-          <source srcset="images/i-will-still-love-you-cover.webp" type="image/webp">
-          <img src="images/i-will-still-love-you-cover.jpg" alt="I Will Still Love You cover" class="music-cover" loading="lazy" decoding="async">
-        </picture>
-
-        <h2>I Will Still Love You</h2>
-        <div class="music-actions">
-          <a class="btn btn-neutral" href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
-          <button class="btn btn-neutral" data-modal="card-lovelyrics">📜 Lyrics</button>
-          <button class="btn btn-primary" data-modal="storyLove">💡 Behind the Song</button>
-        </div>
-      </article>
-    </div>
+  <h2>Feels Like Heaven With You</h2>
+  <div class="music-actions">
+    <!-- Replace # with your track links -->
+    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
+       target="_blank" rel="noopener">🎧 Listen</a>
+    <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+    <button class="btn btn-neutral" data-modal="flhLyrics">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal="flhStory">💡 Behind the Song</button>
   </div>
-</section>
- 
+</article>
+
+<!-- CARD: Still I Will Love You -->
+<article class="music-card" id="card-still">
+  <picture>
+    <source srcset="images/still-i-will-love-you-cover.webp" type="image/webp">
+    <img src="images/still-i-will-love-you-cover.jpg"
+         alt="Still I Will Love You cover"
+         class="music-cover" loading="lazy" decoding="async">
+  </picture>
+
+  <h2>Still I Will Love You</h2>
+  <div class="music-actions">
+    <!-- Replace # with your track links -->
+    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
+       target="_blank" rel="noopener">🎧 Listen</a>
+    <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+    <button class="btn btn-neutral" data-modal="stillLyrics">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal="stillStory">💡 Behind the Song</button>
+  </div>
+</article>
+
+
+
+      
   <!-- Modals -->
 
 
@@ -181,6 +190,7 @@
   </div>
 </div>
 
+<!-- MODAL: Feels Like Heaven With You — Lyrics -->
 <div id="flhLyrics" class="modal" role="dialog" aria-modal="true"
      aria-labelledby="flhLyricsTitle" aria-hidden="true">
   <div class="modal__backdrop" data-modal-close></div>
@@ -188,18 +198,22 @@
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
     <h2 id="flhLyricsTitle">Feels Like Heaven With You — Lyrics</h2>
     <div class="modal__body">
-      <p>
-        <!-- Your real lyrics here -->
-       I was drifting like a song without a key,<br>
-        Empty streets and skies that wouldn’t spea,<br>
-        Then you walked in with a quiet light, <br>
-        And suddenly the dark felt right...
-      </p>
+      <!-- Replace with final lyrics -->
+      <p>Verse 1<br>
+      Sunrise finds us where hope begins,<br>
+      Soft light dancing on your skin…</p>
+
+      <p>Chorus<br>
+      With you it feels like heaven, heaven in the room,<br>
+      Every breath a blessing, love becoming bloom…</p>
+
+      <p>Bridge<br>
+      Even in the silence, I hear your heart sing true…</p>
     </div>
   </div>
 </div>
 
-  <!-- MODAL: Feels Like Heaven With You — Behind the Song -->
+<!-- MODAL: Feels Like Heaven With You — Behind the Song -->
 <div id="flhStory" class="modal" role="dialog" aria-modal="true"
      aria-labelledby="flhStoryTitle" aria-hidden="true">
   <div class="modal__backdrop" data-modal-close></div>
@@ -208,44 +222,53 @@
     <h2 id="flhStoryTitle">Feels Like Heaven With You — Behind the Song</h2>
     <div class="modal__body">
       <p>
-       A heartfelt track about connection, love, and spiritual warmth...</p>
-    </div>
-  </div>
-</div>
-<!-- MODAL: I Will Still Love You — Lyrics -->
-<div id="card-loveLyrics" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="card-loveLyricsTitle" aria-hidden="true">
-  <div class="modal__backdrop" data-modal-close></div>
-  <div class="modal__panel" tabindex="-1">
-    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-    <h2 id="card-loveLyricsTitle">Still I Will Love You — Lyrics</h2>
-    <div class="modal__body">
-      <p>
-        <!-- Your real lyrics here -->
-        You don’t have to say a word,<br>
-        I see your truth, I’ve felt the hurt,<br>
-        In a world that often turns away,<br>
-        I’ll stay, I’ll stay.
+        A celebration of tender love — the quiet kind that heals, reassures,
+        and makes ordinary rooms feel like holy ground. Written in one sitting,
+        carried by a lilting guitar and soft harmonies.
       </p>
     </div>
   </div>
 </div>
 
-<!-- MODAL: I Will Still Love You — Behind the Song -->
-<div id="iwsluStory" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="iwsluStoryTitle" aria-hidden="true">
+<!-- MODAL: Still I Will Love You — Lyrics -->
+<div id="stillLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="stillLyricsTitle" aria-hidden="true">
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-    <h2 id="iwsluStoryTitle">Still I Will Love You — Behind the Song</h2>
+    <h2 id="stillLyricsTitle">Still I Will Love You — Lyrics</h2>
+    <div class="modal__body">
+      <!-- Replace with final lyrics -->
+      <p>Verse 1<br>
+      Storm clouds gather, shadows fall,<br>
+      But I will stand through it all…</p>
+
+      <p>Chorus<br>
+      Still I will love you, through the night and through the rain,<br>
+      When the road is heavy, I’ll carry all your pain…</p>
+
+      <p>Bridge<br>
+      Love is more than easy days — it’s choosing you again…</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Still I Will Love You — Behind the Song -->
+<div id="stillStory" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="stillStoryTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="stillStoryTitle">Still I Will Love You — Behind the Song</h2>
     <div class="modal__body">
       <p>
-        A vow to choose love beyond circumstance — steady, patient, and anchored in grace.
-        Written to sound like a whispered promise you can carry through the dark.
+        A vow set to melody — love that endures, promises kept when feelings fade.
+        Arranged with warm strings and restrained percussion to let the vow breathe.
       </p>
     </div>
   </div>
 </div>
+
   
   <!-- Footer -->
   <footer>
