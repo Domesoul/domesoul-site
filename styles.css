@@ -559,4 +559,21 @@ main {
 footer {
   flex: 0 0 auto;
 }
+/* ==== Sticky footer scaffold (site-wide) ==== */
+html, body { height: 100%; }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Your main content area should expand; footer pushes to bottom */
+main, .page, .content {
+  flex: 1 0 auto;
+}
+
+/* Footer sits at the bottom when content is short */
+footer {
+  margin-top: auto;     /* key line */
+}
 
