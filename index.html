@@ -1,83 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
- <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domé Soul</title>
-  <link rel="icon" type="image/png" href="images/favicon-32.png" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- SEO & Social Meta Tags -->
-<link rel="canonical" href="https://www.domesoul.com/" />
-<meta name="description" content="Domé Soul — Afro-soul artist blending music, outreach, and purpose. Listen on Spotify and YouTube." />
+  <!-- Base -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domé Soul — Music. Outreach. Purpose.</title>
+  <meta name="description" content="Domé Soul blends Afro-soul, gospel, and folk with purpose-driven outreach. Listen, learn the story behind the songs, and support the mission." />
+  <link rel="canonical" href="https://www.domesoul.com/" />
 
-<meta property="og:title" content="Domé Soul - Music, Mission & Marketplace">
-<meta property="og:description" content="Where the light lives, healing begins. Music with purpose – connecting sound and soul.">
-<meta property="og:image" content="https://www.domesoul.com/images/og-cover.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.domesoul.com/">
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#121212" />
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Domé Soul - Music, Mission & Marketplace">
-<meta name="twitter:description" content="Where the light lives, healing begins. Music with purpose – connecting sound and soul.">
-<meta name="twitter:image" content="https://www.domesoul.com/images/og-cover.jpg">
+  <!-- Social / Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.domesoul.com/" />
+  <meta property="og:title" content="Domé Soul — Music. Outreach. Purpose." />
+  <meta property="og:description" content="Afro-soul & gospel expressions from the heart of Africa. Where the light lives, healing begins." />
+  <meta property="og:image" content="https://www.domesoul.com/images/og-cover.jpg" />
+  <meta property="og:site_name" content="Domé Soul" />
 
-<!-- Artist JSON-LD Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  "name": "Domé Soul",
-  "url": "https://www.domesoul.com/",
-  "sameAs": [
-    "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
-    "https://www.youtube.com/@DomeSoulMusic",
-    "https://instagram.com/", 
-    "https://facebook.com/"
-  ],
-  "image": "https://www.domesoul.com/images/logo-dome-soul.png"
-}
-</script>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Domé Soul — Music. Outreach. Purpose." />
+  <meta name="twitter:description" content="Afro-soul & gospel expressions from the heart of Africa. Where the light lives, healing begins." />
+  <meta name="twitter:image" content="https://www.domesoul.com/images/og-cover.jpg" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Domé Soul",
-  "url": "https://www.domesoul.com/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.domesoul.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+  <!-- Preload (optional) -->
+  <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- JSON-LD: Website + Artist -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Domé Soul",
+        "url": "https://www.domesoul.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.domesoul.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "MusicGroup",
+        "name": "Domé Soul",
+        "url": "https://www.domesoul.com",
+        "image": "https://www.domesoul.com/images/og-cover.jpg",
+        "genre": ["Afro-soul", "Gospel", "Folk"],
+        "sameAs": [
+          "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
+          "https://www.youtube.com/@DomeSoulMusic"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "business",
+          "email": "contact@domesoul.com"
+        }
+      }
+    ]
   }
-}
-</script>
-<title>Domé Soul — Music. Outreach. Purpose.</title>
-<meta name="description" content="Where the light lives, healing begins. Afro-soul & gospel expressions from the heart of Africa. Music with a mission.">
-
-<link rel="canonical" href="https://www.domesoul.com/">
-
-<meta property="og:title" content="Domé Soul — Music. Outreach. Purpose.">
-<meta property="og:description" content="Where the light lives, healing begins. Afro-soul & gospel expressions from the heart of Africa.">
-<meta property="og:url" content="https://www.domesoul.com/">
-
-<meta name="twitter:title" content="Domé Soul — Music. Outreach. Purpose.">
-<meta name="twitter:description" content="Where the light lives, healing begins. Afro-soul & gospel expressions from the heart of Africa.">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  "name": "Domé Soul",
-  "url": "https://www.domesoul.com/",
-  "genre": ["Afro-soul", "Gospel"],
-  "sameAs": [
-    "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
-    "https://www.youtube.com/@DomeSoulMusic"
-  ]
-}
-</script>
-
-  
+  </script>
 </head>
 <body>
   <!-- Header / Nav -->
