@@ -1427,5 +1427,53 @@ footer {
   color: #bb86fc;
   text-decoration: underline;
 }
+/* Footer pieces use the same reveal baseline */
+.footer.reveal-init,
+.footer .footer-social h3.reveal-init,
+.footer-bottom.reveal-init {
+  opacity: 0;
+  transform: translateY(8px) scale(.96);
+  filter: blur(2px);
+}
+.footer.reveal-in,
+.footer .footer-social h3.reveal-in,
+.footer-bottom.reveal-in {
+  animation: ds-popIn .55s cubic-bezier(.2,.6,.2,1) forwards;
+  animation-delay: var(--reveal-delay, 100ms);
+}
+
+/* Divider gets a subtle width wipe */
+@keyframes ds-dividerWipe {
+  from { transform: scaleX(0.2); opacity: .35; }
+  to   { transform: scaleX(1);   opacity: 1; }
+}
+.footer-divider {
+  transform-origin: center;
+}
+.footer-divider.reveal-init {
+  transform: scaleX(0.2);
+  opacity: .35;
+}
+.footer-divider.reveal-in {
+  animation: ds-dividerWipe .5s ease-out forwards;
+  animation-delay: var(--reveal-delay, 140ms);
+}
+
+/* Accessibility: no motion */
+@media (prefers-reduced-motion: reduce) {
+  .footer.reveal-init,
+  .footer .footer-social h3.reveal-init,
+  .footer-bottom.reveal-init,
+  .footer-divider.reveal-init,
+  .footer.reveal-in,
+  .footer .footer-social h3.reveal-in,
+  .footer-bottom.reveal-in,
+  .footer-divider.reveal-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
 
 
