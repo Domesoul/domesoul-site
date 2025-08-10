@@ -1354,4 +1354,42 @@ footer {
   .si,
   .si:hover { transition: none; transform: none; }
 }
+/* Center the copyright in footer */
+.footer-powered {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Lighter style for powered-by section */
+.footer-powered em,
+.footer-powered a {
+  color: rgba(255, 255, 255, 0.7); /* softer tone */
+}
+
+.footer-powered a:hover {
+  color: #bb86fc; /* highlight on hover */
+  text-decoration: underline;
+}
+
+/* Optional: dot separator styling */
+.footer-powered .dot {
+  margin: 0 .5rem;
+  opacity: .65;
+}
+
+/* Keep the link inline but allow wrapping on small screens */
+.footer-powered a {
+  white-space: nowrap;
+}
+
+/* If using flex layout for footer container */
+.footer-inner {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
