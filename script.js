@@ -157,4 +157,40 @@ document.addEventListener('click', (e) => {
     closeBtn.closest('.modal')?.setAttribute('aria-hidden', 'true');
   }
 });
+// ===== Scroll-triggered reveal (IntersectionObserver) =====
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return; // respect accessibility
+
+  // Pick elements to reveal on scroll
+  const targets = document.querySelectorAll([
+    // Hero CTAs, Featured buttons, Quick-link pills
+    '.hero .ds-btn',
+    '.featured-mini .btn',
+    '.ds-quick-links .ds-pill',
+    // Any section cards or items you want to reveal
+    '.cards-grid .card',
+    // Footer icons (will trigger when footer enters view)
+    '.footer-socials .social-icon'
+  ].join(','));
+
+  // Initialize state
+  targets.forEach((el, i) => {
+    el.classList.add('reveal-init'); // hidden state
+    // tiny built-in stagger via CSS variable
+    el.style.setProperty('--reveal-delay', `${60 + i * 70}ms`);
+  });
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-in');
+        entry.target.classList.remove('reveal-init');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  targets.forEach(el => io.observe(el));
+})();
 
