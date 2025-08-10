@@ -1160,4 +1160,21 @@ footer {
     filter: none !important;
   }
 }
+.footer-powered {
+  margin-top: 10px;
+  color: #9aa;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.footer-powered a {
+  color: #cbb6ff;
+  text-decoration: none;
+}
+.footer-powered a:hover {
+  text-decoration: underline;
+}
+.footer-powered .highlight {
+  color: #ffd27f; /* warm gold tone */
+  font-weight: 600;
+}
 
