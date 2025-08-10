@@ -222,4 +222,82 @@ document.addEventListener('click', (e) => {
 
   extra.forEach(el => io.observe(el));
 })();
+// ===== Inline audio previews (one-at-a-time) =====
+(() => {
+  const toggles = document.querySelectorAll('.ds-audio-toggle');
+  if (!toggles.length) return;
+
+  const allAudios = Array.from(document.querySelectorAll('audio'));
+  const labelDefault = '▶ Preview (0:30)';
+
+  function resetOthers(except) {
+    allAudios.forEach(a => {
+      if (a !== except) {
+        a.pause();
+        a.currentTime = 0;
+        const btn = document.querySelector(`.ds-audio-toggle[data-audio="${a.id}"]`);
+        if (btn) btn.classList.remove('is-playing'), btn.textContent = labelDefault;
+      }
+    });
+  }
+
+  toggles.forEach(btn => {
+    const id = btn.dataset.audio;
+    const audio = document.getElementById(id);
+    if (!audio) return;
+
+    // ensure initial label
+    if (!btn.textContent.trim()) btn.textContent = labelDefault;
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        resetOthers(audio);
+        audio.play().catch(()=>{ /* ignore autoplay errors */ });
+        btn.classList.add('is-playing');
+        btn.textContent = '⏸ Pause';
+      } else {
+        audio.pause();
+        btn.classList.remove('is-playing');
+        btn.textContent = labelDefault;
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      btn.classList.remove('is-playing');
+      btn.textContent = labelDefault;
+    });
+  });
+})();
+
+// ===== Modal deep-linking: ?modal=<id or alias> =====
+(() => {
+  const params = new URLSearchParams(location.search);
+  const q = params.get('modal');
+  if (!q) return;
+
+  // Accept raw element id OR short alias; map aliases to your actual modal ids
+  const aliasMap = {
+    'wtll-lyrics': 'lyricsLight',
+    'wtll-story': 'wtllStory',
+    'heaven-lyrics': 'lyricsHeaven',
+    'heaven-story': 'storyHeaven',
+    'siwly-lyrics': 'lyricsLove',
+    'siwly-story': 'storyLove'
+  };
+
+  const targetId = aliasMap[q] || q; // try alias, else use given string as id
+  const modal = document.getElementById(targetId);
+  if (!modal) return;
+
+  // Your site likely opens modals by toggling a class; do the same:
+  modal.classList.add('is-open');
+
+  // Optional: focus the panel for accessibility
+  const panel = modal.querySelector('.modal__panel');
+  if (panel) panel.setAttribute('tabindex', '-1'), panel.focus();
+
+  // Close handlers for backdrop/X buttons (if not already wired)
+  const closers = modal.querySelectorAll('[data-modal-close], .modal__backdrop');
+  closers.forEach(el => el.addEventListener('click', () => modal.classList.remove('is-open'), { once: true }));
+})();
 
