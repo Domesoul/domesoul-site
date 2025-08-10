@@ -814,4 +814,87 @@ footer {
   .ds-footer__copy { order: 2; }
   .ds-social { order: 1; }
 }
+/* === Domé Soul small layout polish (safe to append) === */
+
+:root {
+  --ds-accent: #8a5cff;       /* your violet */
+  --ds-text:   #e8e5ff;
+  --ds-muted:  #b7aef2;
+  --ds-border: rgba(255,255,255,.08);
+}
+
+/* CTA row: centered on desktop, stacked on mobile */
+.ds-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 1.15rem auto 0;
+  max-width: 860px; /* keeps the two buttons from stretching */
+}
+.ds-btn {
+  min-width: 220px;
+  border-radius: 999px;
+}
+@media (max-width: 768px) {
+  .ds-btn { width: 100%; }
+}
+
+/* Support card lives on its own lane */
+.ds-support-card {
+  max-width: 980px;
+  margin: 1.25rem auto 0;
+}
+
+/* Optional: keep the footer layout graceful on mobile */
+.ds-footer {
+  border-top: 1px solid var(--ds-border);
+  padding: 22px 0;
+  color: var(--ds-muted);
+}
+.ds-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ds-footer__copy {
+  font-size: .95rem;
+  opacity: .9;
+}
+
+/* Icon-only social row */
+.ds-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ds-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--ds-border);
+  background: rgba(255,255,255,.03);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+.ds-social a:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.18); background: rgba(255,255,255,.06); }
+.ds-social svg { width: 18px; height: 18px; color: var(--ds-text); opacity: .92; }
+
+/* WhatsApp highlight (subtle) */
+.ds-social a[data-social="wa"] {
+  border-color: rgba(37, 211, 102, .25);
+}
+.ds-social a[data-social="wa"]:hover {
+  background: rgba(37, 211, 102, .08);
+}
+
+/* Mobile footer stacking */
+@media (max-width: 768px) {
+  .ds-footer__inner { flex-direction: column; text-align: center; }
+  .ds-footer__copy { order: 2; }
+  .ds-social { order: 1; }
+}
 
