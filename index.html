@@ -87,70 +87,98 @@
     </nav>
   </header>
 
-  <main class="page">
-    <!-- Hero -->
+ <main class="page">
 
-    <!-- DS: Dual CTAs under hero -->
+  <!-- HERO -->
+  <section class="section container-narrow">
+    <div class="hero-grid">
+      <!-- Left: title, quotes, CTAs -->
+      <header class="intro stagger-up">
+        <h1 class="reveal">Welcome to Domé Soul</h1>
+        <p class="tagline reveal">Music. Outreach. Purpose.</p>
 
-    <section class="hero">
-      <div class="container hero reveal-stagger">
-        <section class="intro">
-          <h1 class="reveal">Welcome to Domé Soul</h1>
-          <p class="tagline reveal">Music. Outreach. Purpose.</p>
+        <blockquote class="reveal">“Let your light shine before others.”</blockquote>
+        <blockquote class="reveal">“Where the light lives, healing begins.”</blockquote>
+        <blockquote class="reveal">“Soul is not just music, it’s mission.”</blockquote>
 
-          <blockquote class="reveal">“Let your light shine before others.”</blockquote>
-          <blockquote class="reveal">“Where the light lives, healing begins.”</blockquote>
-          <blockquote class="reveal">“Soul is not just music, it’s mission.”</blockquote>
+        <!-- HERO CTAs -->
+        <div class="cta-row" style="margin-top: 18px;">
+          <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
+             class="cta-pill cta-primary btn btn-primary ds-btn">
+            🎧 Listen Now
+          </a>
+          <a href="soul-mission.html#donate"
+             class="cta-pill cta-neutral btn btn-accent ds-btn">
+            ❤️ Support Soul Mission
+          </a>
+        </div>
+      </header>
 
-<!-- HERO CTAs -->
-<div class="ds-cta-row">
-  <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
-     class="btn btn-primary ds-btn">
-    🎧 Listen Now
-  </a>
+      <!-- Right: Support card -->
+      <aside class="support-card stagger-down ds-support-card">
+        <div class="support-card__title" style="display:flex;gap:.6rem;align-items:center;margin-bottom:.5rem;">
+          <span class="icon">❤️</span>
+          <span>Support the Mission</span>
+        </div>
+        <p>Your donation helps us reach more lives. Every act of generosity counts.</p>
+        <a class="cta-pill cta-primary btn btn-accent btn-block" href="soul-mission.html#donate">Donate Now</a>
+      </aside>
+    </div>
+  </section>
 
-<!-- SUPPORT CARD -->
-<section class="ds-support-card container">
-  <div class="support-card__title">
-            <span class="icon">❤️</span>
-            <span>Support the Mission</span>
-          </div>
-          <p>Your donation helps us reach more lives. Every act of generosity counts.</p>
-          <a class="btn btn-accent btn-block" href="soul-mission.html">Donate Now</a>
-        </aside>
-</section>
-
-    <!-- Featured + Quick Links strip -->
-    <section class="container featured-mini">
-      <div class="mini-left">
+  <!-- Featured + Quick Links (staggered row) -->
+  <section class="section container-narrow">
+    <div class="cards-grid">
+      <!-- Featured track -->
+      <div class="card">
         <h3>Featured Track</h3>
         <p>Where the Light Lives</p>
-        <a class="btn btn-accent btn-pill" href="music.html">🎧 Listen</a>
+        <div class="cta-row" style="margin-top:10px;">
+          <a class="cta-pill cta-neutral btn btn-accent btn-pill" href="music.html#wtll">🎧 Listen</a>
+          <a class="cta-pill cta-neutral" href="music.html">🎵 All Music</a>
+          <a class="cta-pill cta-neutral" href="press-kit.html">📁 Press Kit</a>
+        </div>
       </div>
-      <div class="mini-right">
-        <a class="chip" href="music.html"https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=50fcc263402d41a5">New: Feels Like Heaven With You</a>
-        <a class="chip" href="soul-mission.html#nomination-form">Nominate Someone</a>
-        <a class="chip" href="press-kit.html">Press Kit</a>
-      </div>
-    </section>
-    <!-- DS: Quick Links banner -->
-<section class="ds-quick-links container" aria-label="Shortcuts">
-  <a href="music.html" class="ds-pill">🎵 All Music</a>
-  <a href="articles.html" class="ds-pill">📰 Latest Articles</a>
-  <a href="presskit.html" class="ds-pill">📂 Press Kit</a>
-</section>
-    <!-- DS: About Domé Soul blurb -->
-<section class="ds-about container">
-  <h2 class="ds-about__title">About Domé Soul</h2>
-  <p class="ds-about__body">
-    Domé Soul is an Afro-soul artist blending soul, gospel, and folk influences, uniting music
-    and humanitarian outreach. His songs explore healing, faith, community, and the light
-    we carry for one another.
-  </p>
-  <a class="ds-btn ds-btn--neutral" href="presskit.html">Read More</a>
-</section>
 
-  </main>
+      <!-- Quick links / news -->
+      <div class="card">
+        <h3>Quick Links</h3>
+        <div class="cta-row" style="margin-top:10px;">
+          <a class="cta-pill cta-neutral"
+             href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=50fcc263402d41a5"
+             target="_blank" rel="noopener">
+            ✨ New: Feels Like Heaven With You
+          </a>
+          <a class="cta-pill cta-neutral" href="soul-mission.html#nomination-form">🎁 Nominate Someone</a>
+          <a class="cta-pill cta-neutral" href="articles.html">📰 Latest Articles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional: Chip banner (kept, but corrected) -->
+  <section class="ds-quick-links container container-narrow" aria-label="Shortcuts" style="margin-top:-6px;">
+    <a href="music.html" class="ds-pill">🎵 All Music</a>
+    <a href="articles.html" class="ds-pill">📰 Latest Articles</a>
+    <a href="press-kit.html" class="ds-pill">📂 Press Kit</a>
+  </section>
+
+  <!-- About Domé Soul -->
+  <section class="section container-narrow">
+    <div class="cards-grid">
+      <div class="card">
+        <h2 class="ds-about__title">About Domé Soul</h2>
+        <p class="ds-about__body" style="max-width:60ch;">
+          Domé Soul is an Afro-soul artist blending soul, gospel, and folk influences, uniting music
+          and humanitarian outreach. His songs explore healing, faith, community, and the light
+          we carry for one another.
+        </p>
+        <a class="cta-pill cta-neutral ds-btn ds-btn--neutral" href="press-kit.html#bio">Read More</a>
+      </div>
+    </div>
+  </section>
+
+</main>
 <footer class="section">
   <div class="container-narrow" style="text-align:center;">
     <div class="footer-icons" style="margin-bottom:10px;">
