@@ -1269,4 +1269,89 @@ footer {
     text-align: center;
   }
 }
+/* ===== CONNECT STRIP POLISH ===== */
+.connect-with-us {
+  text-align: center;
+  margin: clamp(1.75rem, 3vw, 2.75rem) auto clamp(0.75rem, 2vw, 1.25rem);
+}
+.connect-with-us h3 {
+  margin: 0 0 .35rem;
+  letter-spacing: .2px;
+}
+.connect-with-us p {
+  margin: 0 0 1rem;
+  color: var(--muted, #b8b8b8);
+}
+
+/* Social icons row spacing */
+.social-icons { gap: 16px; }
+
+/* Icon buttons: a touch bigger with softer shadow */
+.si {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.si svg { width: 22px; height: 22px; }
+
+/* On hover: subtle lift + color glow ring */
+.si:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.32),
+    0 0 0 6px color-mix(in srgb, currentColor 20%, transparent);
+}
+
+/* Keyboard focus: accessible focus ring */
+.si:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Official brand colors (kept from earlier) */
+.si.spotify   { color: #1DB954; }
+.si.youtube   { color: #FF0000; }
+.si.email     { color: #8AB4F8; }
+.si.instagram { color: #E4405F; }
+.si.whatsapp  { color: #25D366; }
+
+/* ===== FOOTER TWEAKS ===== */
+.site-footer { padding-top: 1.25rem; }
+.footer-inner {
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding-top: 1rem;
+}
+.footer-powered {
+  margin: 0;
+  color: var(--muted, #bcbcbc);
+  font-size: .95rem;
+}
+.footer-powered .dot {
+  margin: 0 .5rem;
+  opacity: .65;
+}
+.footer-powered .nowrap { white-space: nowrap; }
+.footer-powered a { color: var(--accent, #b694ff); }
+
+/* Keep layout elegant on mobile */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: .75rem 1rem;
+  }
+  .footer-powered .nowrap { white-space: normal; } /* allow wrap on small */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .si,
+  .si:hover { transition: none; transform: none; }
+}
 
