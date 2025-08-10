@@ -1475,5 +1475,28 @@ footer {
     filter: none !important;
   }
 }
+/* Preview button state */
+.ds-audio-toggle.is-playing::before { content: "⏸ "; }
+.ds-audio-toggle:not(.is-playing)::before { content: "▶ "; }
+
+/* Modal animation (non-destructive, uses .modal/.modal__panel you already have) */
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal__panel {
+  transform: scale(.96) translateY(6px);
+  opacity: 0;
+  transition: transform .28s cubic-bezier(.2,.6,.2,1), opacity .28s ease;
+}
+.modal.is-open .modal__panel {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
 
 
