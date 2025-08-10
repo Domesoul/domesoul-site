@@ -1177,4 +1177,96 @@ footer {
   color: #ffd27f; /* warm gold tone */
   font-weight: 600;
 }
+/* Connect with us */
+.connect-with-us {
+  text-align: center;
+  margin: 2.5rem auto 1rem;
+}
+.connect-with-us h3 {
+  font-size: clamp(1.25rem, 1.2vw + 1rem, 1.7rem);
+  margin: 0 0 .25rem;
+}
+.connect-with-us p {
+  color: var(--muted, #b8b8b8);
+  margin: 0 0 1rem;
+}
+
+/* Social icon strip */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.si {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 6px 24px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.06);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.si svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: currentColor;
+}
+
+/* Official brand colors */
+.si.spotify   { color: #1DB954; }
+.si.youtube   { color: #FF0000; }
+.si.email     { color: #8AB4F8; }     /* Gmail-ish blue for balance */
+.si.instagram { color: #E4405F; }
+.si.whatsapp  { color: #25D366; }
+
+/* Hover pop */
+.si:hover { transform: translateY(-2px) scale(1.03); }
+
+/* Footer */
+.site-footer {
+  margin-top: 2.5rem;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid rgba(255,255,255,.06);
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.06));
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+}
+.site-footer .copyright {
+  margin: 0;
+  color: var(--muted, #bcbcbc);
+  font-size: .95rem;
+}
+.site-footer .copyright a { color: var(--accent, #b694ff); }
+
+/* Social row inside footer */
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .si,
+  .si:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
 
