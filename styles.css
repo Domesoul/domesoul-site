@@ -1327,9 +1327,10 @@ footer {
   padding-top: 1rem;
 }
 .footer-powered {
-  margin: 0;
-  color: var(--muted, #bcbcbc);
-  font-size: .95rem;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 0.75rem;
 }
 .footer-powered .dot {
   margin: 0 .5rem;
@@ -1392,4 +1393,5 @@ footer {
   justify-content: center;
   text-align: center;
 }
+
 
