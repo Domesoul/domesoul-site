@@ -193,4 +193,33 @@ document.addEventListener('click', (e) => {
 
   targets.forEach(el => io.observe(el));
 })();
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const extra = document.querySelectorAll([
+    '.footer',
+    '.footer .footer-social h3',
+    '.footer-divider',
+    '.footer-bottom'
+  ].join(','));
+
+  let baseDelay = 80;
+  extra.forEach((el, i) => {
+    el.classList.add('reveal-init');
+    el.style.setProperty('--reveal-delay', `${baseDelay + i * 90}ms`);
+  });
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-in');
+        entry.target.classList.remove('reveal-init');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  extra.forEach(el => io.observe(el));
+})();
 
