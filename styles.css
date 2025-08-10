@@ -976,4 +976,51 @@ footer {
   justify-content: center;
 }
 .footer-icons a { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; }
+.footer {
+  padding: 20px 0;
+  background: #000;
+  text-align: center;
+}
+
+.footer-copy {
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-socials .social-icon svg {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Hover effects with brand glow */
+.footer-socials .social-icon.spotify:hover svg {
+  filter: drop-shadow(0 0 6px #1DB954);
+  transform: scale(1.15);
+}
+
+.footer-socials .social-icon.youtube:hover svg {
+  filter: drop-shadow(0 0 6px #FF0000);
+  transform: scale(1.15);
+}
+
+.footer-socials .social-icon.email:hover svg {
+  filter: drop-shadow(0 0 6px #D44638);
+  transform: scale(1.15);
+}
+
+.footer-socials .social-icon.instagram:hover svg {
+  filter: drop-shadow(0 0 6px #DD2A7B);
+  transform: scale(1.15);
+}
+
+.footer-socials .social-icon.whatsapp:hover svg {
+  filter: drop-shadow(0 0 6px #25D366);
+  transform: scale(1.15);
+}
 
