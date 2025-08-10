@@ -780,4 +780,38 @@ footer {
   .ds-footer__copy { order: 2; }
   .ds-social { order: 1; }
 }
+/* === DS layout refinements (safe to append) === */
+
+/* Keep hero text breathing before CTAs */
+.ds-hero-intro { margin-bottom: 1rem; } /* (Optional: add this class to your hero intro container) */
+
+/* CTA row: centered on desktop, stacked on mobile */
+.ds-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .9rem;
+  margin: 1.15rem auto 0;
+  max-width: 860px;           /* keeps the two buttons from stretching too wide */
+}
+.ds-btn { min-width: 220px; } /* wide enough to feel solid, but not full-width */
+@media (max-width: 768px) {
+  .ds-btn { width: 100%; }    /* stack on mobile */
+}
+
+/* If your Support card is a section — give it its own lane */
+.ds-support-card {
+  max-width: 980px;
+  margin: 1.25rem auto 0;     /* separates from CTAs nicely */
+}
+
+/* Quick links banner spacing if you added it */
+.ds-quick-links { margin-top: 1.1rem; }
+
+/* Footer alignment stays centered on mobile */
+@media (max-width: 768px) {
+  .ds-footer__inner { flex-direction: column; text-align: center; }
+  .ds-footer__copy { order: 2; }
+  .ds-social { order: 1; }
+}
 
