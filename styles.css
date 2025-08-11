@@ -2309,3 +2309,7 @@ section { margin-block: 2rem; }
 
 .mini-player{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:#111;border:1px solid #222;border-radius:.9rem;padding:.5rem .8rem;display:flex;gap:.6rem;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:50;color:#eee}
 .mini-player [class*=btn]{height:36px}
+.footer-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));align-items:start;padding:1rem 0}
+.footer-links a,.footer-socials a{color:#cfcfcf;text-decoration:none;margin-right:.8rem}
+.footer-links a:hover,.footer-socials a:hover{color:#fff}
+.copy{margin-top:.6rem;text-align:center}
