@@ -2241,3 +2241,16 @@ section { margin-block: 2rem; }
   .newsletter-grid { grid-template-columns: 1fr; }
   .newsletter .btn.btn-primary { width: 100%; }
 }
+/* Limit form width and center it */
+.contact form,
+.newsletter form {
+  max-width: 600px;   /* Adjust width here */
+  margin: 0 auto;     /* Center horizontally */
+}
+
+/* Optional: make the button not stretch full width */
+.contact .btn-block {
+  display: inline-block;
+  width: auto;
+  padding: 0 2rem;
+}
