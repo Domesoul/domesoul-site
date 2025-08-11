@@ -1805,3 +1805,78 @@ footer {
   white-space: nowrap; border: 0; padding: 0; margin: -1px;
 }
 
+/* --- Newsletter consistency patch --- */
+.newsletter {
+  max-width: 860px;
+  margin: 2rem auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 6px 22px rgba(0,0,0,.06);
+}
+
+.newsletter h2 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1.25rem, 1.2vw + 1rem, 1.75rem);
+  color: #111;           /* force solid heading (fixes faint look) */
+  letter-spacing: .2px;
+}
+
+/* compact inline row that stacks on small screens */
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;  /* email | name | button */
+  gap: .7rem;
+  align-items: center;
+}
+
+.newsletter .form input[type="email"],
+.newsletter .form input[type="text"] {
+  height: 46px;
+  padding: .6rem .8rem;
+  border: 1px solid #ddd;
+  border-radius: .7rem;
+  background: #fff;
+  color: #111;
+}
+
+.newsletter .form input::placeholder {
+  color: #6b6b6b;
+  opacity: 1; /* ensure visible on all browsers */
+}
+
+.newsletter .btn.btn-primary {
+  height: 46px;
+  padding: 0 1.1rem;
+  border-radius: .9rem;
+  white-space: nowrap;
+  /* inherits your site’s primary button colors */
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+/* status message centered under the row */
+.newsletter .form-status {
+  text-align: center;
+  margin-top: .8rem;
+}
+
+/* mobile stacking */
+@media (max-width: 680px) {
+  .newsletter-grid {
+    grid-template-columns: 1fr; /* stack fields + button */
+  }
+  .newsletter .btn.btn-primary {
+    width: 100%;
+  }
+}
+
+/* keep this helper in your CSS if not already there */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
