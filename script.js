@@ -491,4 +491,40 @@ document.addEventListener('click', (e) => {
     }
   });
 })();
+(function () {
+  function wireForm(formId, statusId, successMsg) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const statusEl = document.getElementById(statusId);
+
+    const showStatus = (msg, type) => {
+      statusEl.textContent = msg;
+      statusEl.hidden = false;
+      statusEl.className = 'form-status ' + (type || '');
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const gotcha = form.querySelector('input[name="_gotcha"]');
+      if (gotcha && gotcha.value) return;
+
+      showStatus('Sending...', '');
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data });
+        if (res.ok) {
+          form.reset();
+          showStatus(successMsg, 'success');
+        } else {
+          showStatus('Something went wrong. Please try again.', 'error');
+        }
+      } catch {
+        showStatus('Network error. Please try again later.', 'error');
+      }
+    });
+  }
+
+  wireForm('ds-contact', 'ds-contact-status', 'Message sent! We’ll get back to you soon.');
+  wireForm('ds-subscribe', 'ds-subscribe-status', 'You’re in! Check your inbox for confirmation.');
+})();
 
