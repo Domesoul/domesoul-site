@@ -459,4 +459,36 @@ document.addEventListener('click', (e) => {
 
   forms.forEach(wire);
 })();
+// Domé Soul — contact form handler
+(function () {
+  const form = document.getElementById('ds-contact');
+  if (!form) return;
+  const statusEl = document.getElementById('ds-contact-status');
+
+  const showStatus = (msg, type) => {
+    statusEl.textContent = msg;
+    statusEl.hidden = false;
+    statusEl.className = 'form-status ' + (type || '');
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const gotcha = form.querySelector('input[name="_gotcha"]');
+    if (gotcha && gotcha.value) return; // bot trap
+
+    showStatus('Sending...', '');
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data });
+      if (res.ok) {
+        form.reset();
+        showStatus('Message sent! We’ll get back to you soon.', 'success');
+      } else {
+        showStatus('Something went wrong. Please try again.', 'error');
+      }
+    } catch {
+      showStatus('Network error. Please try again later.', 'error');
+    }
+  });
+})();
 
