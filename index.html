@@ -263,17 +263,27 @@
 </style>
 
   
-<section class="newsletter container">
-  <h2>📬 Join the Domé Soul Community</h2>
-  <p>Be the first to hear new music, mission updates, and exclusive giveaways.</p>
+<section class="stack newsletter">
+  <h2>Subscribe for new music &amp; mission updates</h2>
+  <form id="ds-subscribe" class="form" action="https://formspree.io/f/manbagjw" method="POST" novalidate>
+    <!-- Honeypot -->
+    <label class="visually-hidden">Leave this field empty
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </label>
 
-  <form action="https://formspree.io/f/mqalwvkeL"method="post" target="_blank" novalidate>
-    <div class="newsletter-fields">
-      <input type="email" name="EMAIL" placeholder="Enter Your Email" required>
-      <button type="submit" class="btn btn-primary">Subscribe</button>
-    </div>
+    <label>Email address
+      <input type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+    </label>
+
+    <label>Name (optional)
+      <input type="text" name="name" placeholder="Your name">
+    </label>
+
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+    <p id="ds-subscribe-status" class="form-status" aria-live="polite" hidden></p>
   </form>
 </section>
+
 
  <!-- CONNECT WITH US -->
 <section class="connect-with-us container" aria-labelledby="connect-title">
