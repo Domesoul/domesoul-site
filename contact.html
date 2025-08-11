@@ -73,10 +73,13 @@
   </header>
 
 <section class="contact section-dark">
-  <h2>Contact</h2>
-  <p>For bookings, interviews, or outreach collaborations.</p>
+  <div class="contact-header">
+    <h2>Contact</h2>
+    <p>For bookings, interviews, or outreach collaborations.</p>
+  </div>
 
   <form id="ds-contact" action="https://formspree.io/f/manbagjw?redirect=https://yourdomain.com/thanks.html" method="POST" novalidate>
+    <!-- Honeypot -->
     <label class="visually-hidden">Leave this field empty
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
     </label>
@@ -95,6 +98,7 @@
     <p id="ds-contact-status" class="form-status" aria-live="polite" hidden></p>
   </form>
 </section>
+
 
 <!-- Newsletter Card -->
 <section class="newsletter section-dark">
