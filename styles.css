@@ -1704,4 +1704,8 @@ footer {
 }
 .form-hint { font-size: .9rem; opacity: .75; }
 
+.impact{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:20px auto}
+.impact__item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;text-align:center}
+.impact__num{display:block;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;line-height:1.1}
+.impact__label{display:block;opacity:.8;margin-top:4px}
 
