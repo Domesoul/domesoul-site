@@ -2119,7 +2119,7 @@ section { margin-block: 2rem; }
 }
 #ds-contact input,
 #ds-contact textarea {
-  width: 60%;
+  width: 100%;
   padding: .6rem .9rem;
   border-radius: .6rem;
   border: 1px solid #333;
