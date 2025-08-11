@@ -528,3 +528,36 @@ document.addEventListener('click', (e) => {
   wireForm('ds-subscribe', 'ds-subscribe-status', 'You’re in! Check your inbox for confirmation.');
 })();
 
+// After your preview logic:
+(function(){
+  const bar = document.getElementById('miniPlayer');
+  const title = document.getElementById('miniPlayerTitle');
+  const stopBtn = document.getElementById('miniPlayerStop');
+  let currentAudio=null, currentBtn=null;
+
+  // hook into existing click handler
+  document.addEventListener('click',(e)=>{
+    const btn=e.target.closest('.ds-audio-toggle');
+    if(!btn) return;
+    const audioId=btn.getAttribute('data-audio');
+    const audio=document.getElementById(audioId);
+    if(!audio) return;
+
+    if(currentAudio===audio){ audio.pause(); audio.currentTime=0; bar.hidden=true; currentAudio=null; currentBtn=null; return; }
+
+    // stop previous
+    if(currentAudio){ currentAudio.pause(); currentAudio.currentTime=0; }
+
+    audio.play().then(()=>{
+      currentAudio=audio; currentBtn=btn;
+      title.textContent = btn.closest('.music-card, .feature-hero__body')?.querySelector('h3, h2')?.textContent || 'Preview';
+      bar.hidden=false;
+      audio.onended=()=>{ bar.hidden=true; currentAudio=null; currentBtn=null; };
+    }).catch(()=>{ /* noop, handled elsewhere */ });
+  });
+
+  stopBtn?.addEventListener('click',()=>{
+    if(currentAudio){ currentAudio.pause(); currentAudio.currentTime=0; }
+    bar.hidden=true; currentAudio=null; currentBtn=null;
+  });
+})();
