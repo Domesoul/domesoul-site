@@ -1498,5 +1498,18 @@ footer {
   transform: scale(1) translateY(0);
   opacity: 1;
 }
+.ds-audio-toggle.is-loading {
+  opacity: .7;
+  pointer-events: none;
+  position: relative;
+}
+.ds-audio-toggle.is-loading::after {
+  content: '…';
+  margin-left: .4rem;
+  opacity: .8;
+}
+.ds-audio-toggle.is-playing {
+  font-weight: 600;
+}
 
 
