@@ -300,5 +300,50 @@ document.addEventListener('click', (e) => {
   const closers = modal.querySelectorAll('[data-modal-close], .modal__backdrop');
   closers.forEach(el => el.addEventListener('click', () => modal.classList.remove('is-open'), { once: true }));
 })();
+// Focus trap for modals (enhanced a11y)
+(function () {
+  const focusable = 'a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+  function trapFocus(modal) {
+    const nodes = Array.from(modal.querySelectorAll(focusable));
+    if (!nodes.length) return;
+    const first = nodes[0], last = nodes[nodes.length - 1];
+
+    function handle(e) {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+    modal.__trapHandler = handle;
+    modal.addEventListener('keydown', handle);
+    first.focus();
+  }
+  function untrap(modal) {
+    if (modal.__trapHandler) modal.removeEventListener('keydown', modal.__trapHandler);
+  }
+
+  window.DSopenModal = (id) => {
+    const m = document.getElementById(id);
+    if (!m) return;
+    m.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    trapFocus(m);
+  };
+  window.DScloseModal = (modal) => {
+    const m = typeof modal === 'string' ? document.getElementById(modal) : modal;
+    if (!m) return;
+    m.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    untrap(m);
+  };
+
+  // Wire data-modal buttons
+  document.querySelectorAll('[data-modal]').forEach(btn=>{
+    btn.addEventListener('click', ()=> DSopenModal(btn.dataset.modal));
+  });
+  document.querySelectorAll('[data-modal-close]').forEach(el=>{
+    el.addEventListener('click', ()=> DScloseModal(el.closest('.modal')));
+  });
+})();
 
 
