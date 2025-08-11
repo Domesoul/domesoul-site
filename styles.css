@@ -1739,3 +1739,13 @@ footer {
 .pk-ico { font-size: 22px; opacity: .9; }
 .pk-card h3 { margin: 8px 0 4px; font-size: 1.06rem; }
 .pk-card p { margin: 0; opacity: .78; }
+
+.articles { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: clamp(14px, 2.4vw, 24px); }
+.art-card { display:grid; grid-template-columns: 110px 1fr; gap: 14px; align-items:center;
+  background: rgba(18,18,18,.85); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:12px;
+  transition: border-color .2s, box-shadow .2s; }
+.art-card:hover { border-color: rgba(168,85,247,.35); box-shadow: 0 10px 26px rgba(0,0,0,.35); }
+.art-card img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:10px; }
+.art-card h3 { margin: 2px 0 6px; font-size: 1.06rem; }
+.art-card p { margin: 0 0 6px; opacity: .85; }
+.art-meta { font-size: .9rem; opacity: .7; }
