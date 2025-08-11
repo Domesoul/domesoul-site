@@ -1754,3 +1754,13 @@ footer {
 .post-share { display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 18px; }
 .post-share .ds-pill { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); padding:8px 12px; border-radius:999px; text-decoration:none; }
 .post-share .ds-pill:hover { border-color: rgba(168,85,247,.35); }
+
+.form-field { display:grid; gap:8px; margin-bottom:14px; }
+.form-field input, .form-field textarea {
+  background:#0f0f10; border:1px solid rgba(255,255,255,.08); border-radius:10px; color:#fff; padding:12px 14px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-field input:focus, .form-field textarea:focus {
+  outline:none; border-color:rgba(168,85,247,.45); box-shadow:0 0 0 3px rgba(168,85,247,.25);
+}
+.form-hint { font-size:.9rem; opacity:.75; }
