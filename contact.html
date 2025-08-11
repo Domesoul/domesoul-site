@@ -72,44 +72,52 @@
     </nav>
   </header>
 
-<main class="page container contact-section">
-    <h1>Contact Domé Soul</h1>
+<section class="contact section-dark">
+  <h2>Contact</h2>
+  <p>For bookings, interviews, or outreach collaborations.</p>
 
-<section class="container" aria-labelledby="contact-title">
-  <h1 id="contact-title">Contact</h1>
-  <p class="muted">For bookings, interviews, or outreach collaborations.</p>
+  <form id="ds-contact" action="https://formspree.io/f/manbagjw?redirect=https://yourdomain.com/thanks.html" method="POST" novalidate>
+    <!-- Honeypot -->
+    <label class="visually-hidden">Leave this field empty
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </label>
 
-  <form class="contact-form" method="POST" action="https://formspree.io/f/manbagjw" enctype="text/plain">
-    <div class="form-field">
-      <label for="name">Your Name</label>
-      <input id="name" name="name" required autocomplete="name">
-    </div>
-    <div class="form-field">
-      <label for="email">Your Email</label>
-      <input id="email" type="email" name="email" required autocomplete="email">
-      <div class="form-hint">We’ll reply within 48 hours.</div>
-    </div>
-    <div class="form-field">
-      <label for="msg">Message</label>
-      <textarea id="msg" name="message" rows="6" required></textarea>
-    </div>
-    <button class="btn btn-primary">Send Message</button>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required placeholder="Your Name">
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required placeholder="you@example.com">
+    <p class="small-text">We’ll reply within 48 hours.</p>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+
+    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+    <p id="ds-contact-status" class="form-status" aria-live="polite" hidden></p>
   </form>
 </section>
-<section class="newsletter container">
-  <h2>📬 Join the Domé Soul Community</h2>
-  <p>Be the first to hear new music, mission updates, and exclusive giveaways.</p>
 
-  <form action="https://formspree.io/f/mqalwvkeL"method="post" target="_blank" novalidate>
-    <div class="newsletter-fields">
-      <input type="email" name="EMAIL" placeholder="Enter Your Email" required>
+
+
+<!-- Newsletter Card -->
+<section class="newsletter section-dark">
+  <h2>📬 Join the Domé Soul Community</h2>
+  <p class="sub-text">Be the first to hear new music, mission updates, and exclusive giveaways.</p>
+
+  <form id="ds-subscribe" class="form" action="https://formspree.io/f/manbagjw?redirect=https://yourdomain.com/thanks.html" method="POST" novalidate>
+    <!-- Honeypot -->
+    <label class="visually-hidden">Leave this field empty
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </label>
+
+    <div class="newsletter-grid">
+      <input type="email" name="email" required placeholder="Enter Your Email" autocomplete="email">
       <button type="submit" class="btn btn-primary">Subscribe</button>
     </div>
+
+    <p id="ds-subscribe-status" class="form-status" aria-live="polite" hidden></p>
   </form>
 </section>
-
-
-
 
   
 
