@@ -2299,3 +2299,5 @@ section { margin-block: 2rem; }
 .feature-hero__body h2{ color:#fff; margin:.2rem 0 .3rem; font-size:1.8rem; }
 .feature-hero__body p{ color:#cfcfcf; margin:0 0 .8rem; }
 @media (max-width:720px){ .feature-hero__wrap{ grid-template-columns:1fr; } }
+.proof-row{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;color:#bdbdbd;font-size:.95rem}
+.proof-row li{list-style:none;background:#111;border:1px solid #222;border-radius:.7rem;padding:.45rem .7rem}
