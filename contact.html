@@ -108,6 +108,24 @@
   </form>
 </section>
 
+
+<!-- keep your <form id="ds-subscribe" ...> start tag -->
+<div class="newsletter-grid">
+  <!-- accessible labels: hidden visually but readable by screen readers -->
+  <label class="visually-hidden" for="sub-email">Email address</label>
+  <input id="sub-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+
+  <label class="visually-hidden" for="sub-name">Name (optional)</label>
+  <input id="sub-name" type="text" name="name" placeholder="Your name">
+
+  <button type="submit" class="btn btn-primary">Subscribe</button>
+</div>
+
+<p id="ds-subscribe-status" class="form-status" aria-live="polite" hidden></p>
+<!-- keep your </form> closing tag -->
+
+  
+
  <!-- CONNECT WITH US -->
 <section class="connect-with-us container" aria-labelledby="connect-title">
   <h3 id="connect-title">Connect with us on social media</h3>
