@@ -86,36 +86,39 @@
 
     <!-- NEW: grid wrapper -->
     <div class="music-grid">
-      <!-- CARD 1 -->
+
+
+
+<!-- CARD: Where the Light Lives -->
 <article class="music-card" id="card-light">
   <picture>
-    <source srcset="/images/where-the-light-lives-cover.webp" type="image/webp">
-    <img
-      src="/images/where-the-light-lives-cover.jpg"
-      alt="Where the Light Lives cover"
-      class="music-cover"
-      loading="lazy" decoding="async">
+    <source srcset="images/where-the-light-lives-cover.webp" type="image/webp">
+    <img src="images/where-the-light-lives-cover.jpg"
+         alt="Where the Light Lives cover"
+         class="music-cover" loading="lazy" decoding="async">
   </picture>
 
   <h2>Where the Light Lives</h2>
 
   <div class="music-actions">
-    <a class="btn btn-neutral" href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
-<a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+    <!-- Replace the href with your actual track link if available -->
+    <a class="btn btn-neutral" https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
+    <a class="btn btn-neutral" href="href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
 
-<!-- NEW: 30s preview -->
+    <!-- 30s preview -->
     <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-wtll">▶ Preview (0:30)</button>
-    <audio id="audio-wtll" preload="none">
+    <audio id="audio-wtll" preload="metadata" playsinline>
       <source src="audio/where-the-light-lives-30s.mp3" type="audio/mpeg">
     </audio>
-    
-    <!-- NOTE: these now point at modal IDs via data-modal-target -->
-    <button class="btn btn-neutral" data-modal-target="#wtllLyrics">📜 Lyrics</button>
-    <button class="btn btn-primary" data-modal-target="#wtllStory">💡 Behind the Song</button>
+
+    <!-- Modals -->
+    <button class="btn btn-neutral" data-modal-target="lyricsLight">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal-target="storyLight">💡 Behind the Song</button>
   </div>
 </article>
+
 <!-- CARD: Feels Like Heaven With You -->
-<article class="music-card" id="card-flhwy">
+<article class="music-card" id="card-heaven">
   <picture>
     <source srcset="images/feels-like-heaven-cover.webp" type="image/webp">
     <img src="images/feels-like-heaven-cover.jpg"
@@ -124,15 +127,19 @@
   </picture>
 
   <h2>Feels Like Heaven With You</h2>
+
   <div class="music-actions">
-    <!-- Replace # with your track links -->
-    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
-       target="_blank" rel="noopener">🎧 Listen</a>
+    <!-- Replace the href with your actual track link -->
+    <a class="btn btn-neutral" href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=44c02003055f4c80" target="_blank" rel="noopener">🎧 Listen</a>
     <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+
+    <!-- 30s preview -->
     <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-flhwy">▶ Preview (0:30)</button>
-    <audio id="audio-flhwy" preload="none">
+    <audio id="audio-flhwy" preload="metadata" playsinline>
       <source src="audio/feels-like-heaven-30s.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Modals -->
     <button class="btn btn-neutral" data-modal-target="#flhLyrics">📜 Lyrics</button>
     <button class="btn btn-primary" data-modal-target="#flhStory">💡 Behind the Song</button>
   </div>
@@ -148,20 +155,27 @@
   </picture>
 
   <h2>Still I Will Love You</h2>
+
   <div class="music-actions">
-    <!-- Replace # with your track links -->
-    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
-       target="_blank" rel="noopener">🎧 Listen</a>
+    <!-- Replace the href with your actual track link -->
+    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A" target="_blank" rel="noopener">🎧 Listen</a>
     <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
-    <!-- NEW: 30s preview -->
+
+    <!-- 30s preview -->
     <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-siwly">▶ Preview (0:30)</button>
-    <audio id="audio-siwly" preload="none">
+    <audio id="audio-siwly" preload="metadata" playsinline>
       <source src="audio/still-i-will-love-you-30s.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Modals -->
     <button class="btn btn-neutral" data-modal-target="#stillLyrics">📜 Lyrics</button>
     <button class="btn btn-primary" data-modal-target="#stillStory">💡 Behind the Song</button>
   </div>
 </article>
+
+
+
+      
       
   <!-- Modals -->
 
