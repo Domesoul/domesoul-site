@@ -365,4 +365,55 @@ document.addEventListener('click', (e) => {
   },{threshold:.35});
   nums.forEach(n=>io.observe(n));
 })();
+// Domé Soul — unified Formspree subscribe handlers (main + footer)
+(function () {
+  function wireForm(formId, statusId) {
+    const form = document.getElementById(formId);
+    const statusEl = document.getElementById(statusId);
+    if (!form || !statusEl) return;
+
+    function showStatus(msg, type) {
+      statusEl.textContent = msg;
+      statusEl.hidden = false;
+      statusEl.className = 'form-status ' + (type || '');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Honeypot
+      const gotcha = form.querySelector('input[name="_gotcha"]');
+      if (gotcha && gotcha.value) return;
+
+      form.setAttribute('aria-busy', 'true');
+      showStatus('Subscribing…', '');
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
+        if (res.ok) {
+          form.reset();
+          showStatus('You’re in! Check your inbox for a confirmation email.', 'success');
+        } else {
+          const j = await res.json().catch(() => ({}));
+          const msg = (j && j.errors && j.errors[0] && j.errors[0].message) || 'Something went wrong. Please try again.';
+          showStatus(msg, 'error');
+        }
+      } catch (err) {
+        showStatus('Network error. Please try again.', 'error');
+      } finally {
+        form.removeAttribute('aria-busy');
+      }
+    });
+  }
+
+  // Wire up both forms if present (safe if one is missing)
+  wireForm('ds-subscribe', 'ds-subscribe-status');
+  wireForm('ds-footer-subscribe', 'ds-footer-subscribe-status');
+})();
 
