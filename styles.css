@@ -1880,3 +1880,86 @@ footer {
   overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; border: 0; padding: 0; margin: -1px;
 }
+/* Dark mode newsletter block */
+.newsletter {
+  max-width: 860px;
+  margin: 2rem auto;
+  background: #111; /* dark background */
+  border: 1px solid #222;
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.4);
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.newsletter h2 {
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+  font-size: clamp(1.35rem, 1.5vw + 1rem, 1.85rem);
+  color: #fff;
+}
+
+.newsletter p.sub-text {
+  margin: 0 0 1rem;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+/* Form row */
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .8rem;
+  align-items: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.newsletter input[type="email"],
+.newsletter input[type="text"] {
+  width: 100%;
+  height: 46px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #333;
+  border-radius: .7rem;
+  background: #1a1a1a;
+  color: #f2f2f2;
+  font-size: 0.95rem;
+}
+
+.newsletter input::placeholder {
+  color: #888;
+}
+
+/* Purple glow button */
+.newsletter .btn.btn-primary {
+  background: #7b5cff; /* purple */
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  height: 46px;
+  padding: 0 1.2rem;
+  border-radius: .9rem;
+  box-shadow: 0 6px 20px rgba(123, 92, 255, 0.4);
+  transition: background 0.2s ease;
+}
+.newsletter .btn.btn-primary:hover {
+  background: #8a6eff;
+}
+
+/* Status message */
+.newsletter .form-status {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .newsletter-grid {
+    grid-template-columns: 1fr;
+  }
+  .newsletter .btn.btn-primary {
+    width: 100%;
+  }
+}
