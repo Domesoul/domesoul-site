@@ -1749,3 +1749,8 @@ footer {
 .art-card h3 { margin: 2px 0 6px; font-size: 1.06rem; }
 .art-card p { margin: 0 0 6px; opacity: .85; }
 .art-meta { font-size: .9rem; opacity: .7; }
+
+.post-meta { opacity: .75; margin: -6px 0 12px; }
+.post-share { display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 18px; }
+.post-share .ds-pill { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); padding:8px 12px; border-radius:999px; text-decoration:none; }
+.post-share .ds-pill:hover { border-color: rgba(168,85,247,.35); }
