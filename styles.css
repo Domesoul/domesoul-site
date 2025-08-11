@@ -1716,3 +1716,9 @@ footer {
 .tier p{margin:0 0 10px;opacity:.85}
 .tier .btn{min-width:120px}
 
+.faq{margin:24px auto;display:grid;gap:10px;max-width:900px}
+.faq__item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 14px}
+.faq__item summary{cursor:pointer;font-weight:600;list-style:none}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item[open]{border-color:rgba(168,85,247,.35)}
+.faq__item p{margin:10px 0 6px;opacity:.9}
