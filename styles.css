@@ -1790,4 +1790,18 @@ footer {
 .newsletter button {
   flex-shrink: 0;
 }
+/* Newsletter block */
+.newsletter { background: #fff; border: 1px solid #eee; border-radius: 1rem; padding: 1.2rem; }
+.form-status { margin-top: .6rem; padding: .65rem .8rem; border-radius: .6rem; font-weight: 600; }
+.form-status.success { background: #e9f8ef; color: #0a5b2a; border: 1px solid #bfe9cd; }
+.form-status.error   { background: #fdecec; color: #7a1f1f; border: 1px solid #f6c9c9; }
+.form[aria-busy="true"] { opacity: .7; pointer-events: none; }
+
+/* Accessibility helper for honeypot */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
 
