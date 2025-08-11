@@ -346,4 +346,23 @@ document.addEventListener('click', (e) => {
   });
 })();
 
+// Count-up on scroll
+(() => {
+  const nums = document.querySelectorAll('.impact__num');
+  if (!nums.length) return;
+  const io = new IntersectionObserver((entries,obs)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el=e.target, target=+el.dataset.count || 0, dur=900, t0=performance.now();
+      function tick(now){
+        const p=Math.min(1,(now-t0)/dur);
+        el.textContent = Math.round(target*p).toLocaleString();
+        if(p<1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      obs.unobserve(el);
+    });
+  },{threshold:.35});
+  nums.forEach(n=>io.observe(n));
+})();
 
