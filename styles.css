@@ -2306,3 +2306,6 @@ section { margin-block: 2rem; }
 .press-card{background:#111;border:1px solid #222;border-radius:1rem;padding:1rem;color:#eee}
 .press-card p{margin:0 0 .4rem}
 .press-src{color:#9a9a9a;font-size:.9rem}
+
+.mini-player{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:#111;border:1px solid #222;border-radius:.9rem;padding:.5rem .8rem;display:flex;gap:.6rem;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:50;color:#eee}
+.mini-player [class*=btn]{height:36px}
