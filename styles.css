@@ -2106,3 +2106,51 @@ section { margin-block: 2rem; }
   .newsletter-grid { grid-template-columns: 1fr; }
   .newsletter .btn.btn-primary { width: 100%; }
 }
+/* ==== Contact Form ==== */
+.contact h2 { margin-bottom: .3rem; font-weight: 800; color: #fff; }
+.contact p { color: #cfcfcf; margin-bottom: 1.2rem; }
+
+#ds-contact label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: .3rem;
+  font-weight: 600;
+  color: #ddd;
+}
+#ds-contact input,
+#ds-contact textarea {
+  width: 100%;
+  padding: .6rem .9rem;
+  border-radius: .6rem;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #f2f2f2;
+  font-size: .95rem;
+}
+#ds-contact input::placeholder,
+#ds-contact textarea::placeholder { color: #888; }
+#ds-contact .small-text {
+  font-size: .85rem;
+  color: #888;
+  margin: .2rem 0 0;
+}
+
+#ds-contact .btn.btn-primary {
+  background: #7b5cff;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  height: 46px;
+  padding: 0 1.2rem;
+  border-radius: .9rem;
+  box-shadow: 0 6px 20px rgba(123,92,255,.4);
+  margin-top: 1.5rem;
+}
+#ds-contact .btn.btn-primary:hover { background: #8a6eff; }
+.btn-block { display: block; width: 100%; }
+
+/* Status messages */
+#ds-contact .form-status {
+  margin-top: .8rem;
+  font-size: .9rem;
+}
