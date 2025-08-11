@@ -30,9 +30,24 @@
   </main>
 
   <footer class="site-footer">
+    <div class="footer-subscribe">
+  <h3>Stay Connected</h3>
+  <form id="ds-footer-subscribe" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+    <label class="visually-hidden">Leave this field empty
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </label>
+
+    <input type="email" name="email" required placeholder="Your email address" autocomplete="email">
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+
+    <p id="ds-footer-subscribe-status" class="form-status" aria-live="polite" hidden></p>
+  </form>
+</div>
+
     <p>© <span id="year"></span> Domé Soul • Music • Mission</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
