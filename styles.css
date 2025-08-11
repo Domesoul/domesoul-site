@@ -1709,3 +1709,10 @@ footer {
 .impact__num{display:block;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;line-height:1.1}
 .impact__label{display:block;opacity:.8;margin-top:4px}
 
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:18px auto}
+.tier{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;text-align:center;transition:transform .15s,box-shadow .2s,border-color .2s}
+.tier:hover{transform:translateY(-3px);border-color:rgba(168,85,247,.35);box-shadow:0 14px 30px rgba(0,0,0,.35)}
+.tier h3{margin:0 0 6px;font-size:1.25rem}
+.tier p{margin:0 0 10px;opacity:.85}
+.tier .btn{min-width:120px}
+
