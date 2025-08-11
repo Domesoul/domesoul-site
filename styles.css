@@ -2292,3 +2292,10 @@ section { margin-block: 2rem; }
   max-width: 600px;
   margin: 0 auto;
 }
+/* Featured hero */
+.feature-hero { margin-block: 2rem; }
+.feature-hero__wrap { display:grid; gap:1.2rem; align-items:center; grid-template-columns: 160px 1fr; }
+.feature-hero__art { width:100%; border-radius:1rem; box-shadow:0 8px 24px rgba(0,0,0,.35); }
+.feature-hero__body h2{ color:#fff; margin:.2rem 0 .3rem; font-size:1.8rem; }
+.feature-hero__body p{ color:#cfcfcf; margin:0 0 .8rem; }
+@media (max-width:720px){ .feature-hero__wrap{ grid-template-columns:1fr; } }
