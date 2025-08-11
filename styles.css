@@ -1722,3 +1722,20 @@ footer {
 .faq__item summary::-webkit-details-marker{display:none}
 .faq__item[open]{border-color:rgba(168,85,247,.35)}
 .faq__item p{margin:10px 0 6px;opacity:.9}
+
+.pk-hero { margin: 16px auto 8px; text-align: center; }
+.pk-hero h1 { margin: 0 0 6px; }
+.pk-tag { opacity: .9; margin: 0 0 8px; }
+.pk-badges { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; padding:0; margin:0; list-style:none; }
+.pk-badges li { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08);
+  padding:8px 12px; border-radius:999px; font-size:.95rem; }
+
+.pk-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: clamp(14px, 2.4vw, 24px); margin: 16px auto; }
+.pk-card { background: rgba(20,20,20,.85); border:1px solid rgba(255,255,255,.08); border-radius:14px;
+  padding:16px; text-decoration:none; color:inherit; transition: transform .15s, box-shadow .2s, border-color .2s; }
+.pk-card:hover { transform: translateY(-4px); border-color: rgba(168,85,247,.35);
+  box-shadow: 0 14px 30px rgba(0,0,0,.35), 0 0 0 1px rgba(168,85,247,.2) inset; }
+.pk-ico { font-size: 22px; opacity: .9; }
+.pk-card h3 { margin: 8px 0 4px; font-size: 1.06rem; }
+.pk-card p { margin: 0; opacity: .78; }
