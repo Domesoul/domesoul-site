@@ -416,4 +416,47 @@ document.addEventListener('click', (e) => {
   wireForm('ds-subscribe', 'ds-subscribe-status');
   wireForm('ds-footer-subscribe', 'ds-footer-subscribe-status');
 })();
+// Domé Soul — wire all Formspree newsletter forms on the page
+(function () {
+  const forms = Array.from(document.querySelectorAll('form#ds-subscribe, form#ds-footer-subscribe'));
+  if (!forms.length) return;
+
+  function wire(form){
+    const statusEl = form.querySelector('.form-status');
+    const showStatus = (msg, type) => {
+      if (!statusEl) return;
+      statusEl.textContent = msg;
+      statusEl.hidden = false;
+      statusEl.className = 'form-status ' + (type || '');
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const gotcha = form.querySelector('input[name="_gotcha"]');
+      if (gotcha && gotcha.value) return; // bot
+
+      form.setAttribute('aria-busy','true');
+      showStatus('Subscribing…','');
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method:'POST', headers:{'Accept':'application/json'}, body:data });
+        if (res.ok){
+          form.reset();
+          showStatus('You’re in! Check your inbox for a confirmation email.','success');
+        } else {
+          const j = await res.json().catch(()=>({}));
+          const msg = (j && j.errors && j.errors[0] && j.errors[0].message) || 'Something went wrong. Please try again.';
+          showStatus(msg, 'error');
+        }
+      } catch {
+        showStatus('Network error. Please try again.','error');
+      } finally {
+        form.removeAttribute('aria-busy');
+      }
+    });
+  }
+
+  forms.forEach(wire);
+})();
 
