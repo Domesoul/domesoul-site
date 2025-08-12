@@ -411,4 +411,34 @@
   <div class="footer-bottom">
     <p>© 2025 Domé Soul. All rights reserved.</p>
   </div>
+  <script>
+(function () {
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+
+  // Toggle menu open/close
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // Close menu on link click
+  nav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Active link highlight
+  const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  document.querySelectorAll('.main-nav a').forEach(a => {
+    if (a.getAttribute('href').toLowerCase() === current) {
+      a.classList.add('active');
+    }
+  });
+})();
+</script>
+  </body>
 </footer>
