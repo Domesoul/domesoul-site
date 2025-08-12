@@ -87,3 +87,25 @@
 
 /* 6) Year in footer */
 (() => { const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear(); })();
+// Auto-apply AOS animations to common blocks
+document.addEventListener('DOMContentLoaded', () => {
+  const map = [
+    ['.hero', 'fade-up'],
+    ['.feature-hero__wrap', 'fade-up'],
+    ['.music-card', 'fade-up'],
+    ['.story-card', 'fade-up'],
+    ['.press-card', 'fade-up'],
+    ['.donate-card', 'fade-up'],
+    ['.newsletter', 'zoom-in'],
+    ['.social-tiles .tile', 'fade-up']
+  ];
+  map.forEach(([sel, effect]) => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      if (!el.getAttribute('data-aos')) {
+        el.setAttribute('data-aos', effect);
+        el.setAttribute('data-aos-delay', String(50 + i * 60));
+      }
+    });
+  });
+});
+
