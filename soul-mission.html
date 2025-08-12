@@ -85,21 +85,30 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <!-- Header / Nav -->
-  <header class="main-header">
-    <div class="logo">
-      <a href="index.html"><img src="assets/logo-dome-soul.png" alt="Domé Soul" /></a>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a class="active" href="soul-mission.html">Soul Mission</a></li>
-        <li><a href="press-kit.html">Press Kit</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="articles.html">Articles</a></li>
-      </ul>
+  <header class="site-header">
+  <div class="container header-container">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="Domé Soul Logo" class="site-logo">
+      <span class="brand-name">Domé Soul</span>
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav id="primary-nav" class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="contact.html">Contact</a>
+      <a href="articles.html">Articles</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <main class="page">
     <!-- Why We Give -->
