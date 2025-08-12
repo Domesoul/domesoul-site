@@ -348,6 +348,45 @@
   });
 })();
 </script>
+<script>
+(function(){
+  const buttons = document.querySelectorAll('.ds-audio-toggle[data-audio]');
+  const getAudio = id => document.getElementById(id);
+  let current;
+
+  function stopAll() {
+    document.querySelectorAll('audio').forEach(a => { a.pause(); a.currentTime = 0; });
+    buttons.forEach(b => b.textContent = '▶ Preview (0:30)');
+    current = null;
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-audio');
+      const audio = getAudio(id);
+      if (!audio) return;
+
+      // If clicking the same one, toggle; if a different one, stop others first
+      if (current && current !== audio) stopAll();
+
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '⏸ Pause';
+        current = audio;
+      } else {
+        audio.pause();
+        btn.textContent = '▶ Preview (0:30)';
+        current = null;
+      }
+
+      audio.onended = () => {
+        btn.textContent = '▶ Preview (0:30)';
+        current = null;
+      };
+    });
+  });
+})();
+</script>
 
 </body>
 </footer>
