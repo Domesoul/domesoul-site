@@ -552,3 +552,6 @@ body{
 }
 @keyframes fadeInLogo { to { opacity: 1; } }
 .main-nav a.active { color: #c9b8a6; background: rgba(255,255,255,.1); }
+/* Reveal animation */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease,transform .6s ease;}
+.reveal.is-visible{opacity:1; transform:none;}
