@@ -818,3 +818,41 @@ body { background: #333232; }
   }
   .main-nav.open { display: flex; }
 }
+/* --- Hero visibility + layout safeguard --- */
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,420px);
+  gap:28px;
+  align-items:start;
+}
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns:1fr; }
+}
+
+/* Ensure hero intro is always visible even if AOS/reveal hasn't run yet */
+#home-hero .intro,
+#home-hero .intro .reveal,
+#home-hero .hero-grid .reveal{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
+/* Nice readable styling */
+#home-hero .intro h1{
+  color:#fff;
+  margin:0 0 .35rem;
+  font-size:clamp(2rem,2.2vw + 1.2rem,3rem);
+  line-height:1.15;
+}
+#home-hero .intro .tagline{
+  color:#c9b8a6;
+  font-weight:600;
+  margin-bottom:.8rem;
+}
+#home-hero blockquote{
+  margin:.28rem 0;
+  color:#e8e6e3;
+  opacity:.92;
+  font-style:italic;
+}
