@@ -387,6 +387,13 @@
   });
 })();
 </script>
+<script>
+(function(){
+  const active = document.querySelector('.main-nav a.active');
+  if (active) active.setAttribute('aria-current','page');
+})();
+</script>
 
+  
 </body>
 </footer>
