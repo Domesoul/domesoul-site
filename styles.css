@@ -856,3 +856,79 @@ body { background: #333232; }
   opacity:.92;
   font-style:italic;
 }
+/* ===== Home hero layout polish ===== */
+#home-hero{
+  padding-top: clamp(28px, 6vh, 72px);
+  padding-bottom: clamp(16px, 4vh, 48px);
+}
+
+#home-hero .hero-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) 380px; /* intro | card */
+  gap: clamp(20px, 3vw, 36px);
+  align-items: center; /* vertical balance */
+}
+
+#home-hero .intro{
+  max-width: 60ch;
+}
+
+#home-hero .intro h1{
+  margin: 0 0 .35rem;
+  font-size: clamp(2rem, 2.1vw + 1.2rem, 3.1rem);
+  line-height: 1.15;
+}
+
+#home-hero .intro .tagline{
+  color: #c9b8a6;
+  font-weight: 600;
+  margin-bottom: .85rem;
+}
+
+#home-hero blockquote{
+  margin: .28rem 0;
+  color: #e8e6e3;
+  opacity: .92;
+  font-style: italic;
+}
+
+/* Support card: subtle glass + tidy spacing */
+.ds-support-card{
+  width: 100%;
+  max-width: 420px;
+  padding: 18px 20px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.28);
+  backdrop-filter: blur(4px);
+}
+
+.ds-support-card p{
+  margin: .35rem 0 .8rem;
+}
+
+.ds-support-card .btn-block{
+  width: 100%;
+}
+
+/* Space to the next section so the cover art doesn't crowd the hero */
+#home-hero + .feature-hero{
+  margin-top: clamp(18px, 6vh, 72px);
+}
+
+/* Mobile/tablet: stack nicely, center CTAs */
+@media (max-width: 1024px){
+  #home-hero .hero-grid{ grid-template-columns: minmax(0,1fr) 340px; }
+}
+@media (max-width: 900px){
+  #home-hero .hero-grid{ grid-template-columns: 1fr; }
+  #home-hero .intro{ max-width: 65ch; }
+  #home-hero .cta-row{ display: flex; flex-wrap: wrap; gap: 10px; }
+  .ds-support-card{ max-width: 520px; }
+}
+
+/* Optional: keep the card visible as you scroll a bit on desktop */
+@media (min-width: 1100px){
+  .sticky-desktop{ position: sticky; top: 96px; }
+}
