@@ -1,31 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Domé Soul Music — Listen, Lyrics & Stories</title>
   <meta name="description" content="Stream Domé Soul’s latest releases, read lyrics, and explore the stories behind the songs." />
   <link rel="canonical" href="https://www.domesoul.com/music.html" />
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#333232" />
-  <meta property="og:title" content="Domé Soul Music – Listen & Explore" />
-  <meta property="og:description" content="Discover heartfelt tracks like Where the Light Lives, Feels Like Heaven With You, and Still I Will Love You." />
-  <meta property="og:image" content="https://www.domesoul.com/img/music-og.jpg" />
-  <meta property="og:url" content="https://www.domesoul.com/music.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="Domé Soul Music – Listen & Explore">
+<meta property="og:description" content="Discover heartfelt tracks like Where the Light Lives, Feels Like Heaven With You, and Still I Will Love You.">
+<meta property="og:image" content="https://www.domesoul.com/images/music-og.jpg">
+<meta property="og:url" content="https://www.domesoul.com/music.html">
+<meta property="og:type" content="website">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css" />
-
-  <!-- Analytics (kept) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Domé Soul Music – Listen & Explore">
+<meta name="twitter:description" content="Discover heartfelt tracks like Where the Light Lives, Feels Like Heaven With You, and Still I Will Love You.">
+<meta name="twitter:image" content="https://www.domesoul.com/images/music-og.jpg">
   <script defer data-domain="domesoul.com" src="https://plausible.io/js/script.js"></script>
 
-  <!-- JSON-LD: Artist + recordings (tidy) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- JSON-LD: Music page (artist + recordings) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,7 +32,7 @@
     "name": "Domé Soul",
     "url": "https://www.domesoul.com",
     "sameAs": [
-      "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB",
+      "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
       "https://www.youtube.com/@DomeSoulMusic"
     ],
     "track": [
@@ -43,7 +42,10 @@
         "inAlbum": "Where the Light Lives",
         "byArtist": "Domé Soul",
         "url": "https://www.domesoul.com/music.html#light",
-        "image": "https://www.domesoul.com/images/wtll-cover.jpg"
+        "image": "https://www.domesoul.com/images/wtll-cover.jpg",
+        "sameAs": [
+          "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
+        ]
       },
       {
         "@type": "MusicRecording",
@@ -51,255 +53,340 @@
         "inAlbum": "Feels Like Heaven With You",
         "byArtist": "Domé Soul",
         "url": "https://www.domesoul.com/music.html#heaven",
-        "image": "https://www.domesoul.com/images/flhwy-cover.jpg"
-      },
-      {
-        "@type": "MusicRecording",
-        "name": "Still I Will Love You",
-        "inAlbum": "Still I Will Love You",
-        "byArtist": "Domé Soul",
-        "url": "https://www.domesoul.com/music.html#still",
-        "image": "https://www.domesoul.com/images/still-i-will-love-you-cover.jpg"
+        "image": "https://www.domesoul.com/images/flhwy-cover.jpg",
+        "sameAs": [
+          "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
+        ]
       }
     ]
   }
-  </script>
+  </script>  
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Header / Nav (matches index) -->
+  <!-- Header / Nav -->
   <header class="main-header">
-    <nav class="nav container">
-      <a class="brand" href="index.html">Domé Soul</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
-      <div id="navLinks" class="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="music.html">Music</a></li>
-          <li><a href="soul-mission.html">Soul Mission</a></li>
-          <li><a href="press-kit.html">Press Kit</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="articles.html">Articles</a></li>
-        </ul>
-      </div>
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo-dome-soul.png" alt="Domé Soul" /></a>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="music.html">Music</a></li>
+        <li><a href="soul-mission.html">Soul Mission</a></li>
+        <li><a href="press-kit.html">Press Kit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="articles.html">Articles</a></li>
+      </ul>
     </nav>
   </header>
+<main class="page">
+<section class="music-page">
+  <div class="container">
+    <h1>Domé Soul Music</h1>
+    <p class="tagline">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
 
-  <main id="main" class="home-stack">
-    <!-- HERO -->
-    <section class="hero animate-glow">
-      <div class="container hero-wrap">
-        <div class="hero-copy">
-          <h1>Domé Soul Music</h1>
-          <p class="tagline">Soulful Afro-folk & gospel expressions from the heart of Africa.</p>
-        </div>
-      </div>
-    </section>
+    <!-- NEW: grid wrapper -->
+    <div class="music-grid">
 
-    <!-- MUSIC GRID -->
-    <section class="section-dark">
-      <div class="container music-grid">
 
-        <!-- CARD: Where the Light Lives -->
-        <article class="music-card" id="light">
-          <picture>
-            <source srcset="images/where-the-light-lives-cover.webp" type="image/webp" />
-            <img src="images/where-the-light-lives-cover.jpg" alt="Where the Light Lives cover" class="music-cover" loading="lazy" decoding="async" />
-          </picture>
 
-          <h2>Where the Light Lives</h2>
-          <p class="muted">Gentle soul ballad about finding hope in hard places.</p>
+<!-- CARD: Where the Light Lives -->
+<article class="music-card" id="card-light">
+  <picture>
+    <source srcset="images/where-the-light-lives-cover.webp" type="image/webp">
+    <img src="images/where-the-light-lives-cover.jpg"
+         alt="Where the Light Lives cover"
+         class="music-cover" loading="lazy" decoding="async">
+  </picture>
 
-          <div class="music-actions">
-            <!-- fixed broken link here -->
-            <a class="btn btn-neutral" href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a> <!-- fixed missing href. It was broken in your upload. :contentReference[oaicite:3]{index=3} -->
-            <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+  <h2>Where the Light Lives</h2>
 
-            <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-wtll">▶ Preview (0:30)</button>
-            <audio id="audio-wtll" preload="metadata" playsinline>
-              <source src="audio/where-the-light-lives-30s.mp3" type="audio/mpeg" />
-            </audio>
+  <div class="music-actions">
+    <!-- Replace the href with your actual track link if available -->
+    <a class="btn btn-neutral" https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
+    <a class="btn btn-neutral" href="href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
 
-            <button class="btn btn-neutral" data-modal-target="#wtllLyrics">📜 Lyrics</button>
-            <button class="btn btn-primary" data-modal-target="#wtllStory">💡 Behind the Song</button>
-          </div>
-        </article>
+    <!-- 30s preview -->
+    <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-wtll">▶ Preview (0:30)</button>
+    <audio id="audio-wtll" preload="metadata" playsinline>
+      <source src="audio/where-the-light-lives-30s.mp3" type="audio/mpeg">
+    </audio>
 
-        <!-- CARD: Feels Like Heaven With You -->
-        <article class="music-card" id="heaven">
-          <picture>
-            <source srcset="images/feels-like-heaven-cover.webp" type="image/webp" />
-            <img src="images/feels-like-heaven-cover.jpg" alt="Feels Like Heaven With You cover" class="music-cover" loading="lazy" decoding="async" />
-          </picture>
+    <!-- Modals -->
+    <button class="btn btn-neutral" data-modal-target="#wtllLyrics">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal-target="#wtllStory">💡 Behind the Song</button>
+  </div>
+</article>
 
-          <h2>Feels Like Heaven With You</h2>
-          <p class="muted">A warm, soulful celebration of love.</p>
+<!-- CARD: Feels Like Heaven With You -->
+<article class="music-card" id="card-heaven">
+  <picture>
+    <source srcset="images/feels-like-heaven-cover.webp" type="image/webp">
+    <img src="images/feels-like-heaven-cover.jpg"
+         alt="Feels Like Heaven With You cover"
+         class="music-cover" loading="lazy" decoding="async">
+  </picture>
 
-          <div class="music-actions">
-            <a class="btn btn-neutral" href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=44c02003055f4c80" target="_blank" rel="noopener">🎧 Listen</a>
-            <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+  <h2>Feels Like Heaven With You</h2>
 
-            <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-flhwy">▶ Preview (0:30)</button>
-            <audio id="audio-flhwy" preload="metadata" playsinline>
-              <source src="audio/feels-like-heaven-30s.mp3" type="audio/mpeg" />
-            </audio>
+  <div class="music-actions">
+    <!-- Replace the href with your actual track link -->
+    <a class="btn btn-neutral" href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=44c02003055f4c80" target="_blank" rel="noopener">🎧 Listen</a>
+    <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
 
-            <button class="btn btn-neutral" data-modal-target="#flhLyrics">📜 Lyrics</button>
-            <button class="btn btn-primary" data-modal-target="#flhStory">💡 Behind the Song</button>
-          </div>
-        </article>
+    <!-- 30s preview -->
+    <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-flhwy">▶ Preview (0:30)</button>
+    <audio id="audio-flhwy" preload="metadata" playsinline>
+      <source src="audio/feels-like-heaven-30s.mp3" type="audio/mpeg">
+      <div id="miniPlayer" class="mini-player" hidden>
+  <span id="miniPlayerTitle">Preview — Feels Like Heaven With You</span>
+  <button id="miniPlayerStop" class="btn btn-neutral">⏹ Stop</button>
+</div>
 
-        <!-- CARD: Still I Will Love You -->
-        <article class="music-card" id="still">
-          <picture>
-            <source srcset="images/still-i-will-love-you-cover.webp" type="image/webp" />
-            <img src="images/still-i-will-love-you-cover.jpg" alt="Still I Will Love You cover" class="music-cover" loading="lazy" decoding="async" />
-          </picture>
+    </audio>
 
-          <h2>Still I Will Love You</h2>
-          <p class="muted">A vow set to melody — love that endures.</p>
+    <!-- Modals -->
+    <button class="btn btn-neutral" data-modal-target="#flhLyrics">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal-target="#flhStory">💡 Behind the Song</button>
+  </div>
+</article>
 
-          <div class="music-actions">
-            <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB" target="_blank" rel="noopener">🎧 Listen</a>
-            <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+<!-- CARD: Still I Will Love You -->
+<article class="music-card" id="card-still">
+  <picture>
+    <source srcset="images/still-i-will-love-you-cover.webp" type="image/webp">
+    <img src="images/still-i-will-love-you-cover.jpg"
+         alt="Still I Will Love You cover"
+         class="music-cover" loading="lazy" decoding="async">
+  </picture>
 
-            <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-siwly">▶ Preview (0:30)</button>
-            <audio id="audio-siwly" preload="metadata" playsinline>
-              <source src="audio/still-i-will-love-you-30s.mp3" type="audio/mpeg" />
-            </audio>
+  <h2>Still I Will Love You</h2>
 
-            <button class="btn btn-neutral" data-modal-target="#stillLyrics">📜 Lyrics</button>
-            <button class="btn btn-primary" data-modal-target="#stillStory">💡 Behind the Song</button>
-          </div>
-        </article>
+  <div class="music-actions">
+    <!-- Replace the href with your actual track link -->
+    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A" target="_blank" rel="noopener">🎧 Listen</a>
+    <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
 
-      </div>
-    </section>
+    <!-- 30s preview -->
+    <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-siwly">▶ Preview (0:30)</button>
+    <audio id="audio-siwly" preload="metadata" playsinline>
+      <source src="audio/still-i-will-love-you-30s.mp3" type="audio/mpeg">
+    </audio>
 
-    <!-- MODALS (unchanged content, cleaned structure) -->
-    <!-- WTLL Lyrics -->
-    <div id="wtllLyrics" class="modal" role="dialog" aria-modal="true" aria-labelledby="wtllLyricsTitle" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" tabindex="-1">
-        <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-        <h2 id="wtllLyricsTitle">Lyrics — Where the Light Lives</h2>
-        <div class="modal__body">
-          <p>First verse…</p>
-          I’ve danced with sorrow, slept next to fear,<br>
-          But you were the song I needed to hear,<br>
-          Your hands don’t just hold, they understand,<br>
-          You carry my heart like sacred land...
-        </div>
-      </div>
+    <!-- Modals -->
+    <button class="btn btn-neutral" data-modal-target="#stillLyrics">📜 Lyrics</button>
+    <button class="btn btn-primary" data-modal-target="#stillStory">💡 Behind the Song</button>
+  </div>
+</article>
+
+
+
+      
+      
+  <!-- Modals -->
+
+<!-- MODAL: Where the Light Lives — Lyrics -->
+<div id="wtllLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="wtllLyricsTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="wtllLyricsTitle">Lyrics — Where the Light Lives</h2>
+    <div class="modal__body">
+      <!-- Your lyrics go here -->
+      <p>First verse…</p>
+      I’ve danced with sorrow, slept next to fear,<br>
+        But you were the song I needed to hear,<br>
+        Your hands don’t just hold, they understand, <br>
+        You carry my heart like sacred land...
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Where the Light Lives — Behind the Song -->
+<div id="wtllStory" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="wtllStoryTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="wtllStoryTitle">Where the Light Lives — Behind the Song</h2>
+    <div class="modal__body">
+      <p>
+        Inspired by moments of quiet courage — choosing to shine even when it’s hard,
+        and becoming a shelter for others.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Feels Like Heaven With You — Lyrics -->
+<div id="flhLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="flhLyricsTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="flhLyricsTitle">Feels Like Heaven With You — Lyrics</h2>
+    <div class="modal__body">
+      <!-- Replace with final lyrics -->
+      <p>Verse 1<br> 
+      I was drifting like a song without a key ,<br>
+      Empty streets and skies that wouldn’t speak …</p>
+
+      <p>Chorus<br>
+      Feels like heaven with you,<br>
+      Like every storm finally passed through…</p>
+
+      <p>Bridge<br>
+      Maybe this is what grace feels like…</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Feels Like Heaven With You — Behind the Song -->
+<div id="flhStory" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="flhStoryTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="flhStoryTitle">Feels Like Heaven With You — Behind the Song</h2>
+    <div class="modal__body">
+      <p>
+        A celebration of tender love — the quiet kind that heals, reassures,
+        and makes ordinary rooms feel like holy ground. Written in one sitting,
+        carried by a lilting guitar and soft harmonies.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Still I Will Love You — Lyrics -->
+<div id="stillLyrics" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="stillLyricsTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="stillLyricsTitle">Still I Will Love You — Lyrics</h2>
+    <div class="modal__body">
+      <!-- Replace with final lyrics -->
+      <p>Verse 1<br>  
+      You don’t have to say a word,<br>
+      I see your truth, I’ve felt the hurt,<br>
+      In a world that often turns away,<br>
+      I’ll stay, I’ll stay...</p> 
+      
+      <p>Chorus<br>
+      Still I will love, when the fire is gone,<br>
+      Still I will give, even if I’ve got none…</p>
+
+      <p>Bridge<br>
+      Even when it hurts to smile...…</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Still I Will Love You — Behind the Song -->
+<div id="stillStory" class="modal" role="dialog" aria-modal="true"
+     aria-labelledby="stillStoryTitle" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel" tabindex="-1">
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
+    <h2 id="stillStoryTitle">Still I Will Love You — Behind the Song</h2>
+    <div class="modal__body">
+      <p>
+        A vow set to melody — love that endures, promises kept when feelings fade.
+        Arranged with warm strings and restrained percussion to let the vow breathe.
+      </p>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- Newsletter Card -->
+<section class="newsletter section-dark">
+  <h2>📬 Join the Domé Soul Community</h2>
+  <p class="sub-text">Be the first to hear new music, mission updates, and exclusive giveaways.</p>
+
+  <form id="ds-subscribe" class="form" action="https://formspree.io/f/manbagjw?redirect=https://yourdomain.com/thanks.html" method="POST" novalidate>
+    <label class="visually-hidden">Leave this field empty
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </label>
+
+    <div class="newsletter-grid">
+      <input type="email" name="email" required placeholder="Enter Your Email" autocomplete="email">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
     </div>
 
-    <!-- WTLL Story -->
-    <div id="wtllStory" class="modal" role="dialog" aria-modal="true" aria-labelledby="wtllStoryTitle" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" tabindex="-1">
-        <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-        <h2 id="wtllStoryTitle">Where the Light Lives — Behind the Song</h2>
-        <div class="modal__body">
-          <p>Inspired by moments of quiet courage — choosing to shine even when it’s hard, and becoming a shelter for others.</p>
-        </div>
-      </div>
+    <p id="ds-subscribe-status" class="form-status" aria-live="polite" hidden></p>
+  </form>
+</section>
+
+      
+  <!-- CONNECT WITH US -->
+<section class="connect-with-us container" aria-labelledby="connect-title">
+  <h3 id="connect-title">Connect with us on social media</h3>
+  <div class="social-icons" role="list">
+    <!-- Spotify -->
+    <a role="listitem" class="si spotify" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A" target="_blank" rel="noopener" aria-label="Spotify">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 .001 24.001A12 12 0 0 0 12 0Zm5.32 17.34a.74.74 0 0 1-1.02.25c-2.79-1.71-6.3-2.1-10.44-1.15a.74.74 0 1 1-.33-1.44c4.51-1.04 8.4-.6 11.46 1.25.34.2.45.64.24.99Zm1.39-3.07a.94.94 0 0 1-1.31.32c-3.19-1.97-8.06-2.54-11.83-1.39a.94.94 0 0 1-.53-1.8c4.28-1.27 9.61-.63 13.2 1.54.44.27.58.86.28 1.33Zm.14-3.17c-3.63-2.13-9.65-2.33-13.08-1.27a1.13 1.13 0 1 1-.65-2.16c4.03-1.22 10.7-1 14.86 1.43a1.13 1.13 0 0 1-1.13 1.99Z"/></svg>
+    </a>
+
+    <!-- YouTube -->
+    <a role="listitem" class="si youtube" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.11C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.39.59A3 3 0 0 0 .5 6.2 31.13 31.13 0 0 0 0 12a31.13 31.13 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.11C4.5 20.5 12 20.5 12 20.5s7.5 0 9.39-.59A3 3 0 0 0 23.5 17.8 31.13 31.13 0 0 0 24 12a31.13 31.13 0 0 0-.5-5.8ZM9.75 15.5v-7l6 3.5-6 3.5Z"/></svg>
+    </a>
+
+    <!-- Email -->
+    <a role="listitem" class="si email" href="mailto:contact@domesoul.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.11.89 2 2 2h16a2 2 0 0 0 2-2V6c0-1.11-.89-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </a>
+
+    <!-- Instagram -->
+    <a role="listitem" class="si instagram" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.06 1.8.25 2.22.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.35 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.25 1.8-.41 2.22a3.6 3.6 0 0 1-.9 1.38 3.6 3.6 0 0 1-1.38.9c-.42.16-1.05.35-2.22.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.8-.25-2.22-.41a3.6 3.6 0 0 1-1.38-.9 3.6 3.6 0 0 1-.9-1.38c-.16-.42-.35-1.05-.41-2.22C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.06-1.17.25-1.8.41-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.35 2.22-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 2c-3.15 0-3.52.01-4.76.07-.96.04-1.48.2-1.83.33-.46.18-.79.39-1.14.73-.34.34-.55.67-.73 1.14-.13.35-.29.87-.33 1.83-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.96.2 1.48.33 1.83.18.46.39.79.73 1.14.34.34.67.55 1.14.73.35.13.87.29 1.83.33 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.96-.04 1.48-.2 1.83-.33.46-.18.79-.39 1.14-.73.34-.34.55-.67.73-1.14.13-.35.29-.87.33-1.83.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.96-.2-1.48-.33-1.83-.18-.46-.39-.79-.73-1.14a2.8 2.8 0 0 0-1.14-.73c-.35-.13-.87-.29-1.83-.33-1.24-.06-1.61-.07-4.76-.07Zm0 3.3a4.5 4.5 0 1 1 0 9.001 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 .001 5.001A2.5 2.5 0 0 0 12 9.5ZM17.4 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a role="listitem" class="si whatsapp" href="https://wa.me/2349070610805" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.2-1.6A11.8 11.8 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52Zm-8.52 18.1c-1.88 0-3.71-.5-5.32-1.45l-.38-.22-3.68.95.99-3.6-.24-.37A9.56 9.56 0 0 1 2.4 12c0-5.28 4.32-9.6 9.6-9.6s9.6 4.32 9.6 9.6-4.32 9.6-9.6 9.6Zm5.31-7.15c-.29-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.68.15-.2.29-.77.95-.95 1.14-.18.2-.35.22-.65.07-1.77-.88-2.93-1.57-4.09-3.56-.31-.53.31-.49.9-1.62.1-.2.05-.37-.03-.52-.08-.15-.68-1.66-.93-2.28-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.37-.27.29-1.04 1-1.04 2.43 0 1.42 1.07 2.79 1.22 2.98.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.18-1.41-.07-.12-.26-.2-.55-.35Z"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<p class="footer-powered">
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <strong>Domé Soul</strong>
+      <p class="muted">Music • Mission • Stories</p>
     </div>
-
-    <!-- FLHWY Lyrics -->
-    <div id="flhLyrics" class="modal" role="dialog" aria-modal="true" aria-labelledby="flhLyricsTitle" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" tabindex="-1">
-        <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-        <h2 id="flhLyricsTitle">Feels Like Heaven With You — Lyrics</h2>
-        <div class="modal__body">
-          <p>Verse 1<br>I was drifting like a song without a key,<br>Empty streets and skies that wouldn’t speak …</p>
-          <p>Chorus<br>Feels like heaven with you,<br>Like every storm finally passed through…</p>
-          <p>Bridge<br>Maybe this is what grace feels like…</p>
-        </div>
-      </div>
+    <nav class="footer-links">
+      <a href="music.html">Music</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-socials">
+      <a href="https://instagram.com/..." target="_blank" rel="noopener">Instagram</a>
+      <a href="https://youtube.com/@..." target="_blank" rel="noopener">YouTube</a>
+      <a href="https://open.spotify.com/artist/..." target="_blank" rel="noopener">Spotify</a>
     </div>
+  </div>
+  <p class="copy muted">© <span id="year"></span> Domé Soul</p>
+</footer>
 
-    <!-- FLHWY Story -->
-    <div id="flhStory" class="modal" role="dialog" aria-modal="true" aria-labelledby="flhStoryTitle" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" tabindex="-1">
-        <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-        <h2 id="flhStoryTitle">Feels Like Heaven With You — Behind the Song</h2>
-        <div class="modal__body">
-          <p>A celebration of tender love — the quiet kind that heals, reassures, and makes ordinary rooms feel like holy ground.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIWLY Lyrics -->
-    <div id="stillLyrics" class="modal" role="dialog" aria-modal="true" aria-labelledby="stillLyricsTitle" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" tabindex="-1">
-        <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-        <h2 id="stillLyricsTitle">Still I Will Love You — Lyrics</h2>
-        <div class="modal__body">
-          <p>Verse 1<br>You don’t have to say a word…</p>
-          <p>Chorus<br>Still I will love, when the fire is gone…</p>
-          <p>Bridge<br>Even when it hurts to smile…</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIWLY Story -->
-    <div id="stillStory" class="modal" role="dialog" aria-modal="true" aria-labelledby="stillStoryTitle" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" tabindex="-1">
-        <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
-        <h2 id="stillStoryTitle">Still I Will Love You — Behind the Song</h2>
-        <div class="modal__body">
-          <p>A vow set to melody — promises kept when feelings fade. Warm strings and restrained percussion let the vow breathe.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter section-dark">
-      <div class="container">
-        <h2>📬 Join the Domé Soul Community</h2>
-        <p class="sub-text">Be the first to hear new music, mission updates, and exclusive giveaways.</p>
-        <form id="ds-subscribe" class="form" action="https://formspree.io/f/manbagjw?redirect=https://yourdomain.com/thanks.html" method="POST" novalidate>
-          <label class="visually-hidden">Leave this field empty
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-          </label>
-          <div class="newsletter-grid">
-            <input type="email" name="email" required placeholder="Enter Your Email" autocomplete="email" />
-            <button type="submit" class="btn btn-primary">Subscribe</button>
-          </div>
-          <p id="ds-subscribe-status" class="form-status" aria-live="polite" hidden></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer (single, clean) -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Domé Soul</strong>
-        <p class="muted">Music • Mission • Stories</p>
-      </div>
-      <nav class="footer-links">
-        <a href="music.html">Music</a>
-        <a href="press-kit.html">Press Kit</a>
-        <a href="soul-mission.html">Soul Mission</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="footer-socials">
-        <a href="https://instagram.com/..." target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=q0Z0Q-jcRtW4ofspABaj8w" target="_blank" rel="noopener">Spotify</a>
-      </div>
-    </div>
-    <p class="copy muted">© <span id="year"></span> Domé Soul</p>
-  </footer>
-
+  
+  © 2025 Domé Soul. All rights reserved.
+  <span class="dot">•</span>
+  Powered by <em>Passion &amp; Purpose</em> —
+  <a href="https://www.domesoul.com/soul-mission.html" class="nowrap">Domé Soul Initiative</a>
+</p>
+  </div>
+</footer>
   <!-- Scripts -->
+  <script src="script.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
