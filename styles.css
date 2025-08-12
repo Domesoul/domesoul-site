@@ -551,3 +551,4 @@ body{
   .main-nav:not(.open) { display: grid; }
 }
 @keyframes fadeInLogo { to { opacity: 1; } }
+.main-nav a.active { color: #c9b8a6; background: rgba(255,255,255,.1); }
