@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
   });
 })();
-<script>
+
 (function(){
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
@@ -127,5 +127,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold:.12 });
   els.forEach(el=>io.observe(el));
 })();
-</script>
 
+ 
+  (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+
+    const close = () => {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    };
+
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    // Close when a link is clicked
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) close();
+    });
+
+    // Close on Escape or outside click
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.main-nav') && !e.target.closest('.nav-toggle')) close();
+    });
+  })();
