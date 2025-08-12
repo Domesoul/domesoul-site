@@ -37,69 +37,51 @@
   <link rel="preload" href="styles.css?v=2" as="style">
   <link rel="stylesheet" href="styles.css?v=2">
 
-  <!-- Animations (AOS) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true
-      });
-    });
-  <!-- JSON-LD: Website + Artist -->
-  <script type="application/ld+json">
-    </script>
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "Domé Soul",
-        "url": "https://www.domesoul.com",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.domesoul.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "MusicGroup",
-        "name": "Domé Soul",
-        "url": "https://www.domesoul.com",
-        "image": "https://www.domesoul.com/images/og-cover.jpg",
-        "genre": ["Afro-soul", "Gospel", "Folk"],
-        "sameAs": [
-          "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
-          "https://www.youtube.com/@DomeSoulMusic"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "business",
-          "email": "contact@domesoul.com"
-        }
-      }
-    ]
-  }
+ <!-- Animations (AOS) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.AOS) AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  });
+</script>
+
+<!-- JSON-LD: Website + Artist (single clean block) -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"MusicGroup",
-  "name":"Domé Soul",
-  "url":"https://www.domesoul.com/",
-  "image":"https://www.domesoul.com/images/og-cover.jpg",
-  "sameAs":[
-    "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A",
-    "https://www.youtube.com/@DomeSoulMusic",
-    "https://instagram.com"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Domé Soul",
+      "url": "https://www.domesoul.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.domesoul.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "MusicGroup",
+      "name": "Domé Soul",
+      "url": "https://www.domesoul.com",
+      "image": "https://www.domesoul.com/images/og-cover.jpg",
+      "genre": ["Afro-soul","Gospel","Folk"],
+      "sameAs": [
+        "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB",
+        "https://www.youtube.com/@DomeSoulMusic",
+        "https://instagram.com/YOUR_HANDLE"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "business",
+        "email": "contact@domesoul.com"
+      }
+    }
   ]
 }
+</script>
 
-    
-  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
