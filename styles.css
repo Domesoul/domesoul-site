@@ -742,3 +742,79 @@ body{
 
 /* Optional: subtle shadow under header for separation */
 body { background: #333232; }
+
+/* Navbar styling */
+.site-header {
+  background-color: #2a2929; /* contrast with page background */
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: .4rem .65rem;
+  border-radius: 10px;
+  transition: background .2s, color .2s;
+}
+
+.main-nav a:hover {
+  background: rgba(255,255,255,.08);
+}
+
+.main-nav a.active {
+  background: rgba(255,255,255,.15);
+  color: #c9b8a6;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 38px;
+  border: none;
+  background: rgba(255,255,255,.06);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+}
+
+@media (max-width: 860px) {
+  .nav-toggle { display: flex; }
+  .main-nav {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: #242323;
+    border-radius: 12px;
+    padding: 10px;
+    display: none;
+  }
+  .main-nav.open { display: flex; }
+}
