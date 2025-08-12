@@ -410,34 +410,55 @@
     <a class="tile tile--x reveal" href="https://x.com/..." target="_blank" rel="noopener" aria-label="X (Twitter)">
       <span class="tile__icon">🐦</span><span class="tile__label">X</span>
     </a>
+    <a class="tile tile--whatsapp reveal" href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <span class="tile__icon">💬</span><span class="tile__label">WhatsApp</span>
+    </a>
     <a class="tile tile--email reveal" href="mailto:contact@domesoul.com" aria-label="Email">
       <span class="tile__icon">✉</span><span class="tile__label">Email</span>
     </a>
   </div>
 </section>
 
+
 <footer class="site-footer">
 <p class="footer-powered">
+
 <footer class="site-footer">
-  <div class="footer-grid">
-    <div>
-      <strong>Domé Soul</strong>
-      <p class="muted">Music • Mission • Stories</p>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Domé Soul Logo" class="footer-logo">
+      <p class="footer-tagline">"Where the light lives, healing begins"</p>
     </div>
-    <nav class="footer-links">
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
       <a href="music.html">Music</a>
-      <a href="press-kit.html">Press Kit</a>
       <a href="soul-mission.html">Soul Mission</a>
+      <a href="press-kit.html">Press Kit</a>
       <a href="contact.html">Contact</a>
-    </nav>
-    <div class="footer-socials">
-      <a href="https://instagram.com/..." target="_blank" rel="noopener">Instagram</a>
-      <a href="https://youtube.com/@..." target="_blank" rel="noopener">YouTube</a>
-      <a href="https://open.spotify.com/artist/..." target="_blank" rel="noopener">Spotify</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/icons/twitter.svg" alt="Twitter/X"></a>
+        <a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/icons/spotify.svg" alt="Spotify"></a>
+        <a href="#"><img src="images/icons/youtube.svg" alt="YouTube"></a>
+      </div>
     </div>
   </div>
-  <p class="copy muted">© <span id="year"></span> Domé Soul</p>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Domé Soul. All rights reserved.</p>
+  </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
   
   © 2025 Domé Soul. All rights reserved.
@@ -447,8 +468,40 @@
 </p>
   </div>
 </footer>
-  <!-- Scripts -->
+    
+ <!-- Scripts -->
+
   <script src="script.js"></script>
-  <script src="script.js"></script>
+  <script>
+  (function () {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+
+    const close = () => {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    };
+
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    // Close when a link is clicked
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) close();
+    });
+
+    // Close on Escape or outside click
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.main-nav') && !e.target.closest('.nav-toggle')) close();
+    });
+  })();
+</script>
+
 </body>
 </html>
