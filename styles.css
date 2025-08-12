@@ -655,3 +655,90 @@ body{
   font-size: 0.85rem;
   color: #aaa;
 }
+/* ===== Header contrast + hamburger behavior ===== */
+
+/* Give navbar a distinct tone from page background */
+.site-header {
+  background-color: #2a2929;           /* slightly lighter than page (#333232) */
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  position: sticky; top: 0; z-index: 1000;
+  backdrop-filter: saturate(140%) blur(6px);
+  padding: 12px 0;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Desktop nav */
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: .38rem .65rem;
+  border-radius: 10px;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.main-nav a:hover { color: #c9b8a6; background: rgba(255,255,255,.08); transform: translateY(-2px); }
+
+/* Active link */
+.main-nav a.active { color: #c9b8a6; background: rgba(255,255,255,.14); }
+
+/* Hamburger button (hidden on desktop) */
+.nav-toggle {
+  display: none; /* shown on mobile */
+  width: 42px; height: 38px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.nav-toggle-bar { display: block; width: 20px; height: 2px; background: #fff; border-radius: 2px; }
+
+/* Mobile menu panel */
+@media (max-width: 860px) {
+  .nav-toggle { display: inline-flex; }
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 12px;
+    right: 12px;
+    display: grid;             /* stacked links */
+    gap: 8px;
+    padding: 10px;
+    background: #242323;       /* darker than header for depth */
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    transform-origin: top right;
+    transform: scaleY(0.96) translateY(-6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease;
+    z-index: 1001;
+  }
+  .main-nav a { background: rgba(255,255,255,.06); padding: .55rem .7rem; }
+  .main-nav.open {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* Optional: subtle shadow under header for separation */
+body { background: #333232; }
