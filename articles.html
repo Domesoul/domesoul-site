@@ -37,28 +37,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Styles (minified) -->
-  <link rel="stylesheet" href="styles.min.css" />
+  <!-- Styles -->
+  <link rel="preload" href="styles.css?v=2" as="style">
+  <link rel="stylesheet" href="styles.css?v=2">
 
-  <!-- Animations (AOS) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.AOS) AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-    });
-  </script>
+ <!-- Animations (AOS) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.AOS) AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  });
+</script>
 
-  <!-- JSON-LD: Collection Page -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Articles & Updates — Domé Soul",
-    "url":"https://www.domesoul.com/articles.html",
-    "isPartOf":{"@type":"WebSite","name":"Domé Soul","url":"https://www.domesoul.com"}
-  }
-  </script>
+<!-- JSON-LD: Website + Artist (single clean block) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Domé Soul",
+      "url": "https://www.domesoul.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.domesoul.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "MusicGroup",
+      "name": "Domé Soul",
+      "url": "https://www.domesoul.com",
+      "image": "https://www.domesoul.com/images/og-cover.jpg",
+      "genre": ["Afro-soul","Gospel","Folk"],
+      "sameAs": [
+        "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB",
+        "https://www.youtube.com/@DomeSoulMusic",
+        "https://instagram.com/YOUR_HANDLE"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "business",
+        "email": "contact@domesoul.com"
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -221,3 +248,4 @@
   </script>
 </body>
 </html>
+
