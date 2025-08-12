@@ -555,3 +555,6 @@ body{
 /* Reveal animation */
 .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease,transform .6s ease;}
 .reveal.is-visible{opacity:1; transform:none;}
+.footer-icons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.footer-icons .fi { width:26px; height:26px; fill:#fff; opacity:.9; transition: transform .2s ease, opacity .2s ease; }
+.footer-icons a:hover .fi { transform: translateY(-2px) scale(1.06); opacity:1; }
