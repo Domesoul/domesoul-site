@@ -115,4 +115,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
   });
 })();
+<script>
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+  if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('is-visible')); return; }
+  const io = new IntersectionObserver((entries, obs)=>{
+    entries.forEach(en=>{
+      if (en.isIntersecting){ en.target.classList.add('is-visible'); obs.unobserve(en.target); }
+    });
+  }, { threshold:.12 });
+  els.forEach(el=>io.observe(el));
+})();
+</script>
 
