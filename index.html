@@ -34,13 +34,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.min.css">
 
   <!-- Animations (AOS) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       AOS.init({
@@ -360,6 +360,30 @@
       a.classList.add('active');
     }
   });
+})();
+</script>
+<script>
+(function () {
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (btn && nav) {
+    const close=()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false');};
+    btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+    nav.addEventListener('click',e=>{ if(e.target.closest('a')) close(); });
+    document.addEventListener('click',e=>{ if(!e.target.closest('.main-nav')&&!e.target.closest('.nav-toggle')) close(); });
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+    const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    document.querySelectorAll('.main-nav a').forEach(a=>{
+      const href=(a.getAttribute('href')||'').toLowerCase();
+      if((current===''&&href==='index.html')||href===current) a.classList.add('active');
+    });
+  }
+  // Lazy-load images & iframes
+  document.querySelectorAll('img:not(.site-logo):not(.feature-hero__art)').forEach(img=>{
+    if(!img.hasAttribute('loading')) img.setAttribute('loading','lazy');
+    if(!img.hasAttribute('decoding')) img.setAttribute('decoding','async');
+  });
+  document.querySelectorAll('iframe').forEach(f=>{ if(!f.hasAttribute('loading')) f.setAttribute('loading','lazy'); });
 })();
 </script>
 
