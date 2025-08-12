@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.domesoul.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2025-08-13</lastmod>
   </url>
   <url>
     <loc>https://www.domesoul.com/music.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-13</lastmod>
   </url>
   <url>
     <loc>https://www.domesoul.com/soul-mission.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2025-08-13</lastmod>
   </url>
   <url>
     <loc>https://www.domesoul.com/press-kit.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2025-08-13</lastmod>
   </url>
   <url>
     <loc>https://www.domesoul.com/contact.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2025-08-13</lastmod>
   </url>
-<url><loc>https://www.domesoul.com/articles.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.domesoul.com/article-where-the-light-lives.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-<url><loc>https://www.domesoul.com/article-feels-like-heaven.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-<url><loc>https://www.domesoul.com/article-soul-mission-update.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url>
+    <loc>https://www.domesoul.com/articles.html</loc>
+    <lastmod>2025-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.domesoul.com/article-feels-like-heaven.html</loc>
+    <lastmod>2025-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.domesoul.com/article-soul-mission-update.html</loc>
+    <lastmod>2025-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.domesoul.com/article-where-the-light-lives.html</loc>
+    <lastmod>2025-08-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.domesoul.com/thanks.html</loc>
+    <lastmod>2025-08-13</lastmod>
+  </url>
 </urlset>
-<url>
-  <loc>https://www.domesoul.com/article-where-the-light-lives.html</loc>
-  <lastmod>2025-02-01T09:00:00Z</lastmod>
-</url>
-
-
