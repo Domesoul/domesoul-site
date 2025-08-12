@@ -335,3 +335,93 @@ body{
 @keyframes fadeInLogo {
   to { opacity: 1; }
 }
+/* Header */
+.site-header {
+  background-color: #333232;
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+.site-logo {
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.site-logo:hover { transform: scale(1.05); }
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.main-nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.main-nav a:hover {
+  color: #a889f4; /* Brand purple highlight */
+}
+
+/* Footer */
+.site-footer {
+  background-color: #2b2b2b;
+  padding: 40px 20px 20px;
+  color: #ddd;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+}
+.footer-logo {
+  height: 50px;
+}
+.footer-tagline {
+  font-style: italic;
+  margin-top: 10px;
+}
+.footer-links, .footer-social {
+  min-width: 150px;
+}
+.footer-links a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin: 5px 0;
+}
+.footer-links a:hover {
+  color: #a889f4;
+}
+.social-icons a img {
+  height: 25px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
