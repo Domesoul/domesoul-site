@@ -932,3 +932,51 @@ body { background: #333232; }
 @media (min-width: 1100px){
   .sticky-desktop{ position: sticky; top: 96px; }
 }
+/* === Home: feature block alignment fix === */
+#home-feature .feature-hero__wrap{
+  display:grid;
+  grid-template-columns: 240px minmax(0,1fr); /* cover | text */
+  gap: clamp(18px,3vw,32px);
+  align-items:center;
+}
+
+#home-feature .feature-hero__art{
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 16px 36px rgba(0,0,0,.32);
+}
+
+#home-feature .feature-hero__body{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start; /* <-- keep all text & buttons left */
+}
+
+#home-feature .feature-hero__body h2{
+  margin:0 0 .35rem;
+  font-size:clamp(1.7rem,1.6vw + 1rem,2.2rem);
+  line-height:1.15;
+}
+
+#home-feature .feature-hero__body p{
+  margin:.2rem 0 .8rem;
+  color:#e6e3df;
+  opacity:.92;
+}
+
+/* Buttons directly beneath the heading */
+#home-feature .cta-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-start; /* <-- no centering */
+  align-items:center;
+  margin-top:.6rem;
+}
+
+/* Mobile: stack the grid */
+@media (max-width: 860px){
+  #home-feature .feature-hero__wrap{ grid-template-columns:1fr; }
+  #home-feature .feature-hero__art{ max-width:420px; }
+}
