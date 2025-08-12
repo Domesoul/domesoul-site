@@ -102,22 +102,23 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <!-- Header / Nav -->
-  <header class="main-header">
-<a href="index.html" class="logo-link">
-  <img src="/images/logo.png" alt="Domé Soul Logo" class="logo">
-</a>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a"class="active" href="index.html">Home</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="soul-mission.html">Soul Mission</a></li>
-        <li><a href="press-kit.html">Press Kit</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="articles.html">Articles</a></li>
-      </ul>
+
+<header class="site-header">
+  <div class="container header-container">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="Domé Soul Logo" class="site-logo">
+      <span class="brand-name">Domé Soul</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="contact.html">Contact</a>
+      <a href="articles.html">Articles</a>
     </nav>
-  </header>
+  </div>
+</header>
 
  <main class="page">
 
@@ -331,6 +332,45 @@
 
 <footer class="site-footer">
 <p class="footer-powered">
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Domé Soul Logo" class="footer-logo">
+      <p class="footer-tagline">"Where the light lives, healing begins"</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="soul-mission.html">Soul Mission</a>
+      <a href="press-kit.html">Press Kit</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/icons/twitter.svg" alt="Twitter/X"></a>
+        <a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/icons/spotify.svg" alt="Spotify"></a>
+        <a href="#"><img src="images/icons/youtube.svg" alt="YouTube"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Domé Soul. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  
   © 2025 Domé Soul. All rights reserved.
   <span class="dot">•</span>
   Powered by <em>Passion &amp; Purpose</em> —
