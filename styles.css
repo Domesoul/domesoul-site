@@ -475,3 +475,79 @@ body{
   background-color: #25D366;
   color: #fff;
 }
+/* ===== Responsive Header + Hamburger ===== */
+.site-header {
+  background-color: #333232;
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+  position: sticky; top: 0; z-index: 1000;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-link { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.site-logo { height: 40px; transition: transform .3s ease, opacity .6s ease; opacity: 0; animation: fadeInLogo 1s ease forwards; }
+.brand-name { font-weight: 700; color: #fff; letter-spacing: .2px; }
+
+/* Desktop nav */
+.main-nav { display: flex; justify-content: flex-end; gap: 18px; }
+.main-nav a { color: #fff; text-decoration: none; font-weight: 600; padding: .35rem .6rem; border-radius: 10px; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.main-nav a:hover { color: #c9b8a6; background: rgba(255,255,255,.06); transform: translateY(-2px); }
+
+/* Hamburger button (hidden on desktop) */
+.nav-toggle {
+  display: none; /* shown on mobile below */
+  width: 42px; height: 38px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  border-radius: 10px;
+  align-items: center; justify-content: center; gap: 4px;
+  cursor: pointer;
+}
+.nav-toggle-bar {
+  display: block; width: 20px; height: 2px; background: #fff; border-radius: 2px;
+}
+
+/* --- Mobile layout --- */
+@media (max-width: 860px) {
+  .header-container { grid-template-columns: auto auto 42px; }
+  .nav-toggle { display: inline-flex; }
+
+  /* collapse nav into panel */
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 12px;
+    left: 12px;
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    background: #2b2a2a;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    transform-origin: top right;
+    transform: scaleY(0.96) translateY(-6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+  .main-nav a { padding: .55rem .65rem; background: rgba(255,255,255,.06); border-radius: 10px; }
+  .main-nav.open {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+    pointer-events: auto;
+  }
+
+  /* turn off desktop flex row */
+  .main-nav:not(.open) { display: grid; }
+}
+@keyframes fadeInLogo { to { opacity: 1; } }
