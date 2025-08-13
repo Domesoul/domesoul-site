@@ -1024,4 +1024,49 @@ body.no-scroll { overflow: hidden; }
   line-height: 1;
   cursor: pointer;
 }
+/* ---- Modal stacking & clickability ---- */
+body.no-scroll { overflow: hidden; }
+
+.modal[hidden] { display: none !important; }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;        /* modal above the page */
+  display: none;
+}
+.modal.is-open { display: block; }
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+  z-index: 0;           /* backdrop below panel */
+}
+
+.modal__content {
+  position: relative;
+  z-index: 2;           /* panel above backdrop */
+  max-width: min(92vw, 720px);
+  margin: 6vh auto;
+  background: rgba(28,28,28,.98);
+  color: #f5f4f2;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  padding: 22px 24px;
+}
+
+.modal__x {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 3;          /* guarantee it's clickable */
+}
 
