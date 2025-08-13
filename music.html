@@ -623,6 +623,105 @@
   });
 })();
 </script>
+<script>
+(function () {
+  if (window.__dsCardInit) return; window.__dsCardInit = true;
+
+  /* ---------- MODALS (data-modal-target / data-modal-close) ---------- */
+  function openModal(sel){
+    const m = document.querySelector(sel);
+    if (!m) return;
+    m.classList.add('is-open');
+    m.removeAttribute('hidden');
+    document.body.classList.add('no-scroll');
+    // focus panel
+    const panel = m.querySelector('.modal__panel'); if (panel) panel.focus();
+  }
+  function closeModal(m){
+    if (!m) return;
+    m.classList.remove('is-open');
+    m.setAttribute('hidden','');
+    document.body.classList.remove('no-scroll');
+  }
+  const modalFrom = el => el && el.closest('.modal');
+
+  document.addEventListener('click', e => {
+    const opener = e.target.closest('[data-modal-target]');
+    if (opener) { e.preventDefault(); openModal(opener.getAttribute('data-modal-target')); return; }
+
+    const closer = e.target.closest('[data-modal-close], .modal__close');
+    if (closer) { e.preventDefault(); closeModal(modalFrom(closer)); return; }
+
+    const m = modalFrom(e.target);
+    if (m && e.target.classList.contains('modal__backdrop')) { closeModal(m); }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.querySelectorAll('.modal.is-open').forEach(closeModal);
+  });
+
+  /* ---------- PREVIEW (0:30) ---------- */
+  let currentAudio = null, currentBtn = null;
+  const label = (btn, txt) => (btn.querySelector('.label') || btn).textContent = txt;
+
+  function getAudioFor(btn) {
+    const id = btn.getAttribute('data-audio');
+    if (id) return document.getElementById(id.replace('#',''));
+    // fallback: nearest audio in same card
+    const card = btn.closest('article, .card, .music-card, li, div');
+    return card ? card.querySelector('audio') : null;
+  }
+  function getMiniFor(audio) {
+    // mini-player should be NEXT element or sibling in same container
+    if (!audio) return null;
+    const next = audio.nextElementSibling;
+    if (next && next.classList && next.classList.contains('mini-player')) return next;
+    return audio.parentElement ? audio.parentElement.querySelector('.mini-player') : null;
+  }
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.ds-audio-toggle, [data-audio], .js-preview');
+    if (!btn) return;
+    e.preventDefault();
+
+    const audio = getAudioFor(btn);
+    if (!audio) return;
+    const mini = getMiniFor(audio);
+
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause(); currentAudio.currentTime = 0;
+      if (currentBtn) label(currentBtn, '▶ Preview (0:30)');
+      const prevMini = getMiniFor(currentAudio); if (prevMini) prevMini.hidden = true;
+    }
+
+    if (audio.paused) {
+      audio.play(); label(btn, '⏸ Pause'); currentAudio = audio; currentBtn = btn;
+      if (mini) mini.hidden = false;
+    } else {
+      audio.pause(); label(btn, '▶ Preview (0:30)'); currentAudio = currentBtn = null;
+      if (mini) mini.hidden = true;
+    }
+
+    audio.onended = () => {
+      if (currentBtn) label(currentBtn, '▶ Preview (0:30)');
+      if (mini) mini.hidden = true;
+      currentAudio = currentBtn = null;
+    };
+  });
+
+  // Mini-player Stop button
+  document.addEventListener('click', e => {
+    const stop = e.target.closest('[data-stop-for]');
+    if (!stop) return;
+    e.preventDefault();
+    const id = stop.getAttribute('data-stop-for');
+    const audio = document.getElementById(id);
+    if (audio) { audio.pause(); audio.currentTime = 0; }
+    if (currentBtn) label(currentBtn, '▶ Preview (0:30)');
+    const mini = audio ? getMiniFor(audio) : null; if (mini) mini.hidden = true;
+    currentAudio = currentBtn = null;
+  });
+})();
+</script>
 
   </body>
 </footer>
