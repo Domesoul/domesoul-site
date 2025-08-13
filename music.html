@@ -131,22 +131,28 @@
   </picture>
 
   <h2>Where the Light Lives</h2>
-
   <div class="music-actions">
-    <!-- Replace the href with your actual track link if available -->
-    <a class="btn btn-neutral" https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da" target="_blank" rel="noopener">🎧 Listen</a>
-    <a class="btn btn-neutral" href="href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+  <!-- Streaming -->
+  <a class="btn btn-neutral"
+     href="https://open.spotify.com/track/5JfMg9vnpC1Xc1hvAsw05N?si=a88f745f639a42da"
+     target="_blank" rel="noopener">🎧 Listen</a>
 
-    <!-- 30s preview -->
+  <a class="btn btn-neutral"
+     href="https://www.youtube.com/@DomeSoulMusic"
+     target="_blank" rel="noopener">▶ YouTube</a>
 
-<button class="btn js-preview" data-audio="audio-wtll">▶ Preview (0:30)</button>
-<audio id="audio-wtll" preload="none">
-  <source src="audio/where-the-light-lives-30s.mp3" type="audio/mpeg">
-</audio>
-    <!-- Modals -->
-<button class="btn" data-modal-target="#wtllLyrics">📜 Lyrics</button>
-<button class="btn btn-primary" data-modal-target="#wtllStory">💡 Behind the Song</button>
-  </div>
+  <!-- 30s preview -->
+  <button class="btn btn-neutral ds-audio-toggle" data-audio="audio-wtll">
+    <span class="label">▶ Preview (0:30)</span>
+  </button>
+  <audio id="audio-wtll" preload="none" playsinline>
+    <source src="audio/where-the-light-lives-30s.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Modals -->
+  <button class="btn" data-modal-target="#wtllLyrics">📜 Lyrics</button>
+  <button class="btn btn-primary" data-modal-target="#wtllStory">💡 Behind the Song</button>
+</div>
 </article>
 <!-- CARD: Feels Like Heaven With You -->
 <article class="music-card" id="card-heaven">
@@ -213,34 +219,30 @@
     <button class="btn btn-primary" data-modal-target="#stillStory">💡 Behind the Song</button>
   </div>
 </article>
-
-
-
-      
       
   <!-- Modals -->
-
 <!-- MODAL: Where the Light Lives — Lyrics -->
 <div id="wtllLyrics" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="wtllLyricsTitle" aria-hidden="true">
-  <div class=""modal__overlay" data-modal-close></div>
+     aria-labelledby="wtllLyricsTitle" hidden>
+  <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
-   <button class="modal__x" data-close-modal aria-label="Close">×</button>
+    <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
     <h2 id="wtllLyricsTitle">Lyrics — Where the Light Lives</h2>
     <div class="modal__body">
-      <!-- Your lyrics go here -->
-      <p>First verse…</p>
-      I’ve danced with sorrow, slept next to fear,<br>
+      <p><strong>First verse…</strong></p>
+      <p>
+        I’ve danced with sorrow, slept next to fear,<br>
         But you were the song I needed to hear,<br>
-        Your hands don’t just hold, they understand, <br>
+        Your hands don’t just hold, they understand,<br>
         You carry my heart like sacred land...
+      </p>
     </div>
   </div>
 </div>
 
 <!-- MODAL: Where the Light Lives — Behind the Song -->
 <div id="wtllStory" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="wtllStoryTitle" aria-hidden="true">
+     aria-labelledby="wtllStoryTitle" hidden>
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
