@@ -536,6 +536,89 @@
   });
 })();
 </script>
+<script>
+(function () {
+  if (window.__dsInit) return; window.__dsInit = true;
+
+  /* ---------- MODALS ---------- */
+  function openModal(sel){
+    const m = document.querySelector(sel);
+    if (!m) return;
+    m.classList.add('is-open');
+    m.removeAttribute('hidden');
+    document.body.classList.add('no-scroll');
+  }
+  function closeModal(m){
+    if (!m) return;
+    m.classList.remove('is-open');
+    m.setAttribute('hidden','');
+    document.body.classList.remove('no-scroll');
+  }
+  const modalFrom = el => el && el.closest('.modal');
+
+  document.addEventListener('click', e => {
+    // Open: data-modal-target="#id"
+    const opener = e.target.closest('[data-modal-target]');
+    if (opener) {
+      e.preventDefault();
+      openModal(opener.getAttribute('data-modal-target'));
+      return;
+    }
+    // Close: data-close-modal, .modal__x, .modal-close
+    const closer = e.target.closest('[data-close-modal], .modal__x, .modal-close');
+    if (closer) {
+      e.preventDefault();
+      closeModal(modalFrom(closer));
+      return;
+    }
+    // Backdrop click (or click on the modal root outside the panel)
+    const m = modalFrom(e.target);
+    if (m && (e.target.classList.contains('modal__overlay') || e.target === m)) {
+      closeModal(m);
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.is-open').forEach(closeModal);
+    }
+  });
+
+  /* ---------- PREVIEW (0:30) ---------- */
+  let currentAudio = null, currentBtn = null;
+  const setBtnLabel = (btn, txt) => {
+    const label = btn.querySelector('.label');
+    (label || btn).textContent = txt;
+  };
+  const getAudioForBtn = (btn) => {
+    const id = btn.getAttribute('data-audio');
+    if (id) return document.getElementById(id.replace('#',''));
+    // Fallback: nearest <audio> in the same card
+    const card = btn.closest('article, .card, .music-card, li, div');
+    if (card) return card.querySelector('audio');
+    return null;
+  };
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-audio], .js-preview');
+    if (!btn) return;
+    e.preventDefault();
+    const audio = getAudioForBtn(btn);
+    if (!audio) return;
+
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause(); currentAudio.currentTime = 0;
+      if (currentBtn) setBtnLabel(currentBtn, '▶ Preview (0:30)');
+    }
+    if (audio.paused) {
+      audio.play(); setBtnLabel(btn, '⏸ Pause'); currentAudio = audio; currentBtn = btn;
+    } else {
+      audio.pause(); setBtnLabel(btn, '▶ Preview (0:30)'); currentAudio = currentBtn = null;
+    }
+    audio.onended = () => { if (currentBtn) setBtnLabel(currentBtn, '▶ Preview (0:30)'); currentAudio = currentBtn = null; };
+  });
+})();
+</script>
 
   </body>
 </footer>
