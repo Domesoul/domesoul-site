@@ -1082,3 +1082,5 @@ body.no-scroll { overflow: hidden; }
 /* Mini player (optional) */
 .mini-player{ display:flex; gap:10px; align-items:center; margin-top:8px; padding:8px 10px; border-radius:10px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); }
 .mini-player__title{ opacity:.9; }
+/* Mini player default hidden (works with [hidden] or class) */
+.mini-player[hidden] { display: none !important; }
