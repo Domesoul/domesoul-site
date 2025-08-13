@@ -980,3 +980,27 @@ body { background: #333232; }
   #home-feature .feature-hero__wrap{ grid-template-columns:1fr; }
   #home-feature .feature-hero__art{ max-width:420px; }
 }
+/* Music page tidy (cards, spacing, alignment) */
+#music-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:28px;
+}
+#music-cards > *{
+  display:flex;
+  flex-direction:column;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+}
+#music-cards figure,
+#music-cards .cover,
+#music-cards .track-cover{ margin:0 0 12px; border-radius:14px; overflow:hidden; aspect-ratio:1/1; }
+#music-cards img{ width:100%; height:100%; object-fit:cover; display:block; }
+#music-cards h3{ margin:8px 0 10px; font-size:1.25rem; line-height:1.2; }
+#music-cards .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+#music-cards .chip-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+#music-cards .cta-bottom{ margin-top:auto; }
+@media (max-width:680px){ #music-cards{ grid-template-columns:1fr; } }
