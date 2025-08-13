@@ -1084,3 +1084,14 @@ body.no-scroll { overflow: hidden; }
 .mini-player__title{ opacity:.9; }
 /* Mini player default hidden (works with [hidden] or class) */
 .mini-player[hidden] { display: none !important; }
+#mission-hero{padding-top:clamp(28px,6vh,72px);padding-bottom:clamp(14px,4vh,42px)}
+#mission-hero .intro{max-width:60ch}
+#mission-hero .intro .tagline{color:#c9b8a6;font-weight:600}
+
+.ds-form label{display:block;margin-bottom:12px}
+.ds-form input,.ds-form textarea{
+  width:100%; padding:.75rem .9rem; border-radius:12px;
+  border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:#fff;
+}
+.ds-form .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){.ds-form .grid-2{grid-template-columns:1fr}}
