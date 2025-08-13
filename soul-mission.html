@@ -10,18 +10,20 @@
   <meta name="description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust. Join the movement today.">
   <meta name="keywords" content="Domé Soul, music, humanitarian, outreach, marketplace, Afro-soul, folk, gospel, Afrobeat">
   <meta name="author" content="Domé Soul">
-  
+
+<link rel="canonical" href="https://www.domesoul.com/soul-mission.html">
+<link rel="prefetch" href="press-kit.html" as="document">
   <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-  <meta property="og:title" content="Domé Soul – Music, Mission & Marketplace">
-  <meta property="og:description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust.">
+  <meta property="og:title" content="Soul Mission — Domé Soul">
+  <meta property="og:description" content="Helping light reach farther — music, outreach, and practical support.">
   <meta property="og:image" content="https://domesoul.com/assets/og-image.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://domesoul.com/">
+  <meta property="og:url" content="https://www.domesoul.com/soul-mission.html">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Domé Soul – Music, Mission & Marketplace">
-  <meta name="twitter:description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust.">
+ <meta name="twitter:title" content="Soul Mission — Domé Soul">
+  <meta name="twitter:description" content="Helping light reach farther — music, outreach, and practical support.">
   <meta name="twitter:image" content="https://domesoul.com/assets/twitter-card.png">
   
   <!-- Theme Colors -->
@@ -113,14 +115,26 @@
 
   <main class="page">
     <!-- Why We Give -->
-    <section class="container we-give-section reveal-stagger">
-      <h1 class="reveal">💜 Why We Give</h1>
-      <p class="reveal">
-        Through Domé Soul’s humanitarian outreach, we connect music with purpose—bringing light, love,
-        and support to those in need. Every act of generosity helps us reach one more person.
-      </p>
-      <a class="btn btn-accent btn-pill reveal" href="#nomination-form">🎁 Nominate Someone in Need</a>
-    </section>
+    <section id="mission-hero" class="section section-dark">
+  <div class="container-narrow">
+    <header class="intro">
+      <h1 class="reveal">Soul Mission</h1>
+      <p class="tagline reveal">Helping light reach farther — practical care fueled by music.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#donate">💝 Donate</a>
+        <a class="btn btn-neutral" href="#nominate">🕊 Nominate Someone</a>
+      </div>
+    </header>
+  </div>
+</section>
+<section class="section container-narrow" aria-label="Impact">
+  <div class="cards-grid">
+    <article class="card"><h3>238+</h3><p class="muted">Care packs delivered</p></article>
+    <article class="card"><h3>17</h3><p class="muted">Community visits</p></article>
+    <article class="card"><h3>100%</h3><p class="muted">Donor-funded outreach</p></article>
+  </div>
+</section>
+
 <section class="faq container" aria-label="FAQ">
   <details class="faq__item">
     <summary>How are donations used?</summary>
@@ -136,17 +150,22 @@
   </details>
 </section>
     <!-- Nomination Form -->
-    <section class="container" id="nomination-form">
-      <div class="card">
-        <h2>Nomination Form</h2>
-        <p>Know someone who could use support? Share their story below.</p>
+   <section id="nominate" class="section container-narrow">
+  <h2>Nominate Someone in Need</h2>
+  <p class="muted">Tell us briefly who needs help and why. We’ll reach out if we need more info.</p>
+  <form action="https://formspree.io/f/your-id" method="POST" class="ds-form">
+    <div class="grid-2">
+      <label>Full name<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+    </div>
+    <label>Story (2–5 sentences)
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <input type="text" name="_gotcha" style="display:none"> <!-- honeypot -->
+    <button class="btn btn-primary" type="submit">Send Nomination</button>
+  </form>
+</section>
 
-        <!-- Replace YOUR_FORM_ID with your actual Google Form ID -->
-
-<div class="form-frame">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdltid1Fz_S71oyInNtvwuKCxtm54zivkE7g08dbrjZ6zfGqQ/viewform?embedded=true"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
  
  <section class="impact container" aria-label="Impact stats">
   <div class="impact__item"><span class="impact__num" data-count="128">0</span><span class="impact__label">Meals funded</span></div>
@@ -165,18 +184,20 @@
 
     
     <!-- Donate -->
-    <section class="container donation-section">
-      <div class="card center">
-        <h2>❤️ Support the Mission</h2>
-        <p>Your donation helps us provide relief, outreach, and hope through music-led initiatives.</p>
-        <!-- Swap href with your real donation link -->
-<a class="btn btn-accent btn-block" 
-   href="soul-mission.html" 
-   onclick="plausible('Donate Now Click')">
-   ❤️ Donate Now
-</a>
+    <section id="donate" class="section section-dark">
+  <div class="container-narrow">
+    <div class="ds-support-card">
+      <h2>Support the Mission</h2>
+      <p>Your generosity helps the light go farther — food, medicine, and urgent needs for families.</p>
+      <div class="cta-row">
+        <!-- Replace with your real donate link/provider -->
+        <a class="btn btn-primary" href="https://your-donate-link.example" target="_blank" rel="noopener">💝 Give Now</a>
+        <a class="btn btn-neutral" href="#impact">See impact</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   </main>
 
 <!-- Newsletter Card -->
