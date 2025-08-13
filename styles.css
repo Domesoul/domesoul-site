@@ -980,3 +980,47 @@ body { background: #333232; }
   #home-feature .feature-hero__wrap{ grid-template-columns:1fr; }
   #home-feature .feature-hero__art{ max-width:420px; }
 }
+/* Modal base (for data-modal-target pattern) */
+body.no-scroll { overflow: hidden; }
+
+.modal[hidden] { display: none !important; }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+}
+.modal.is-open { display: block; }
+
+/* Backdrop */
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+}
+
+/* Panel */
+.modal__content {
+  position: relative;
+  max-width: min(92vw, 720px);
+  margin: 6vh auto;
+  background: rgba(28,28,28,.98);
+  color: #f5f4f2;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  padding: 22px 24px;
+}
+
+.modal__x {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
