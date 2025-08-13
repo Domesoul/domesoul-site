@@ -1254,6 +1254,16 @@ body.no-scroll{overflow:hidden;}
   .home-feature{grid-template-columns:1fr; text-align:center;}
   .home-feature .btn{justify-content:center;}
 }
+/* Footer subscribe column refinement */
+.footer-grid{grid-template-columns: 2fr 1fr 1fr; align-items:flex-start;}
+.footer-col.subscribe .newsletter-form{max-width: 420px;}
+.footer-col.subscribe .newsletter-form input[type="email"]{
+  height:48px; border-radius:12px; padding:.8rem .95rem;
+}
+.footer-col.subscribe .newsletter-form button{
+  height:48px; border-radius:12px; width:100%;
+}
+
 /* Unified social icon tiles */
 .footer-icons a{
   width: 42px; height: 42px;
