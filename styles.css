@@ -1281,4 +1281,55 @@ body.no-scroll{overflow:hidden;}
   box-shadow: 0 10px 20px rgba(0,0,0,.25);
 }
 .footer-icons{gap:12px;}
+/* ---- Footer 4-column layout with Subscribe on the right ---- */
+.footer-grid{
+  display:grid;
+  grid-template-columns: 2fr 1fr auto 1.4fr; /* Brand | Explore | Connect | Subscribe */
+  gap:24px;
+  align-items:flex-start;
+}
+
+.footer-col h4{margin:0 0 10px; font-weight:700;}
+
+.footer-col.connect .footer-icons{gap:12px; justify-content:flex-start;}
+.footer-icons a{
+  width:42px; height:42px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:12px; background:rgba(255,255,255,.06); border:1px solid var(--border);
+  box-shadow:var(--shadow); font-size:20px; line-height:1;
+  transition:transform .12s ease, background .2s ease, box-shadow .2s ease;
+}
+.footer-icons a:hover{background:rgba(255,255,255,.10); transform:translateY(-1px); box-shadow:0 10px 20px rgba(0,0,0,.25);}
+
+/* Subscribe block */
+.newsletter-form{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  max-width:420px; /* keeps it tidy, like screenshot */
+}
+.newsletter-form input[type="email"]{
+  height:48px; padding:.85rem 1rem; border-radius:12px;
+  border:1px solid var(--border); background:rgba(255,255,255,.06); color:#fff; width:100%;
+}
+.newsletter-form button{height:48px; border-radius:12px;}
+
+/* Accessibility helper if not already present */
+.visually-hidden{
+  position:absolute!important; height:1px; width:1px; overflow:hidden;
+  clip:rect(1px,1px,1px,1px); white-space:nowrap;
+}
+
+/* Responsive: place Subscribe nicely on smaller screens */
+@media (max-width: 1080px){
+  .footer-grid{grid-template-columns: 1.6fr 1fr 1fr;} /* Brand | Explore | Connect */
+  .footer-col.subscribe{
+    grid-column: 1 / -1; /* move below as full row */
+    max-width: 520px; justify-self:end;
+  }
+}
+@media (max-width: 760px){
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-col.subscribe{justify-self:stretch; max-width:none;}
+  .newsletter-form{max-width:none;}
+}
 
