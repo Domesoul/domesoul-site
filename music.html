@@ -203,21 +203,34 @@
 
   <h2>Still I Will Love You</h2>
 
-  <div class="music-actions">
-    <!-- Replace the href with your actual track link -->
-    <a class="btn btn-neutral" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A" target="_blank" rel="noopener">🎧 Listen</a>
-    <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+<div class="music-actions">
+  <!-- Streaming -->
+  <a class="btn btn-neutral"
+     href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB?si=0pporqzRRt2OYMYiKVE-5A"
+     target="_blank" rel="noopener">🎧 Listen</a>
 
-    <!-- 30s preview -->
-    <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-siwly">▶ Preview (0:30)</button>
-    <audio id="audio-siwly" preload="metadata" playsinline>
-      <source src="audio/still-i-will-love-you-30s.mp3" type="audio/mpeg">
-    </audio>
+  <a class="btn btn-neutral"
+     href="https://www.youtube.com/@DomeSoulMusic"
+     target="_blank" rel="noopener">▶ YouTube</a>
 
-    <!-- Modals -->
-    <button class="btn btn-neutral" data-modal-target="#stillLyrics">📜 Lyrics</button>
-    <button class="btn btn-primary" data-modal-target="#stillStory">💡 Behind the Song</button>
+  <!-- 30s preview -->
+  <button class="btn btn-neutral ds-audio-toggle" data-audio="audio-siwly">
+    <span class="label">▶ Preview (0:30)</span>
+  </button>
+  <audio id="audio-siwly" preload="none" playsinline>
+    <source src="audio/still-i-will-love-you-30s.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Optional mini-player -->
+  <div class="mini-player" hidden>
+    <span class="mini-player__title">Preview — Still I Will Love You</span>
+    <button class="btn btn-neutral" data-stop-for="audio-siwly">⏹ Stop</button>
   </div>
+
+  <!-- Modals -->
+  <button class="btn btn-neutral" data-modal-target="#stillLyrics">📜 Lyrics</button>
+  <button class="btn btn-primary" data-modal-target="#stillStory">💡 Behind the Song</button>
+</div>
 </article>
       
   <!-- Modals -->
@@ -297,32 +310,32 @@
 
 <!-- MODAL: Still I Will Love You — Lyrics -->
 <div id="stillLyrics" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="stillLyricsTitle" aria-hidden="true">
+     aria-labelledby="stillLyricsTitle" hidden>
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
     <h2 id="stillLyricsTitle">Still I Will Love You — Lyrics</h2>
     <div class="modal__body">
       <!-- Replace with final lyrics -->
-      <p>Verse 1<br>  
-      You don’t have to say a word,<br>
-      I see your truth, I’ve felt the hurt,<br>
-      In a world that often turns away,<br>
-      I’ll stay, I’ll stay...</p> 
-      
-      <p>Chorus<br>
-      Still I will love, when the fire is gone,<br>
-      Still I will give, even if I’ve got none…</p>
+      <p><strong>Verse 1</strong><br>
+        You don’t have to say a word,<br>
+        I see your truth, I’ve felt the hurt,<br>
+        In a world that often turns away,<br>
+        I’ll stay, I’ll stay...</p>
 
-      <p>Bridge<br>
-      Even when it hurts to smile...…</p>
+      <p><strong>Chorus</strong><br>
+        Still I will love, when the fire is gone,<br>
+        Still I will give, even if I’ve got none…</p>
+
+      <p><strong>Bridge</strong><br>
+        Even when it hurts to smile...</p>
     </div>
   </div>
 </div>
 
 <!-- MODAL: Still I Will Love You — Behind the Song -->
 <div id="stillStory" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="stillStoryTitle" aria-hidden="true">
+     aria-labelledby="stillStoryTitle" hidden>
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
