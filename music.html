@@ -742,6 +742,95 @@
   });
 })();
 </script>
+<script>
+(function(){
+  if (window.__previewFix) return; window.__previewFix = true;
+
+  const BTN_SEL = '.ds-audio-toggle,[data-audio],.js-preview';
+
+  function setLabel(btn, text){
+    (btn.querySelector('.label') || btn).textContent = text;
+  }
+  function audioFor(btn){
+    const id = (btn.getAttribute('data-audio') || '').replace('#','');
+    if (id) return document.getElementById(id);
+    // Fallback: nearest audio in the same card
+    const card = btn.closest('article, .card, .music-card, li, div');
+    return card ? card.querySelector('audio') : null;
+  }
+  function miniFor(audio){
+    if (!audio) return null;
+    const next = audio.nextElementSibling;
+    if (next && next.classList && next.classList.contains('mini-player')) return next;
+    return audio.parentElement ? audio.parentElement.querySelector('.mini-player') : null;
+  }
+
+  let currentAudio = null, currentBtn = null;
+
+  function stopOthers(except){
+    document.querySelectorAll('audio').forEach(a=>{
+      if (a !== except){ a.pause(); a.currentTime = 0; }
+    });
+    document.querySelectorAll(BTN_SEL).forEach(b=>{
+      if (b !== currentBtn) setLabel(b, '▶ Preview (0:30)');
+    });
+    document.querySelectorAll('.mini-player').forEach(mp=>{
+      if (miniFor(except) !== mp) mp.hidden = true;
+    });
+  }
+
+  document.addEventListener('click', async (e)=>{
+    const btn = e.target.closest(BTN_SEL);
+    if (!btn) return;
+
+    // PREVIEW
+    if (btn.matches(BTN_SEL)) {
+      e.preventDefault();
+      const audio = audioFor(btn);
+      if (!audio) return console.warn('No audio found for', btn);
+
+      const mini = miniFor(audio);
+      stopOthers(audio);
+
+      try {
+        if (audio.paused){
+          await audio.play();
+          setLabel(btn, '⏸ Pause');
+          if (mini) mini.hidden = false;
+          currentAudio = audio; currentBtn = btn;
+        } else {
+          audio.pause();
+          setLabel(btn, '▶ Preview (0:30)');
+          if (mini) mini.hidden = true;
+          currentAudio = currentBtn = null;
+        }
+        audio.onended = ()=>{
+          setLabel(btn, '▶ Preview (0:30)');
+          if (mini) mini.hidden = true;
+          currentAudio = currentBtn = null;
+        };
+      } catch (err){
+        console.error('Audio play failed:', err);
+        // Optional: fall back to Spotify link if playback fails
+        const spotify = btn.closest('.music-actions')?.querySelector('a[href*="open.spotify.com"]');
+        if (spotify) spotify.click();
+      }
+    }
+  });
+
+  // Mini player "Stop" buttons
+  document.addEventListener('click', (e)=>{
+    const stop = e.target.closest('[data-stop-for]');
+    if (!stop) return;
+    e.preventDefault();
+    const a = document.getElementById(stop.getAttribute('data-stop-for'));
+    if (a){ a.pause(); a.currentTime = 0; }
+    if (currentBtn) setLabel(currentBtn, '▶ Preview (0:30)');
+    const mini = a ? miniFor(a) : null; if (mini) mini.hidden = true;
+    currentAudio = currentBtn = null;
+  });
+})();
+</script>
 
   </body>
 </footer>
