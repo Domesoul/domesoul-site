@@ -157,28 +157,33 @@
          class="music-cover" loading="lazy" decoding="async">
   </picture>
 
-  <h2>Feels Like Heaven With You</h2>
+ <h2>Feels Like Heaven With You</h2>
 
-  <div class="music-actions">
-    <!-- Replace the href with your actual track link -->
-    <a class="btn btn-neutral" href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=44c02003055f4c80" target="_blank" rel="noopener">🎧 Listen</a>
-    <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
+<div class="music-actions">
+  <!-- Streaming -->
+  <a class="btn btn-neutral" href="https://open.spotify.com/track/5SuokkPewIRoK8gb9xxhPS?si=44c02003055f4c80" target="_blank" rel="noopener">🎧 Listen</a>
+  <a class="btn btn-neutral" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" rel="noopener">▶ YouTube</a>
 
-    <!-- 30s preview -->
-    <button class="ds-audio-toggle btn btn-neutral" data-audio="audio-flhwy">▶ Preview (0:30)</button>
-    <audio id="audio-flhwy" preload="metadata" playsinline>
-      <source src="audio/feels-like-heaven-30s.mp3" type="audio/mpeg">
-      <div id="miniPlayer" class="mini-player" hidden>
-  <span id="miniPlayerTitle">Preview — Feels Like Heaven With You</span>
-  <button id="miniPlayerStop" class="btn btn-neutral">⏹ Stop</button>
-</div>
+  <!-- 30s preview -->
+  <button class="btn btn-neutral ds-audio-toggle" data-audio="audio-flhwy">
+    <span class="label">▶ Preview (0:30)</span>
+  </button>
 
-    </audio>
+  <!-- IMPORTANT: audio contains ONLY <source> (no DIVs inside) -->
+  <audio id="audio-flhwy" preload="metadata" playsinline>
+    <source src="audio/feels-like-heaven-30s.mp3" type="audio/mpeg">
+  </audio>
 
-    <!-- Modals -->
-    <button class="btn btn-neutral" data-modal-target="#flhLyrics">📜 Lyrics</button>
-    <button class="btn btn-primary" data-modal-target="#flhStory">💡 Behind the Song</button>
+  <!-- Mini player (sits AFTER the audio) -->
+  <div class="mini-player" hidden>
+    <span class="mini-player__title">Preview — Feels Like Heaven With You</span>
+    <button class="btn btn-neutral" data-stop-for="audio-flhwy">⏹ Stop</button>
   </div>
+
+  <!-- Modals -->
+  <button class="btn btn-neutral" data-modal-target="#flhLyrics">📜 Lyrics</button>
+  <button class="btn btn-primary" data-modal-target="#flhStory">💡 Behind the Song</button>
+</div>
 </article>
 
 <!-- CARD: Still I Will Love You -->
@@ -251,15 +256,14 @@
 
 <!-- MODAL: Feels Like Heaven With You — Lyrics -->
 <div id="flhLyrics" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="flhLyricsTitle" aria-hidden="true">
+     aria-labelledby="flhLyricsTitle" hidden>
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
     <h2 id="flhLyricsTitle">Feels Like Heaven With You — Lyrics</h2>
     <div class="modal__body">
-      <!-- Replace with final lyrics -->
-      <p>Verse 1<br> 
-      I was drifting like a song without a key ,<br>
+      <p>Verse 1<br>
+      I was drifting like a song without a key,<br>
       Empty streets and skies that wouldn’t speak …</p>
 
       <p>Chorus<br>
@@ -274,7 +278,7 @@
 
 <!-- MODAL: Feels Like Heaven With You — Behind the Song -->
 <div id="flhStory" class="modal" role="dialog" aria-modal="true"
-     aria-labelledby="flhStoryTitle" aria-hidden="true">
+     aria-labelledby="flhStoryTitle" hidden>
   <div class="modal__backdrop" data-modal-close></div>
   <div class="modal__panel" tabindex="-1">
     <button class="modal__close" aria-label="Close" data-modal-close>&times;</button>
