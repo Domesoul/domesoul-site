@@ -435,5 +435,62 @@
   });
 })();
 </script>
+  <script>
+(function () {
+  if (window.__dsModalsInit) return; window.__dsModalsInit = true;
+
+  function openModal(selector) {
+    const m = document.querySelector(selector);
+    if (!m) return;
+    m.classList.add('is-open');
+    m.removeAttribute('hidden');
+    document.body.classList.add('no-scroll');
+    // focus first focusable (if any)
+    const focusable = m.querySelector('[autofocus], button, a, input, textarea, select');
+    if (focusable) try { focusable.focus(); } catch(e){}
+  }
+
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('hidden', '');
+    document.body.classList.remove('no-scroll');
+  }
+
+  // Open on any element with data-modal-target="#id"
+  document.addEventListener('click', function (e) {
+    const openBtn = e.target.closest('[data-modal-target]');
+    if (openBtn) {
+      e.preventDefault();
+      const sel = openBtn.getAttribute('data-modal-target');
+      if (sel) openModal(sel);
+      return;
+    }
+
+    // Close on [data-close-modal] buttons
+    const closeBtn = e.target.closest('[data-close-modal]');
+    if (closeBtn) {
+      e.preventDefault();
+      const modal = closeBtn.closest('.modal');
+      closeModal(modal);
+      return;
+    }
+
+    // Click on backdrop closes
+    if (e.target.classList && e.target.classList.contains('modal__overlay')) {
+      const modal = e.target.closest('.modal');
+      closeModal(modal);
+    }
+  });
+
+  // Esc closes all
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal.is-open').forEach(closeModal);
+    }
+  });
+})();
+</script>
+
   </body>
 </footer>
