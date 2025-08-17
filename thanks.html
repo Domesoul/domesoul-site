@@ -114,5 +114,32 @@
       const i=setInterval(()=>{ n--; el.textContent=n; if(n<=0){clearInterval(i); location.href='index.html';}},1000);
     });
   </script>
+    <script>
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const d = el.getAttribute('data-delay');
+        if (d) el.style.transitionDelay = (+d/1000) + 's';
+        el.classList.add('in');
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+</script>
+<button id="toTop" class="back-to-top" aria-label="Back to top">↑</button>
+<script>
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  toTop.classList.toggle('show', window.scrollY > 600);
+});
+toTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 </body>
 </html>
