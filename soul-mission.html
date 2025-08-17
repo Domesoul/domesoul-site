@@ -109,44 +109,85 @@
     </div>
   </header>
 
-  <main id="main" class="page">
-    <!-- Hero -->
-    <section id="mission-hero" class="section section-dark">
-      <div class="container-narrow">
-        <header class="intro">
-          <h1 class="reveal">Soul Mission</h1>
-          <p class="tagline reveal">Helping light reach farther — practical care fueled by music.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#donate">💝 Donate</a>
-            <a class="btn btn-neutral" href="#nominate">🕊 Nominate Someone</a>
-          </div>
-        </header>
-      </div>
-    </section>
+  <section class="page-hero">
+  <div class="container">
+    <h1>Soul Mission</h1>
+    <p class="sub">Outreach powered by music and practical love. Nominate a person or community we can serve.</p>
+  </div>
+</section>
 
-    <!-- High-level impact -->
-    <section class="section container-narrow" aria-label="Impact">
-      <div class="cards-grid">
-        <article class="card" data-aos="fade-up"><h3>238+</h3><p class="muted">Care packs delivered</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="100"><h3>17</h3><p class="muted">Community visits</p></article>
-        <article class="card" data-aos="fade-up" data-aos-delay="180"><h3>100%</h3><p class="muted">Donor-funded outreach</p></article>
-      </div>
-    </section>
+<section class="container grid-2" style="margin-bottom:28px">
+  <div class="card">
+    <h3>What we do</h3>
+    <ul>
+      <li>Community concerts & hospital visits</li>
+      <li>School supplies & food support</li>
+      <li>Storytelling, prayer circles & follow-ups</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>How funds are used</h3>
+    <p>100% goes to outreach. We publish short updates after each mission.</p>
+    <a class="btn btn-primary" href="#donate">❤️ Donate</a>
+  </div>
+</section>
 
-    <!-- Support / Donate -->
-    <section id="donate" class="section section-dark">
-      <div class="container-narrow">
-        <div class="ds-support-card" data-aos="fade-up">
-          <h2>Support the Mission</h2>
-          <p>Your generosity helps the light go farther — food, medicine, and urgent needs for families.</p>
-          <div class="cta-row">
-            <!-- Replace with your real donate link -->
-            <a class="btn btn-primary" href="https://your-donate-link.example" target="_blank" rel="noopener">💝 Give Now</a>
-            <a class="btn btn-neutral" href="#impact-stats">See impact</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section container">
+  <h2>Nominate Someone</h2>
+  <!-- Update your Formspree id -->
+  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="card form-grid">
+    <!-- Nominator -->
+    <div>
+      <label for="nominator-name">Your Name</label>
+      <input id="nominator-name" name="Nominator Name" type="text" required>
+    </div>
+    <div>
+      <label for="nominator-phone">Your Phone/WhatsApp</label>
+      <input id="nominator-phone" name="Nominator Phone" type="tel" required>
+    </div>
+    <div>
+      <label for="nominator-email">Your Email</label>
+      <input id="nominator-email" name="Nominator Email" type="email">
+    </div>
+    <div class="full"><hr></div>
+
+    <!-- Nominee -->
+    <div>
+      <label for="nominee-name">Nominee Name</label>
+      <input id="nominee-name" name="Nominee Name" type="text" required>
+    </div>
+    <div>
+      <label for="nominee-phone">Nominee Phone/WhatsApp</label>
+      <input id="nominee-phone" name="Nominee Phone" type="tel">
+    </div>
+    <div>
+      <label for="nominee-email">Nominee Email</label>
+      <input id="nominee-email" name="Nominee Email" type="email">
+    </div>
+    <div>
+      <label for="nominee-city">City</label>
+      <input id="nominee-city" name="City" type="text">
+    </div>
+    <div>
+      <label for="nominee-country">Country</label>
+      <input id="nominee-country" name="Country" type="text">
+    </div>
+    <div class="full">
+      <label for="story">Tell us about their situation (200–400 words)</label>
+      <textarea id="story" name="Story" required></textarea>
+    </div>
+    <div class="full">
+      <label><input type="checkbox" name="Consent" required> I have consent to share these details for support purposes.</label>
+    </div>
+
+    <!-- Formspree helpers -->
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="Soul Mission Nomination">
+    <input type="hidden" name="_next" value="thanks.html">
+
+    <button type="submit" class="btn btn-primary">Submit Nomination</button>
+  </form>
+</section>
 
     <!-- FAQ -->
     <section class="section container-narrow" aria-label="FAQ">
