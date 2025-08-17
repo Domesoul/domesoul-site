@@ -1398,3 +1398,15 @@ textarea{min-height:140px;resize:vertical}
   will-change: transform, opacity;
 }
 .reveal.in{ opacity:1; transform: translateY(0); }
+/* ========== Back to top button ========== */
+.back-to-top{
+  position:fixed; right:16px; bottom:18px;
+  padding:12px 14px; border-radius:999px;
+  background:#6c4cff; color:#fff; font-weight:700;
+  box-shadow:0 10px 30px rgba(108,76,255,.35);
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .22s ease, transform .22s ease;
+  z-index:999;
+}
+.back-to-top.show{ opacity:1; transform:none; pointer-events:auto; }
+.back-to-top:focus{ outline:2px solid #fff; outline-offset:2px; }
