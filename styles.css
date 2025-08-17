@@ -1377,3 +1377,8 @@ textarea{min-height:140px;resize:vertical}
 
 .press-photos .card img{aspect-ratio:4/5;object-fit:cover;border-radius:12px}
 
+.footer-col.explore a.active{
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
