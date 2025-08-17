@@ -1410,3 +1410,13 @@ textarea{min-height:140px;resize:vertical}
 }
 .back-to-top.show{ opacity:1; transform:none; pointer-events:auto; }
 .back-to-top:focus{ outline:2px solid #fff; outline-offset:2px; }
+/* ========== Sticky CTA (Soul Mission) ========== */
+.sticky-cta{ position:sticky; bottom:0; padding:16px 0; margin-top:24px;
+  background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0)); }
+.sticky-cta .cta-inner{
+  display:flex; gap:12px; justify-content:center; align-items:center;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px; padding:12px 16px; backdrop-filter: blur(8px);
+}
+.sticky-cta .muted{ opacity:.8 }
