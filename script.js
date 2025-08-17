@@ -207,4 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  document.querySelectorAll('.main-nav a, .footer-col.explore a').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('/').pop().toLowerCase();
+    if (href && href === current) a.classList.add('active');
+  });
+});
+</script>
 
