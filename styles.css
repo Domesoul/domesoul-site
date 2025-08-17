@@ -1382,3 +1382,11 @@ textarea{min-height:140px;resize:vertical}
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.skip-link{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  position:fixed; left:16px; top:12px; width:auto; height:auto; padding:.5rem .75rem;
+  background:#000; color:#fff; border-radius:8px; z-index:99999;
+  outline:2px solid var(--purple);
+}
