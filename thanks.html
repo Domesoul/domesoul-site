@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>Thank You — Domé Soul</title>
-  <meta name="description" content="Thanks for subscribing to Domé Soul.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="styles.css" rel="stylesheet">
+  <meta name="robots" content="noindex">
+  <style>
+    .thanks-wrap{min-height:70vh; display:grid; place-items:center; padding:48px 16px;}
+    .thanks-card{max-width:720px; text-align:center; padding:28px;
+      border-radius:16px; background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08)}
+    .thanks-card h1{margin:.2rem 0 .4rem}
+    .thanks-card p.muted{color:#c9b8a6}
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">Domé Soul</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
-      <div id="navLinks" class="nav-links">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Domé Soul" class="site-logo">
+        <strong class="brand-name">Domé Soul</strong>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
         <a href="music.html">Music</a>
-        <a href="press-kit.html">Press Kit</a>
         <a href="soul-mission.html">Soul Mission</a>
+        <a href="press-kit.html">Press Kit</a>
         <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main class="stack">
-    <section class="thanks card">
-      <h1>You're in! 🎉</h1>
-      <p>Thanks for subscribing to Domé Soul. Please check your inbox to confirm your email.</p>
-      <a class="btn btn-primary" href="music.html">Back to Music</a>
-    </section>
+  <main id="main" class="thanks-wrap">
+    <div class="thanks-card">
+      <h1>Thank you! 🎉</h1>
+      <p class="muted">Your message was sent. We’ll get back to you soon.</p>
+      <p><a class="btn btn-primary" href="index.html">Back to Home</a></p>
+      <p class="muted">Auto-redirecting in <span id="t">5</span>s…</p>
+    </div>
   </main>
 
+ 
 <!-- FOOTER -->
 
 <footer class="site-footer">
@@ -85,4 +99,20 @@
   <div class="footer-bottom">
     <p>© 2025 Domé Soul. All rights reserved.</p>
   </div>
-</footer>
+</footer>->
+
+  <script>
+    // Active nav highlight
+    document.addEventListener('DOMContentLoaded', () => {
+      const current = (location.pathname.split('/').pop() || 'thanks.html').toLowerCase();
+      document.querySelectorAll('.main-nav a').forEach(a=>{
+        const href=(a.getAttribute('href')||'').split('/').pop().toLowerCase();
+        if(href===current) a.classList.add('active');
+      });
+      // Redirect
+      let n=5; const el=document.getElementById('t');
+      const i=setInterval(()=>{ n--; el.textContent=n; if(n<=0){clearInterval(i); location.href='index.html';}},1000);
+    });
+  </script>
+</body>
+</html>
