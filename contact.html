@@ -55,104 +55,60 @@
 
   <main id="main" class="page">
     <!-- Hero -->
-    <section class="section section-dark">
-      <div class="container-narrow">
-        <header class="intro">
-          <h1>Contact</h1>
-          <p class="tagline">Bookings, interviews, collaborations, and outreach requests.</p>
+   <section class="page-hero">
+  <div class="container">
+    <h1>Contact</h1>
+    <p class="sub">For bookings, interviews, outreach partnerships, or prayer requests.</p>
+  </div>
+</section>
 
-          <div class="cta-row">
-            <a class="btn btn-neutral" href="mailto:contact@domesoul.com">✉ Email</a>
-            <a class="btn btn-primary" href="https://wa.me/2349070610805" target="_blank" rel="noopener">🟢 WhatsApp</a>
-          </div>
+<section class="container grid-2">
+  <!-- Form -->
+  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="card form-grid">
+    <div>
+      <label for="cname">Your Name</label>
+      <input id="cname" name="Name" type="text" required>
+    </div>
+    <div>
+      <label for="cemail">Your Email</label>
+      <input id="cemail" name="Email" type="email" required>
+    </div>
+    <div class="full">
+      <label for="csubject">Subject</label>
+      <input id="csubject" name="Subject" type="text">
+    </div>
+    <div class="full">
+      <label for="cmsg">Message</label>
+      <textarea id="cmsg" name="Message" required></textarea>
+    </div>
 
-          <p class="muted" style="margin-top:.75rem">We typically reply within <strong>48 hours</strong>. Office hours: Mon–Fri, 9:00–17:00 WAT.</p>
-        </header>
-      </div>
-    </section>
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="Domé Soul Contact">
+    <input type="hidden" name="_next" value="thanks.html">
 
-    <!-- Quick info / Press line -->
-    <section class="section container-narrow">
-      <div class="cards-grid">
-        <article class="card">
-          <h3>Booking Types</h3>
-          <p class="muted">Concerts, community events, churches, outreach visits, interviews, and collaborative projects.</p>
-        </article>
-        <article class="card">
-          <h3>Press / Media</h3>
-          <p class="muted">For editorial and media inquiries, email <a href="mailto:press@domesoul.com">press@domesoul.com</a> or see the <a href="press-kit.html">Press Kit</a>.</p>
-        </article>
-        <article class="card">
-          <h3>Direct Contact</h3>
-          <p class="muted">Email: <a href="mailto:contact@domesoul.com">contact@domesoul.com</a><br> WhatsApp: <a href="https://wa.me/2349070610805" target="_blank" rel="noopener">+234 907 061 0805</a></p>
-        </article>
-      </div>
-    </section>
+    <button class="btn btn-primary" type="submit">Send Message</button>
+  </form>
 
-    <!-- Main contact form -->
-    <section class="section container-narrow">
-      <h2>Send a Message</h2>
-      <p class="muted" style="margin-bottom:12px">Share a few details so we can route your message quickly.</p>
+  <!-- Sidebar -->
+  <aside class="card">
+    <h3>Quick Contacts</h3>
+    <p><strong>Email:</strong> <a href="mailto:contact@domesoul.com">contact@domesoul.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/2349070610805">+234 907 061 0805</a></p>
+    <h4 style="margin-top:16px">Connect</h4>
+    <div class="footer-icons" style="margin-top:8px">
+      <a class="ico" href="https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB" target="_blank" aria-label="Spotify">🎵</a>
+      <a class="ico" href="https://www.youtube.com/@DomeSoulMusic" target="_blank" aria-label="YouTube">▶</a>
+      <a class="ico" href="https://instagram.com/YOUR_HANDLE" target="_blank" aria-label="Instagram">📸</a>
+      <a class="ico" href="https://x.com/YOUR_HANDLE" target="_blank" aria-label="X">🐦</a>
+      <a class="ico" href="https://wa.me/2349070610805" target="_blank" aria-label="WhatsApp">
+        <!-- same WhatsApp SVG as footer or keep text icon -->
+        ✅
+      </a>
+      <a class="ico" href="mailto:contact@domesoul.com" aria-label="Email">✉</a>
+    </div>
+  </aside>
+</section>
 
-      <!-- Replace with your Formspree endpoint -->
-      <form action="https://formspree.io/f/your-id" method="POST" class="ds-form">
-        <div class="grid-3">
-          <label>Your Name*<input type="text" name="name" required autocomplete="name"></label>
-          <label>Your Email*<input type="email" name="email" required autocomplete="email"></label>
-          <label>Phone (incl. country code)*<input type="tel" name="phone" inputmode="tel" required placeholder="+234 801 234 5678"></label>
-        </div>
-
-        <div class="grid-3">
-          <label>Inquiry Type*
-            <select name="type" required>
-              <option value="">Select</option>
-              <option>Booking (Concert / Event)</option>
-              <option>Church / Outreach Visit</option>
-              <option>Interview / Press</option>
-              <option>Collaboration</option>
-              <option>Support / Soul Mission</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label>Preferred Date (if booking)
-            <input type="date" name="date">
-          </label>
-          <label>Location / City
-            <input type="text" name="location" placeholder="City / Venue">
-          </label>
-        </div>
-
-        <div class="grid-3">
-          <label>Approx. Audience Size
-            <input type="number" name="audience" min="1" step="1" placeholder="e.g., 150">
-          </label>
-          <label>Budget (optional)
-            <input type="text" name="budget" placeholder="e.g., ₦250,000">
-          </label>
-          <label>Organization (optional)
-            <input type="text" name="organization" placeholder="Church / Company / NGO">
-          </label>
-        </div>
-
-        <label>Message*
-          <textarea name="message" rows="6" required placeholder="Tell us a bit more about your request…"></textarea>
-        </label>
-
-        <label class="checkbox">
-          <input type="checkbox" name="consent" required>
-          I consent to Domé Soul storing my details to respond to this message.
-        </label>
-
-        <!-- Honeypot -->
-        <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
-
-        <!-- Optional redirect after submit -->
-        <input type="hidden" name="_redirect" value="https://www.domesoul.com/thanks.html">
-
-        <button class="btn btn-primary" type="submit">Send Message</button>
-        <p class="muted" style="margin-top:.5rem">You’ll receive a confirmation in your email.</p>
-      </form>
-    </section>
   </main>
 
   <!-- Newsletter (shared card) -->
