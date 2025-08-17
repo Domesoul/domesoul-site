@@ -1332,4 +1332,19 @@ body.no-scroll{overflow:hidden;}
   .footer-col.subscribe{justify-self:stretch; max-width:none;}
   .newsletter-form{max-width:none;}
 }
+/* Press Kit polish */
+.press-photos .card img{
+  aspect-ratio: 4 / 5;     /* tall portrait look */
+  object-fit: cover;
+  border-radius: 12px;
+  image-rendering: auto;
+}
+
+.cards-grid.press-photos {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.cards-grid .card .cta-row { display:flex; gap:10px; flex-wrap:wrap; }
+.cards-grid .card .btn { height:40px; border-radius:10px; }
 
