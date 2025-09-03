@@ -1,90 +1,116 @@
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <!-- Page Title -->
   <title>Domé Soul – Music, Mission & Marketplace</title>
-  
+
   <!-- SEO Meta -->
-  <meta name="description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust. Join the movement today.">
-  <meta name="keywords" content="Domé Soul, music, humanitarian, outreach, marketplace, Afro-soul, folk, gospel, Afrobeat">
-  <meta name="author" content="Domé Soul">
-  
-  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
-  <meta property="og:title" content="Domé Soul – Music, Mission & Marketplace">
-  <meta property="og:description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust.">
-  <meta property="og:image" content="https://domesoul.com/assets/og-image.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://domesoul.com/">
+  <meta name="description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust. Join the movement today." />
+  <!-- (Optional) keywords have minimal SEO value; safe to remove, but fine to keep -->
+  <meta name="keywords" content="Domé Soul, music, humanitarian, outreach, marketplace, Afro-soul, folk, gospel, Afrobeat" />
+  <meta name="author" content="Domé Soul" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.domesoul.com/" />
+
+  <!-- Brand Color & Tiles -->
+  <meta name="theme-color" content="#6B4EFF" />
+  <meta name="msapplication-TileColor" content="#333232" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="https://www.domesoul.com/images/logo.png" />
+  <link rel="apple-touch-icon" href="https://www.domesoul.com/images/apple-touch-icon.png" />
+
+  <!-- Open Graph (Facebook/WhatsApp/LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.domesoul.com/" />
+  <meta property="og:title" content="Domé Soul – Music, Mission & Marketplace" />
+  <meta property="og:description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust." />
+  <!-- Use a single canonical OG image (1200×630) -->
+  <meta property="og:image" content="https://www.domesoul.com/images/og/home_1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Domé Soul – Music, Mission & Marketplace">
-  <meta name="twitter:description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust.">
-  <meta name="twitter:image" content="https://domesoul.com/assets/twitter-card.png">
-  
-  <!-- Theme Colors -->
-  <meta name="theme-color" content="#6B4EFF"> <!-- Domé Soul Purple -->
-  <meta name="msapplication-TileColor" content="#333232">
-  <link rel="canonical" href="https://www.domesoul.com/">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.domesoul.com/" />
+  <meta name="twitter:title" content="Domé Soul – Music, Mission & Marketplace" />
+  <meta name="twitter:description" content="Explore Domé Soul's music, humanitarian outreach, and marketplace – a mission to bring light in the dust." />
+  <meta name="twitter:image" content="https://www.domesoul.com/images/og/home_1200x630.jpg" />
+
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="preload" href="styles.css?v=2" as="style">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="preload" href="https://www.domesoul.com/styles.css?v=2" as="style" />
+  <link rel="stylesheet" href="https://www.domesoul.com/styles.css?v=2" />
 
- <!-- Animations (AOS) -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.AOS) AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-  });
-</script>
+  <!-- Performance: Preload OG image (optional) -->
+  <link rel="preload" as="image" href="https://www.domesoul.com/images/og/home_1200x630.jpg" />
 
-<!-- JSON-LD: Website + Artist (single clean block) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "name": "Domé Soul",
-      "url": "https://www.domesoul.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.domesoul.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+  <!-- Animations (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.AOS) AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+    });
+  </script>
+
+  <!-- JSON-LD: Website + Artist (cleaned but same structure) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Domé Soul",
+        "url": "https://www.domesoul.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.domesoul.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "MusicGroup",
+        "name": "Domé Soul",
+        "url": "https://www.domesoul.com/",
+        "image": "https://www.domesoul.com/images/og/home_1200x630.jpg",
+        "genre": ["Afro-soul","Gospel","Folk"],
+        "sameAs": [
+          "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB",
+          "https://www.youtube.com/@DomeSoulMusic",
+          "https://instagram.com/YOUR_HANDLE"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "business",
+          "email": "contact@domesoul.com"
+        }
       }
-    },
-    {
-      "@type": "MusicGroup",
-      "name": "Domé Soul",
-      "url": "https://www.domesoul.com",
-      "image": "https://www.domesoul.com/images/og-cover.jpg",
-      "genre": ["Afro-soul","Gospel","Folk"],
-      "sameAs": [
-        "https://open.spotify.com/artist/3CQUZpVh6x10v1v49OqfkB",
-        "https://www.youtube.com/@DomeSoulMusic",
-        "https://instagram.com/YOUR_HANDLE"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "business",
-        "email": "contact@domesoul.com"
-      }
-    }
-  ]
-}
-</script>
-<link rel="prefetch" href="music.html" as="document">
-<link rel="prefetch" href="soul-mission.html" as="document">
-<link rel="prefetch" href="press-kit.html" as="document">
+    ]
+  }
+  </script>
 
+  <!-- Prefetch internal pages -->
+  <link rel="prefetch" href="https://www.domesoul.com/music.html" as="document" />
+  <link rel="prefetch" href="https://www.domesoul.com/soul-mission.html" as="document" />
+  <link rel="prefetch" href="https://www.domesoul.com/press-kit.html" as="document" />
+
+  <!-- (Optional) GA4: replace G-XXXXXX with your property ID
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXX');
+  </script>
+  -->
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
